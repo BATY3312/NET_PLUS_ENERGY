@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redes troncales de telecomunicaciones | Centro de Formación NPE</title>
+<meta name="description" content="Construcción de redes troncales de fibra óptica: seguridad y 10 reglas de oro, tendido del cable con carrete, chipa, cuerda guía y dron, instalación de herrajes, vestido de postes y tensionado controlado.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Net Plus Energy S.A.S">
+<meta property="og:title" content="Redes troncales de telecomunicaciones | Centro de Formación NPE">
+<meta property="og:description" content="Construcción de redes troncales de fibra óptica: seguridad y 10 reglas de oro, tendido del cable con carrete, chipa, cuerda guía y dron, instalación de herrajes, vestido de postes y tensionado controlado.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="../img/logo-npe.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+<link href="../css/npe.css?v=20261110" rel="stylesheet">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra npe-nav">
+  <div class="marco barra-int">
+    <a class="marca" href="../index.html" aria-label="Net Plus Energy, inicio">
+      <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+      <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+    </a>
+    <button class="barra-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span>Menú</span><i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav class="collapse barra-nav" id="menuPrincipal" aria-label="Principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a class="activo" href="../formacion.html">Formación</a></li>
+      </ul>
+      <a class="boton boton-sm" href="../index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================= ENCABEZADO DEL MÓDULO ======================= -->
+<header class="mod-hero">
+  <div class="marco">
+    <nav class="migas" aria-label="Ruta">
+      <a href="../index.html">Inicio</a> /
+      <a href="../formacion.html">Centro de formación</a> /
+      <a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a> /
+      <span aria-current="page">Redes troncales de telecomunicaciones</span>
+    </nav>
+
+    <h1>Redes troncales de telecomunicaciones</h1>
+    <p class="entrada">
+      Construcción de un tramo de red troncal de fibra óptica en terreno: la seguridad que la precede,
+      el tendido del cable entre postes y la fijación con herrajes, retenciones y tensionado controlado.
+    </p>
+
+    <div class="mod-datos">
+      <div class="mod-dato"><small>Línea</small><b>B · Telecomunicaciones y F.O.</b></div>
+      <div class="mod-dato"><small>Módulo</small><b>B2</b></div>
+      <div class="mod-dato"><small>Nivel</small><b>Avanzado</b></div>
+      <div class="mod-dato"><small>Duración</small><b>55 min</b></div>
+      <div class="mod-dato"><small>Video</small><b>3 partes · 12:45</b></div>
+      <div class="mod-dato"><small>Actualizado</small><b>10 nov 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="container modulo-cuerpo">
+  <div class="row g-5">
+
+    <aside class="col-lg-3 order-lg-2">
+      <nav class="indice-lateral" aria-label="En este módulo">
+        <span class="indice-titulo">En este módulo</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#normativa">Marco normativo</a>
+        <a href="#video">Videos del procedimiento</a>
+        <a href="#reglas">Las 10 reglas de oro</a>
+        <a href="#procedimiento">Procedimiento</a>
+        <a href="#claves">Seis claves técnicas</a>
+        <a href="#herramientas">Herramientas y materiales</a>
+        <a href="#epp">EPP requerido</a>
+        <a href="#riesgos">Riesgos y controles</a>
+        <a href="#galeria">Galería de campo</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#charla">Charla técnica</a>
+        <a href="#evaluacion">Autoevaluación</a>
+      </nav>
+    </aside>
+
+    <main class="col-lg-9 order-lg-1" id="contenido">
+
+      <div class="aviso-validar mb-5">
+        <p class="m-0"><b>Material de apoyo formativo.</b>
+        Los procedimientos de este módulo son pautas generales de capacitación. En obra se aplican junto
+        con el protocolo de seguridad y salud en el trabajo de la empresa, las especificaciones del operador
+        de red y el diseño de cada proyecto, y no sustituyen el criterio del ingeniero responsable.</p>
+      </div>
+
+      <section class="bloque" id="objetivos">
+        <h2>Objetivos de aprendizaje</h2>
+        <p>Al terminar este módulo, el técnico estará en capacidad de:</p>
+        <ul class="lista-check">
+          <li>Preparar la jornada con reunión de seguridad, análisis de trabajo seguro, permisos y plan de rescate.</li>
+          <li>Inspeccionar los elementos de protección y reconocer los riesgos eléctricos de una estructura compartida.</li>
+          <li>Controlar el carrete y tender el cable con chipa, cuerda guía o dron sin dañarlo.</li>
+          <li>Vestir el poste con fleje, hebilla y herraje de retención.</li>
+          <li>Seleccionar e instalar retenciones helicoidales y tensionar el cable de forma controlada.</li>
+          <li>Verificar la instalación terminada antes de dar por cerrado el tramo.</li>
+        </ul>
+      </section>
+
+      <section class="bloque" id="normativa">
+        <h2>Marco normativo aplicable</h2>
+        <p>
+          Referencias que rigen el trabajo de una cuadrilla de redes troncales en Colombia. Debe verificarse la versión
+          vigente de cada una y complementarse con el procedimiento de la empresa y del operador de red.
+        </p>
+        <div>
+          <span class="chip-norma">Decreto 1072 de 2015 · SG-SST</span>
+          <span class="chip-norma">Resolución 4272 de 2021 · Trabajo en alturas</span>
+          <span class="chip-norma">RETIE 2024 · Resolución 40117 y sus modificaciones</span>
+          <span class="chip-norma">Resolución CRC 5050 de 2016 · Uso compartido de postes</span>
+          <span class="chip-norma">RAC 100 · Drones</span>
+        </div>
+        <p class="mt-3 texto-secundario" style="font-size:.9375rem">
+          Desde el 1 de enero de 2026 rige el RETIE 2024, que reemplazó al de 2013. El poste suele ser de un operador de red eléctrica:
+          no se perfora, no se ocupan espacios de otros operadores y cada elemento instalado queda identificado.
+        </p>
+      </section>
+
+      <section class="bloque" id="video">
+        <h2>Videos del procedimiento</h2>
+        <p>
+          Serie <strong>Construcción de redes troncales</strong>, producida por NPE, en tres partes con narración
+          y subtítulos. Siguen el orden del procedimiento de esta página; cada capítulo lleva al tema
+          correspondiente del video.
+        </p>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 1</span>
+            <div>
+              <h3>Seguridad en la construcción de redes troncales</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 4:01</span>
+                <span><i class="bi bi-shield-check" aria-hidden="true"></i> Incluye las 10 reglas de oro</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte1" data-yt="sldxiG8DxuU" data-titulo="Parte 1 · Seguridad en la construcción de redes troncales"
+               href="https://www.youtube.com/watch?v=sldxiG8DxuU" target="_blank" rel="noopener">
+              <img src="../img/poster-troncales-p1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 1 · Seguridad en la construcción de redes troncales</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte1">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> 1 · Llegada al punto de trabajo</button>
+            <button type="button" class="capitulo" data-t="20"><span>0:20</span> 2 · Reunión de seguridad</button>
+            <button type="button" class="capitulo" data-t="58"><span>0:58</span> 3 · Las 10 reglas de oro</button>
+            <button type="button" class="capitulo" data-t="122"><span>2:02</span> 4 · Inspección de los elementos de protección</button>
+            <button type="button" class="capitulo" data-t="163"><span>2:43</span> 5 · Riesgos eléctricos</button>
+            <button type="button" class="capitulo" data-t="195"><span>3:15</span> 6 · Preparación del área de trabajo</button>
+            <button type="button" class="capitulo" data-t="223"><span>3:43</span> 7 · Cierre</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>1 a 4</strong> del procedimiento.</span>
+            <a href="https://youtu.be/sldxiG8DxuU" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 2</span>
+            <div>
+              <h3>Riego y tendido de cable de fibra óptica en redes troncales</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 3:50</span>
+                <span><i class="bi bi-diagram-2" aria-hidden="true"></i> Cable ADSS de 48 fibras</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte2" data-yt="ue8OaSb3kSE" data-titulo="Parte 2 · Riego y tendido de cable de fibra óptica en redes troncales"
+               href="https://www.youtube.com/watch?v=ue8OaSb3kSE" target="_blank" rel="noopener">
+              <img src="../img/poster-troncales-p2.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 2 · Riego y tendido de cable de fibra óptica en redes troncales</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte2">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> 1 · Preparación del cable y del carrete</button>
+            <button type="button" class="capitulo" data-t="43"><span>0:43</span> 2 · Control del carrete</button>
+            <button type="button" class="capitulo" data-t="68"><span>1:08</span> 3 · Transporte del cable en chipa</button>
+            <button type="button" class="capitulo" data-t="100"><span>1:40</span> 4 · Tendido mediante cuerda guía o pita</button>
+            <button type="button" class="capitulo" data-t="136"><span>2:16</span> 5 · Paso de línea guía con dron</button>
+            <button type="button" class="capitulo" data-t="169"><span>2:49</span> 6 · Coordinación del tendido</button>
+            <button type="button" class="capitulo" data-t="204"><span>3:24</span> 7 · Cierre del procedimiento</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>5 a 10</strong> del procedimiento.</span>
+            <a href="https://youtu.be/ue8OaSb3kSE" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 3</span>
+            <div>
+              <h3>Instalación de herrajes, vestido de postes y tensionado del cable</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 4:54</span>
+                <span><i class="bi bi-link-45deg" aria-hidden="true"></i> Retenciones helicoidales</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte3" data-yt="VHTk9k1jVuY" data-titulo="Parte 3 · Instalación de herrajes, vestido de postes y tensionado del cable"
+               href="https://www.youtube.com/watch?v=VHTk9k1jVuY" target="_blank" rel="noopener">
+              <img src="../img/poster-troncales-p3.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 3 · Instalación de herrajes, vestido de postes y tensionado del cable</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte3">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> 1 · Inspección del poste</button>
+            <button type="button" class="capitulo" data-t="35"><span>0:35</span> 2 · Instalación de herrajes</button>
+            <button type="button" class="capitulo" data-t="62"><span>1:02</span> 3 · Vestido del poste</button>
+            <button type="button" class="capitulo" data-t="97"><span>1:37</span> 4 · Preparación de elementos helicoidales</button>
+            <button type="button" class="capitulo" data-t="128"><span>2:08</span> 5 · Organización del tensionado</button>
+            <button type="button" class="capitulo" data-t="165"><span>2:45</span> 6 · Preparación del punto de sujeción</button>
+            <button type="button" class="capitulo" data-t="189"><span>3:09</span> 7 · Tensionado controlado</button>
+            <button type="button" class="capitulo" data-t="226"><span>3:46</span> 8 · Instalación del elemento de retención</button>
+            <button type="button" class="capitulo" data-t="253"><span>4:13</span> 9 · Verificación final</button>
+            <button type="button" class="capitulo" data-t="273"><span>4:33</span> 10 · Cierre</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>11 a 16</strong> del procedimiento.</span>
+            <a href="https://youtu.be/VHTk9k1jVuY" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+
+        <p class="mt-4 mb-0">
+          Las partes 4 y 5 de la serie tienen su propio módulo en la línea de infraestructura eléctrica:
+          <a href="retenidas.html#video">Instalación de retenidas</a> e
+          <a href="postes-metalicos.html#video">Instalación de postes metálicos</a>.
+        </p>
+      </section>
+
+      <section class="bloque" id="reglas">
+        <h2>Las 10 reglas de oro</h2>
+        <p>Así las presenta la parte 1 de la serie. Se repasan en la reunión de seguridad, antes de cualquier actividad.</p>
+        <ol class="reglas">
+          <li>No iniciar ninguna actividad sin identificar los peligros y evaluar los riesgos.</li>
+          <li>Usar los elementos de protección personal que corresponden.</li>
+          <li>Verificar herramientas, equipos y elementos de protección antes de usarlos.</li>
+          <li>No trabajar en alturas sin autorización, capacitación y sistemas de protección adecuados.</li>
+          <li>Identificar las redes eléctricas cercanas y respetar las distancias de seguridad establecidas.</li>
+          <li>No improvisar puntos de anclaje ni usar equipos de tracción sin verificar su capacidad.</li>
+          <li>Mantener comunicación permanente entre linieros, auxiliares y supervisor.</li>
+          <li>Delimitar y señalizar la zona de trabajo para proteger a trabajadores y transeúntes.</li>
+          <li>Suspender la actividad cuando existan condiciones inseguras, climáticas o técnicas.</li>
+          <li>Conocer y cumplir el procedimiento de emergencias y rescate.</li>
+        </ol>
+        <div class="aviso-validar mt-4">
+          <p class="m-0"><b>Marco de referencia en Colombia:</b> Resolución 4272 de 2021 (trabajo en alturas)
+          y RETIE (riesgo eléctrico). En obra prevalece el protocolo de SST de la empresa.</p>
+        </div>
+      </section>
+
+      <section class="bloque" id="procedimiento">
+        <h2>Procedimiento paso a paso</h2>
+        <p>
+          Secuencia de referencia para construir un tramo de red troncal. Los pasos siguen el orden de las tres
+          partes de la serie de video.
+        </p>
+
+        <div class="accordion" id="pasos">
+
+          <h3 class="fase">Parte 1 · Seguridad</h3>
+
+          <div class="paso">
+            <button type="button" class="paso-btn" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1">
+              <span class="paso-num">1</span> Reunión de seguridad y permisos
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p1" class="collapse show" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Antes de empezar, la cuadrilla repasa la actividad del día: qué se va a construir y en qué tramo.</li>
+                  <li>Se diligencia el análisis de trabajo seguro: qué se va a hacer, qué peligros hay y cómo se controlan.</li>
+                  <li>Se revisan el procedimiento de trabajo seguro, los permisos y las autorizaciones requeridas.</li>
+                  <li>Se identifican las redes eléctricas cercanas y se evalúan las condiciones del clima.</li>
+                  <li>Se acuerda la comunicación entre linieros, auxiliares y supervisor.</li>
+                  <li>Todos conocen el plan de emergencias y rescate antes de iniciar.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2">
+              <span class="paso-num">2</span> Inspección de los elementos de protección y herramientas
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p2" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Cada trabajador inspecciona sus elementos de protección antes de usarlos.</li>
+                  <li>Arnés de cuerpo completo: reatas, costuras, hebillas y argollas en buen estado.</li>
+                  <li>Sistema de posicionamiento y protección contra caídas que exige la tarea: eslingas, conectores y anticaídas.</li>
+                  <li>Casco con barbuquejo, guantes, botas, gafas y chaleco reflectivo.</li>
+                  <li>Las herramientas también se revisan y se aseguran para que no caigan desde el poste.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3">
+              <span class="paso-num">3</span> Identificación de riesgos eléctricos
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p3" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>En muchos postes la red de telecomunicaciones comparte estructura con redes eléctricas.</li>
+                  <li>Antes de intervenir un poste se identifica si hay circuitos energizados, a qué altura están y qué tan cerca quedará el trabajo.</li>
+                  <li>Las distancias de seguridad las fijan la normativa eléctrica vigente (RETIE) y el procedimiento de la empresa.</li>
+                  <li><strong>Nunca</strong> tocar conductores eléctricos ni acercarse a una red energizada sin las medidas de control definidas.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p4" aria-expanded="false" aria-controls="p4">
+              <span class="paso-num">4</span> Preparación del área de trabajo
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p4" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La zona se delimita con conos y cinta de señalización para proteger a la cuadrilla y a quienes transitan por la vía.</li>
+                  <li>Cada uno conoce su función: el liniero trabaja en el poste, el auxiliar apoya desde tierra y el supervisor vigila la actividad.</li>
+                  <li>La cuadrilla confirma antes de arrancar: reunión hecha, permisos al día, elementos inspeccionados y área señalizada.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="fase">Parte 2 · Tendido del cable</h3>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p5" aria-expanded="false" aria-controls="p5">
+              <span class="paso-num">5</span> Preparación del cable y del carrete
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p5" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El carrete se ubica en un área de trabajo firme, nivelada y señalizada, montado en su portacarrete.</li>
+                  <li>Se identifica el cable por la marcación de su chaqueta: tipo, número de fibras y metraje. En el tramo del video, cable ADSS de 48 fibras.</li>
+                  <li>Se verifica la ruta: postes, cruces de vía, vegetación y redes eléctricas a lo largo del recorrido.</li>
+                  <li>La cuadrilla se organiza: un trabajador controla el carrete y los auxiliares se ubican a lo largo del recorrido para recibir el cable.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p6" aria-expanded="false" aria-controls="p6">
+              <span class="paso-num">6</span> Control del carrete
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p6" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El trabajador que controla el carrete no pierde de vista la salida del cable.</li>
+                  <li>Hace girar el carrete al ritmo del tendido, sin dejar que tome impulso: si se acelera, el cable se suelta en vueltas y se enreda.</li>
+                  <li>Por radio se confirma cada orden: avanzar, más despacio, detener.</li>
+                  <li>Detiene el giro de forma progresiva cuando se lo piden, sin vueltas cruzadas y sin cable acumulado en el piso.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p7" aria-expanded="false" aria-controls="p7">
+              <span class="paso-num">7</span> Transporte del cable en chipa
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p7" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El cable necesario se saca del carrete y se acomoda en forma de ocho, para que no se tuerza.</li>
+                  <li>La chipa se amarra en varios puntos y la carga se reparte entre varios auxiliares: nadie lleva más de lo que puede manejar con seguridad.</li>
+                  <li>El cable no se arrastra sobre piedras, alambres ni bordes cortantes: se levanta o se protege.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p8" aria-expanded="false" aria-controls="p8">
+              <span class="paso-num">8</span> Tendido mediante cuerda guía o pita
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p8" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>En la montaña el recorrido entre postes cruza laderas, quebradas y vegetación.</li>
+                  <li>Al extremo de la pita se une el cable con una media de tracción y un destorcedor, que evita que el cable gire.</li>
+                  <li>Nadie se ubica dentro de la curva de la cuerda ni en la línea de un posible latigazo, y cada uno trabaja con apoyo firme.</li>
+                  <li>La cuerda, la media de tracción y el destorcedor se usan dentro de su capacidad y según el procedimiento aprobado.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p9" aria-expanded="false" aria-controls="p9">
+              <span class="paso-num">9</span> Paso de línea guía con dron
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p9" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Donde el terreno lo exige, un piloto autorizado opera un dron que lleva solamente una línea guía liviana, por un recorrido inspeccionado previamente.</li>
+                  <li>El dron se mantiene lejos de las redes eléctricas, de las personas y de las estructuras, y su operación cumple la reglamentación aeronáutica vigente.</li>
+                  <li>Al otro lado los auxiliares reciben la línea liviana; con ella se pasa una pita más resistente y, después, se tiende el cable.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p10" aria-expanded="false" aria-controls="p10">
+              <span class="paso-num">10</span> Coordinación y cierre del tendido
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p10" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Los auxiliares distribuidos en el recorrido reciben el cable y lo acompañan en las poleas de tendido.</li>
+                  <li>El cable se cuida de torsiones, enredos, aplastamientos y rozamientos contra el terreno o las estructuras.</li>
+                  <li>Cerca de los postes, el cable y las cuerdas se mantienen alejados de las redes eléctricas.</li>
+                  <li>Al terminar, el cable queda dispuesto en el recorrido previsto y se revisa en todo el tramo: sin cortes, sin aplastamientos ni dobleces visibles.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="fase">Parte 3 · Herrajes y tensionado</h3>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p11" aria-expanded="false" aria-controls="p11">
+              <span class="paso-num">11</span> Inspección del poste e instalación de herrajes
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p11" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Antes de subir, el líder y los linieros verifican el estado del poste: sin fisuras, sin inclinación anormal y con la base firme.</li>
+                  <li>Se identifican las redes eléctricas presentes, los herrajes existentes y la ruta que seguirá el cable.</li>
+                  <li>Se delimita y señaliza la zona inferior: debajo del poste existe riesgo de caída de herramientas y materiales.</li>
+                  <li>Se inspeccionan herrajes y fleje, herramientas, aparejo y protección contra caídas.</li>
+                  <li>Elementos de sujeción: fleje Band-It de acero inoxidable, hebilla que cierra y asegura el fleje, herraje de retención y herramienta tensora.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p12" aria-expanded="false" aria-controls="p12">
+              <span class="paso-num">12</span> Vestido del poste
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p12" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Se pasa el fleje alrededor del poste y por la ranura del herraje, y se inserta en la hebilla.</li>
+                  <li>Con la herramienta tensora se tensa el fleje y se cierra sobre la hebilla.</li>
+                  <li>Se dobla el fleje sobre la hebilla, se corta el sobrante y se aseguran las pestañas, sin dejar bordes cortantes expuestos.</li>
+                  <li>El conjunto se organiza según el diseño de la estructura: a qué altura y en qué dirección queda cada herraje.</li>
+                  <li>Resultado: herrajes firmes, alineados con la ruta del cable y sin elementos improvisados.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p13" aria-expanded="false" aria-controls="p13">
+              <span class="paso-num">13</span> Preparación de elementos helicoidales
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p13" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Para sujetar el cable en los puntos de retención se usan elementos helicoidales, también llamados retenciones preformadas.</li>
+                  <li>Por su lazo se conectan al herraje de retención instalado en el poste; sus varillas en espiral reparten el agarre sin aplastar el cable.</li>
+                  <li>Antes de instalarla se confirma que su referencia corresponda al cable, según las especificaciones del fabricante. Si no corresponde, no se usa.</li>
+                  <li>Un amarre o un alambre improvisado <strong>no</strong> reemplaza una retención helicoidal.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p14" aria-expanded="false" aria-controls="p14">
+              <span class="paso-num">14</span> Organización y preparación del punto de sujeción
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p14" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Un trabajador inspecciona el aparejo: su capacidad de trabajo, el estado de la cuerda y de las poleas, y los mosquetones con su seguro.</li>
+                  <li>Se coordinan la ubicación de los elementos de sujeción y la dirección en la que va a trabajar la fuerza.</li>
+                  <li>El punto de anclaje debe estar verificado y autorizado: no se usa una retenida existente ni cualquier parte del poste sin comprobar que soporta la carga.</li>
+                  <li>Se acuerda la comunicación entre el liniero y los auxiliares, y se verifica que no haya obstáculos en el vano.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p15" aria-expanded="false" aria-controls="p15">
+              <span class="paso-num">15</span> Tensionado controlado
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p15" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Antes de aplicar fuerza, la cuadrilla confirma que los herrajes y los elementos estén instalados y verificados, y el aparejo en su anclaje autorizado.</li>
+                  <li>Nadie hala sin la orden: el liniero y los auxiliares se comunican antes de aplicar fuerza.</li>
+                  <li>El tensionado es progresivo y controlado.</li>
+                  <li>Nadie se ubica en la línea de fuego, y nadie sostiene con las manos un elemento que esté bajo tensión.</li>
+                  <li>Ante cualquier movimiento inesperado o condición insegura, la maniobra se detiene.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p16" aria-expanded="false" aria-controls="p16">
+              <span class="paso-num">16</span> Instalación del elemento de retención y verificación final
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p16" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Las varillas se enrollan sobre el cable desde la marca de aplicación, siguiendo el sentido de la espiral y sin deformarlas.</li>
+                  <li>El lazo queda conectado al herraje de retención, según las instrucciones del fabricante y el diseño de la red.</li>
+                  <li>Verificación final: herrajes bien instalados, cable firmemente sujeto, estructura organizada, sin daños visibles en el cable ni en los elementos, y retenciones en buena condición.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="bloque" id="claves">
+        <h2>Seis claves técnicas</h2>
+        <p>
+          Datos que el video no muestra: cifras, criterios y la razón de algunos pasos. El tema completo
+          está en el <a href="../docs/material-educativo-redes-troncales.pdf" download>material educativo complementario</a> (PDF).
+        </p>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">1</span><div><small>Seguridad</small><h3>Cada sistema contra caídas exige su propio anclaje</h3></div></header>
+          <p>La Resolución 4272 de 2021 aplica cuando hay riesgo de caída de más de 2 m. La resistencia mínima del punto de anclaje, por persona conectada, depende del sistema:</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:26%">Sistema</th><th scope="col">Para qué sirve</th><th scope="col" style="width:24%">Anclaje mínimo</th></tr></thead><tbody><tr><td><b>Restricción</b></td><td>Impide llegar al borde desde donde se podría caer.</td><td>1.000 lb (4,5 kN)</td></tr><tr><td><b>Posicionamiento</b></td><td>Sostiene al liniero contra el poste con las manos libres.</td><td>3.000 lb (13,3 kN)</td></tr><tr><td><b>Detención de caídas</b></td><td>Detiene una caída en curso.</td><td>5.000 lb (22,2 kN)</td></tr></tbody></table></div>
+          <p class="clave-regla"><b>En campo:</b> la faja de posicionamiento sostiene al liniero pero no detiene una caída, así que <b>no reemplaza</b> al sistema de detención. En el sistema contra caídas no se usan mosquetones de seguro de rosca.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">2</span><div><small>Seguridad</small><h3>Un cable sin metal no elimina el riesgo eléctrico</h3></div></header>
+          <p>El cable ADSS es totalmente dieléctrico, pero la pita húmeda, las herramientas y el cuerpo del trabajador sí conducen. El riesgo aparece por contacto directo, por una parte energizada por falla (un herraje, una retenida) o por arco, sin llegar a tocar.</p>
+          <p class="clave-regla"><b>En campo:</b> la protección es no acercarse: identificar los circuitos y respetar las distancias del RETIE vigente. Con tormenta, se suspende.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">3</span><div><small>Tendido</small><h3>El cable tiene límites que no se ven por fuera</h3></div></header>
+          <p>Superar la <b>tensión máxima de instalación</b> o doblar el cable más de lo permitido daña las fibras sin dejar marca en la chaqueta. La regla general de <b>radio mínimo de curvatura</b> es de 20 veces el diámetro mientras se hala y de 10 veces ya instalado.</p><div class="ejemplo"><b>Ejemplo · cable de 12 mm</b><p class="m-0">Halando: 20 × 12 mm = 240 mm de radio. Instalado, en reservas y bajantes: 10 × 12 mm = 120 mm.</p></div>
+          <p class="clave-regla"><b>En campo:</b> prevalece la ficha técnica del cable que se instala; la regla general es solo orientativa.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">4</span><div><small>Tendido</small><h3>La bandera avisa cuando el cable empieza a girar</h3></div></header>
+          <figure class="figura"><img src="../img/troncal/ensamble-traccion.webp" width="1163" height="252" loading="lazy" alt="Ensamble de tracción en línea: pita o cuerda guía, destorcedor, bandera, media de tracción y cable ADSS"><figcaption>Pita, destorcedor, bandera, media de tracción y cable: cada pieza tiene una función.</figcaption></figure><p>El destorcedor impide que la torsión de la cuerda pase al cable. La bandera, pegada detrás, deja ver si aun así el cable gira. La media de tracción está hecha para <b>halar</b>, no para sostener el cable en su tensión final.</p>
+          <p class="clave-regla"><b>En campo:</b> si la bandera gira, se detiene el halado y se libera la torsión. Al terminar, la carga pasa a la retención helicoidal y se retira la media.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">5</span><div><small>Herrajes</small><h3>Cuánto fleje cortar y cuándo se puede reaplicar una retención</h3></div></header>
+          <ul class="lista-check"><li><b>Cuánto fleje cortar:</b> unas 3,5 veces el diámetro del poste para vuelta sencilla, o 7 veces para doble, más 15 a 20 cm para la cola. Poste de 30 cm, vuelta sencilla: unos 125 cm. El diámetro se mide a la altura de instalación, porque el poste es cónico.</li><li><b>Retención helicoidal:</b> se enrolla desde la marca de inicio y la segunda pata se alinea con la marca de cruce. Puede reaplicarse hasta tres veces <b>solo durante la instalación inicial</b>; después, cualquier ajuste exige una nueva.</li></ul>
+          <p class="clave-regla"><b>En campo:</b> las varillas se asientan a mano, sin alicate, y la retención nunca se corta.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">6</span><div><small>Tensionado</small><h3>La línea de fuego y la carga real del anclaje</h3></div></header>
+          <figure class="figura"><img src="../img/troncal/linea-fuego.webp" width="1200" height="368" loading="lazy" alt="Vista en planta del tensionado: el poste, el aparejo sobre la línea del cable con una zona roja marcada como línea de fuego y los auxiliares ubicados a un lado"><figcaption>Quienes halan se ubican a un lado, fuera de la línea del cable.</figcaption></figure><p>El cable, la cuerda y el aparejo en tensión acumulan energía: si algo se suelta, sale disparado a lo largo de esa línea. Además, el anclaje no recibe solo la fuerza de quienes halan: con un aparejo 4:1, 250 N en la cuerda ponen unos 1.000 N en el cable, y el anclaje carga del orden de esos 1.000 N.</p>
+          <p class="clave-regla"><b>En campo:</b> el anclaje se verifica para la carga del cable, no para la fuerza de halado, y el cable se tensiona a la flecha de la tabla del fabricante, nunca “a ojo”.</p>
+        </article>
+      </section>
+
+      <section class="bloque" id="herramientas">
+        <h2>Herramientas y materiales</h2>
+        <p>Equipos y materiales del procedimiento, fotografiados en obras de NPE.</p>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/carrete.webp" alt="Carrete de cable de fibra óptica ADSS en el terreno, junto a una cerca" loading="lazy" width="676" height="684"><b>Carrete de cable</b><small>Cable ADSS de 48 fibras, montado en su portacarrete</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/polea-tendido.webp" alt="Polea de tendido con gancho" loading="lazy" width="678" height="900"><b>Poleas de tendido</b><small>Reciben y acompañan el cable</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/fleje.webp" alt="Rollo de fleje de acero inoxidable" loading="lazy" width="678" height="900"><b>Fleje de acero inoxidable</b><small>Rollo para vestir el poste</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/hebilla.webp" alt="Hebilla de acero inoxidable para fleje" loading="lazy" width="678" height="900"><b>Hebilla</b><small>Cierra y asegura el fleje</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/herraje-retencion.webp" alt="Tres herrajes de retención de aluminio con su ojo para el lazo" loading="lazy" width="678" height="900"><b>Herraje de retención</b><small>Punto donde se conecta el lazo de la retención</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/herramienta-tensora.webp" alt="Herramienta tensora de fleje, de color azul, con su manivela" loading="lazy" width="900" height="678"><b>Herramienta tensora</b><small>Tensa y cierra el fleje</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/retencion-helicoidal.webp" alt="Retención helicoidal preformada extendida sobre el piso" loading="lazy" width="900" height="678"><b>Retención helicoidal</b><small>Sujeta el cable al herraje; referencia según el cable</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/aparejo.webp" alt="Aparejo de cuerda con dos poleas azules y mosquetones de seguro" loading="lazy" width="678" height="900"><b>Aparejo</b><small>Cuerda, poleas y mosquetones con seguro</small></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta"><img class="herr-img" src="../img/herramientas/troncal/polipasto-palanca.webp" alt="Polipasto de palanca rojo con su cadena y ganchos" loading="lazy" width="900" height="678"><b>Polipasto de palanca</b><small>Tensiona y sostiene la carga con cadena</small></div></div>
+        </div>
+        <h3 class="sin-foto-titulo">También se usan</h3>
+        <ul class="sin-foto"><li><b>Radios de comunicación</b><span>Transmiten las órdenes de avanzar y detener</span></li><li><b>Cuerda guía o pita</b><span>Hala el cable entre postes, dentro de su capacidad</span></li><li><b>Media de tracción</b><span>Abraza la chaqueta del cable</span></li><li><b>Destorcedor</b><span>Evita que el cable gire</span></li><li><b>Dron y línea guía liviana</b><span>Solo con piloto autorizado</span></li><li><b>Conos y cinta</b><span>Delimitación de la zona</span></li><li><b>Bolsa portaherramientas</b><span>Herramientas aseguradas en altura</span></li></ul>
+      </section>
+
+      <section class="bloque" id="epp">
+        <h2>EPP requerido</h2>
+        <p>Elementos que cada trabajador inspecciona antes de usarlos. El sistema de protección contra caídas es el que exija la tarea.</p>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-shield-fill-check" aria-hidden="true"></i><div><b>Casco con barbuquejo</b><small>Obligatorio en tierra y en altura</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-person-standing" aria-hidden="true"></i><div><b>Arnés de cuerpo completo</b><small>Reatas, costuras, hebillas y argollas</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-link-45deg" aria-hidden="true"></i><div><b>Eslingas y conectores</b><small>Posicionamiento y anticaídas</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-eyeglasses" aria-hidden="true"></i><div><b>Gafas de seguridad</b><small>Protección contra partículas</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-hand-index-thumb" aria-hidden="true"></i><div><b>Guantes</b><small>Manipulación de cable, cuerdas y herrajes</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-person-walking" aria-hidden="true"></i><div><b>Botas de seguridad</b><small>Apoyo firme en terreno irregular</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-cone-striped" aria-hidden="true"></i><div><b>Chaleco reflectivo</b><small>Visibilidad para el tránsito de la vía</small></div></div></div>
+        </div>
+      </section>
+
+      <section class="bloque" id="riesgos">
+        <h2>Riesgos y controles</h2>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos align-middle">
+            <thead>
+              <tr><th scope="col" style="width:28%">Peligro</th><th scope="col" style="width:12%">Severidad</th><th scope="col">Control</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Caída de altura</b></td><td><span class="sev sev-alta">Alta</span></td><td>Autorización, capacitación y sistema de protección contra caídas para trabajo en alturas. Arnés y conectores inspeccionados antes de subir. Plan de rescate conocido por todos.</td></tr>
+              <tr><td><b>Contacto eléctrico</b></td><td><span class="sev sev-alta">Alta</span></td><td>Identificar circuitos energizados, su altura y la cercanía del trabajo. Respetar las distancias de seguridad del RETIE y del procedimiento. Cable y cuerdas alejados de la red eléctrica.</td></tr>
+              <tr><td><b>Caída de herramientas y materiales</b></td><td><span class="sev sev-alta">Alta</span></td><td>Zona inferior del poste delimitada y señalizada. Herramientas aseguradas o en bolsa portaherramientas.</td></tr>
+              <tr><td><b>Latigazo o línea de fuego</b></td><td><span class="sev sev-alta">Alta</span></td><td>Nadie dentro de la curva de la cuerda ni en la línea de fuego. Nadie sostiene con las manos un elemento bajo tensión. Tensionado progresivo y con orden.</td></tr>
+              <tr><td><b>Falla de anclaje o del equipo de tracción</b></td><td><span class="sev sev-alta">Alta</span></td><td>Puntos de anclaje verificados y autorizados. Aparejo, cuerda, media y destorcedor usados dentro de su capacidad.</td></tr>
+              <tr><td><b>Atrapamiento con el carrete</b></td><td><span class="sev sev-media">Media</span></td><td>Giro al ritmo del tendido y detención progresiva. Sin vueltas cruzadas ni cable acumulado en el piso.</td></tr>
+              <tr><td><b>Sobreesfuerzo al cargar la chipa</b></td><td><span class="sev sev-media">Media</span></td><td>Carga repartida entre varios auxiliares; nadie lleva más de lo que puede manejar con seguridad.</td></tr>
+              <tr><td><b>Tránsito vehicular</b></td><td><span class="sev sev-media">Media</span></td><td>Conos y cinta en la vía, chaleco reflectivo y vigilancia del supervisor.</td></tr>
+              <tr><td><b>Condiciones climáticas</b></td><td><span class="sev sev-media">Media</span></td><td>Evaluar el clima en la reunión de seguridad y suspender la actividad ante condiciones inseguras.</td></tr>
+              <tr><td><b>Operación del dron</b></td><td><span class="sev sev-media">Media</span></td><td>Piloto autorizado, recorrido inspeccionado y distancia a redes eléctricas, personas y estructuras.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="galeria">
+        <h2>Galería de campo</h2>
+        <p>Fotos de las troncales de NPE en el Putumayo, en el orden del procedimiento. Haga clic en una foto para verla en tamaño completo.</p>
+        <div class="row g-3">
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/control-carrete-colon.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/control-carrete-colon.webp" alt="Tres trabajadores de NPE controlan el giro del carrete de cable, montado entre dos árboles" loading="lazy" width="1200" height="1216">
+              </a>
+              <figcaption>Control del carrete · Troncal Colón–Santiago<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/cable-adss-sibundoy.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/cable-adss-sibundoy.webp" alt="Mano con guante sosteniendo el extremo del cable, con la marcación ADSS 48FO G.652D y el metraje en la chaqueta" loading="lazy" width="1200" height="1216">
+              </a>
+              <figcaption>Identificación del cable: ADSS 48 FO G.652D · Troncal Sibundoy–Santiago<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/chipa-santiago.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/chipa-santiago.webp" alt="Trabajador con casco acomodando el cable en chipa sobre el pasto" loading="lazy" width="1126" height="1080">
+              </a>
+              <figcaption>Preparación de la chipa · Santiago, Putumayo<span>sep 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/chipa-terreno-santiago.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/chipa-terreno-santiago.webp" alt="Chipa de cable de fibra óptica sobre el pasto en una ladera" loading="lazy" width="844" height="765">
+              </a>
+              <figcaption>Chipa lista para el tendido · Santiago, Putumayo<span>sep 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/reserva-poste-sibundoy.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/reserva-poste-sibundoy.webp" alt="Dos reservas de cable de fibra enrolladas y amarradas al poste, bajo la red eléctrica de media tensión" loading="lazy" width="1200" height="1104">
+              </a>
+              <figcaption>Reservas de cable en poste · Ruta alterna San Francisco–Sibundoy<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/liniero-ramal-colon.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/liniero-ramal-colon.webp" alt="Liniero con arnés y casco trabajando en lo alto de un poste, con una reserva de cable" loading="lazy" width="1200" height="1216">
+              </a>
+              <figcaption>Liniero en el poste · Ramal Colón–Santiago<span>sep 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/herraje-poste-163.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/herraje-poste-163.webp" alt="Herraje de retención fijado al poste con dos flejes, con la retención helicoidal conectada a su ojo" loading="lazy" width="1200" height="1216">
+              </a>
+              <figcaption>Poste vestido con herraje y retención · Troncal Sibundoy–Santiago<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/retencion-poste-128.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/retencion-poste-128.webp" alt="Mano con guante junto al cable, con las varillas de la retención helicoidal enrolladas" loading="lazy" width="1600" height="816">
+              </a>
+              <figcaption>Retención helicoidal sobre el cable · Troncal Colón–Santiago<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/marquilla-poste-131.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/marquilla-poste-131.webp" alt="Marquilla verde en el cable: fibra óptica, no es cobre, no cortar; tramo Colón–Santiago, 48 hilos" loading="lazy" width="1216" height="678">
+              </a>
+              <figcaption>Marquilla de identificación del tramo · Troncal Colón–Santiago<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="bloque" id="descargas">
+        <h2>Descargas</h2>
+        <div class="row g-3">
+          <div class="col-md-4"><a class="descarga" href="../docs/material-educativo-redes-troncales.pdf" download><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i><b>Material educativo complementario</b><small>PDF · 36 páginas · 4,4 MB</small><span>Descargar <i class="bi bi-download" aria-hidden="true"></i></span></a></div>
+          <div class="col-md-4"><div class="slot" style="min-height:150px"><div><i class="bi bi-list-check" aria-hidden="true"></i><b>Lista de chequeo</b><small>Verificación en campo · en preparación</small></div></div></div>
+          <div class="col-md-4"><div class="slot" style="min-height:150px"><div><i class="bi bi-clipboard-data" aria-hidden="true"></i><b>Formato de registro</b><small>Acta de tendido y tensionado · en preparación</small></div></div></div>
+        </div>
+      </section>
+
+      <section class="bloque" id="charla">
+        <h2>Charla técnica</h2>
+        <div class="slot slot-video">
+          <div>
+            <i class="bi bi-mic" aria-hidden="true"></i>
+            <b>Charla técnica en preparación</b>
+            <small>Sesión con el equipo técnico de NPE</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="bloque" id="evaluacion">
+        <h2>Autoevaluación</h2>
+        <p>Una pregunta por cada clave técnica. Respóndala y luego ábrala para comprobar.</p>
+        <div class="preguntas">
+          <details class="pregunta"><summary><span>1</span>¿Qué resistencia mínima debe tener el anclaje de un sistema de detención de caídas por persona conectada?</summary><p>5.000 lb (22,2 kN). El de posicionamiento pide 3.000 lb y el de restricción 1.000 lb.</p></details>
+          <details class="pregunta"><summary><span>2</span>Si el cable ADSS no tiene partes metálicas, ¿por qué sigue existiendo riesgo eléctrico?</summary><p>Porque la pita húmeda, las herramientas y el cuerpo sí conducen, y el arco puede saltar sin tocar el conductor.</p></details>
+          <details class="pregunta"><summary><span>3</span>Con la regla general, ¿cuál es el radio mínimo de curvatura de un cable de 15 mm mientras se hala?</summary><p>20 × 15 mm = 300 mm de radio, salvo que la ficha técnica indique otro valor.</p></details>
+          <details class="pregunta"><summary><span>4</span>Durante el tendido, la bandera detrás del destorcedor empieza a girar. ¿Qué debe hacer?</summary><p>Detener el halado y liberar la torsión: el cable está girando.</p></details>
+          <details class="pregunta"><summary><span>5</span>La instalación ya terminó y hay que ajustar una retención helicoidal. ¿Se puede reaplicar?</summary><p>No. Solo se reaplica, hasta tres veces, durante la instalación inicial; después se usa una nueva.</p></details>
+          <details class="pregunta"><summary><span>6</span>¿Para qué carga se verifica el anclaje de un aparejo de tensionado?</summary><p>Para la carga del cable, no para la fuerza de quienes halan.</p></details>
+        </div>
+      </section>
+
+      <nav class="nav-modulo" aria-label="Módulos de la línea">
+        <a href="fundamentos-fibra-optica.html">
+          <small><i class="bi bi-arrow-left" aria-hidden="true"></i> Anterior</small>
+          <b>Fundamentos de fibra óptica</b>
+        </a>
+        <a href="fusion-fibra-optica.html">
+          <small>Siguiente <i class="bi bi-arrow-right" aria-hidden="true"></i></small>
+          <b>Fusión de fibra óptica</b>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="pie">
+  <div class="marco pie-grid">
+    <div class="pie-marca">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+        <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+      </a>
+      <p>Ingenieros contratistas y consultores en energía y telecomunicaciones.</p>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Formación</h2>
+      <ul>
+        <li><a href="../formacion.html?linea=A">Infraestructura eléctrica</a></li>
+        <li><a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a></li>
+        <li><a href="../formacion.html?linea=C">Seguridad y SST</a></li>
+        <li><a href="../formacion.html?linea=D">Herramientas y materiales</a></li>
+      </ul>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a class="enlace-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+        <li><a href="mailto:gerencia@npe.com.co">gerencia@npe.com.co</a></li>
+        <li><a href="mailto:talentohumano@npe.com.co">talentohumano@npe.com.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marco">
+    <div class="pie-base">
+      <span>&copy; <span data-anio></span> Net Plus Energy S.A.S. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+<button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../js/npe.js?v=20261110"></script>
+</body>
+</html>

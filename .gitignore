@@ -1,0 +1,36 @@
+# ============================================================
+# NET PLUS ENERGY · qué NO se sube al repositorio
+# Las rutas empiezan con "/" para que apliquen solo a la raíz del proyecto:
+# en Windows Git no distingue mayúsculas, y "Proyectos/" sin barra
+# también excluiría img/proyectos/ (las fotos del sitio).
+# ============================================================
+
+# Videos originales: pesan 775 MB y uno supera el límite de 100 MB de GitHub.
+# El sitio los muestra desde YouTube (ver video/LEEME.md).
+/video/*
+!/video/LEEME.md
+
+# Carpeta generada por preparar_publicacion.py (se rehace en cada ejecución)
+/publicar/
+
+# Privacidad: fotos originales con coordenadas, fuentes del cliente, respaldos
+/documentacion/
+/Proyectos/
+
+# Pruebas y datos sueltos
+/_prueba-inicial/
+/data/
+
+# Configuración local de herramientas
+/.claude/
+/.impeccable/
+/.vercel/
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fundamentos de fibra óptica | Centro de Formación NPE</title>
+<meta name="description" content="Fundamentos de fibra óptica para técnicos: reflexión interna total, monomodo y multimodo, ventanas de operación, atenuación, dBm y dB, presupuesto óptico, medición de pérdida y código de colores TIA-598.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Net Plus Energy S.A.S">
+<meta property="og:title" content="Fundamentos de fibra óptica | Centro de Formación NPE">
+<meta property="og:description" content="Fundamentos de fibra óptica para técnicos: reflexión interna total, monomodo y multimodo, ventanas de operación, atenuación, dBm y dB, presupuesto óptico, medición de pérdida y código de colores TIA-598.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="../img/logo-npe.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+<link href="../css/npe.css?v=20261110" rel="stylesheet">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra npe-nav">
+  <div class="marco barra-int">
+    <a class="marca" href="../index.html" aria-label="Net Plus Energy, inicio">
+      <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+      <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+    </a>
+    <button class="barra-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span>Menú</span><i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav class="collapse barra-nav" id="menuPrincipal" aria-label="Principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a class="activo" href="../formacion.html">Formación</a></li>
+      </ul>
+      <a class="boton boton-sm" href="../index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================= ENCABEZADO DEL MÓDULO ======================= -->
+<header class="mod-hero">
+  <div class="marco">
+    <nav class="migas" aria-label="Ruta">
+      <a href="../index.html">Inicio</a> /
+      <a href="../formacion.html">Centro de formación</a> /
+      <a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a> /
+      <span aria-current="page">Fundamentos de fibra óptica</span>
+    </nav>
+
+    <h1>Fundamentos de fibra óptica</h1>
+    <p class="entrada">
+      Cómo viaja la luz por la fibra, en qué se diferencian la monomodo y la multimodo, por qué se pierde potencia
+      y cómo se mide, y cómo se identifica cada fibra con el código de colores antes de empalmar.
+    </p>
+
+    <div class="mod-datos">
+      <div class="mod-dato"><small>Línea</small><b>B · Telecomunicaciones y F.O.</b></div>
+      <div class="mod-dato"><small>Módulo</small><b>B1</b></div>
+      <div class="mod-dato"><small>Nivel</small><b>Básico</b></div>
+      <div class="mod-dato"><small>Duración</small><b>50 min</b></div>
+      <div class="mod-dato"><small>Video</small><b>2 partes · 10:32</b></div>
+      <div class="mod-dato"><small>Actualizado</small><b>13 nov 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="container modulo-cuerpo">
+  <div class="row g-5">
+
+    <aside class="col-lg-3 order-lg-2">
+      <nav class="indice-lateral" aria-label="En este módulo">
+        <span class="indice-titulo">En este módulo</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#normativa">Referencias técnicas</a>
+        <a href="#video">Videos del módulo</a>
+        <a href="#procedimiento">Temas paso a paso</a>
+        <a href="#claves">Seis claves técnicas</a>
+        <a href="#riesgos">Riesgos y controles</a>
+        <a href="#diagnostico">Diagnóstico de mediciones</a>
+        <a href="#galeria">Galería de campo</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#evaluacion">Autoevaluación</a>
+      </nav>
+    </aside>
+
+    <main class="col-lg-9 order-lg-1" id="contenido">
+
+      <div class="aviso-validar mb-5">
+        <p class="m-0"><b>Material de apoyo formativo.</b>
+        Los valores de este módulo son de referencia. En obra se toman de la ficha técnica del cable instalado, de los
+        planos de la red, del diseño del enlace y del procedimiento del operador, y no sustituyen el criterio del
+        ingeniero responsable.</p>
+      </div>
+
+      <section class="bloque" id="objetivos">
+        <h2>Objetivos de aprendizaje</h2>
+        <p>Al terminar este módulo, el técnico estará en capacidad de:</p>
+        <ul class="lista-check">
+          <li>Explicar cómo queda confinada la luz en el núcleo y por qué una curva o un empalme desalineado la dejan escapar.</li>
+          <li>Leer la marcación de un cable y su ficha técnica para identificar el tipo de fibra.</li>
+          <li>Diferenciar dBm, dB y dB/km, y convertir una lectura del power meter entre dBm y microvatios.</li>
+          <li>Elegir la longitud de onda correcta antes de medir e interpretar la diferencia entre 1310 y 1550 nm.</li>
+          <li>Calcular el presupuesto óptico de un tramo y compararlo con la pérdida medida.</li>
+          <li>Ubicar una fibra por tubo y color en un cable de 48 hilos con el código TIA-598.</li>
+        </ul>
+      </section>
+
+      <section class="bloque" id="normativa">
+        <h2>Referencias técnicas</h2>
+        <p>
+          La fibra no se rige por una ley colombiana específica: la definen recomendaciones y normas técnicas internacionales
+          que cumplen los fabricantes y que aparecen impresas en el cable y en su ficha.
+        </p>
+        <div>
+          <span class="chip-norma">UIT-T G.652 (08/2024) · Fibra monomodo</span>
+          <span class="chip-norma">TIA-598-D · Código de colores</span>
+          <span class="chip-norma">FOA OFSTP-14 · Medición de pérdida de inserción</span>
+          <span class="chip-norma">FOA · Presupuesto de pérdida</span>
+        </div>
+        <p class="mt-3 texto-secundario" style="font-size:.9375rem">
+          La G.652 describe la fibra monomodo estándar, con dispersión cero cerca de 1310 nm; para la subcategoría G.652.D fija un máximo
+          de atenuación en cable de 0,4 dB/km de 1310 a 1625 nm y de 0,3 dB/km en 1550 nm. La TIA-598 define los colores de fibras y tubos;
+          no debe confundirse con el NEC (NFPA 70), que trata la seguridad y el listado de los cables. Las referencias de la FOA explican
+          cómo calcular y medir la pérdida.
+        </p>
+      </section>
+
+      <section class="bloque" id="video">
+        <h2>Videos del módulo</h2>
+        <p>
+          Serie <strong>Fundamentos de fibra óptica</strong>, producida por NPE, en dos partes con narración y subtítulos.
+          La primera explica cómo viaja la luz y en qué se diferencian las fibras; la segunda, las ventanas de operación,
+          la atenuación, la medición y el código de colores. Cada capítulo lleva al tema correspondiente del video.
+        </p>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 1</span>
+            <div>
+              <h3>Fundamentos de transmisión óptica</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 5:09</span>
+                <span><i class="bi bi-diagram-2" aria-hidden="true"></i> Monomodo y multimodo</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte1" data-yt="81-bBM4_WWo" data-titulo="Parte 1 · Fundamentos de transmisión óptica"
+               href="https://www.youtube.com/watch?v=81-bBM4_WWo" target="_blank" rel="noopener">
+              <img src="../img/poster-fundamentos-p1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 1 · Fundamentos de transmisión óptica</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte1">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> Un cable de la troncal, de cerca</button>
+            <button type="button" class="capitulo" data-t="18"><span>0:18</span> 1 · Qué es la fibra óptica</button>
+            <button type="button" class="capitulo" data-t="44"><span>0:44</span> 2 · Cómo se transmite la información</button>
+            <button type="button" class="capitulo" data-t="71"><span>1:11</span> 3 · Reflexión interna total</button>
+            <button type="button" class="capitulo" data-t="107"><span>1:47</span> 4 · Estructura de la fibra</button>
+            <button type="button" class="capitulo" data-t="144"><span>2:24</span> 5 · Fibra monomodo</button>
+            <button type="button" class="capitulo" data-t="185"><span>3:05</span> 6 · Fibra multimodo</button>
+            <button type="button" class="capitulo" data-t="219"><span>3:39</span> 7 · Monomodo y multimodo</button>
+            <button type="button" class="capitulo" data-t="242"><span>4:02</span> 8 · En el trabajo de campo</button>
+            <button type="button" class="capitulo" data-t="281"><span>4:41</span> 9 · Mito o realidad</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los temas <strong>1 a 6</strong> de esta página.</span>
+            <a href="https://youtu.be/81-bBM4_WWo" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 2</span>
+            <div>
+              <h3>Ventanas de operación, atenuación y código de colores</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 5:24</span>
+                <span><i class="bi bi-palette" aria-hidden="true"></i> Código TIA-598</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte2" data-yt="KvoAUNVkZl8" data-titulo="Parte 2 · Ventanas de operación, atenuación y código de colores"
+               href="https://www.youtube.com/watch?v=KvoAUNVkZl8" target="_blank" rel="noopener">
+              <img src="../img/poster-fundamentos-p2.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 2 · Ventanas de operación, atenuación y código de colores</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte2">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> Una lectura del power meter</button>
+            <button type="button" class="capitulo" data-t="26"><span>0:26</span> 1 · Ventanas de operación</button>
+            <button type="button" class="capitulo" data-t="50"><span>0:50</span> 2 · Las tres ventanas clásicas</button>
+            <button type="button" class="capitulo" data-t="81"><span>1:21</span> 3 · Atenuación</button>
+            <button type="button" class="capitulo" data-t="123"><span>2:03</span> 4 · Causas de la atenuación</button>
+            <button type="button" class="capitulo" data-t="171"><span>2:51</span> 5 · Medición de potencia</button>
+            <button type="button" class="capitulo" data-t="200"><span>3:20</span> 6 · Código de colores TIA-598</button>
+            <button type="button" class="capitulo" data-t="230"><span>3:50</span> 7 · Cables de 24 y 48 hilos</button>
+            <button type="button" class="capitulo" data-t="270"><span>4:30</span> 8 · Aplicación en campo</button>
+            <button type="button" class="capitulo" data-t="298"><span>4:58</span> 9 · Reto de identificación</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los temas <strong>7 a 12</strong> de esta página.</span>
+            <a href="https://youtu.be/KvoAUNVkZl8" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+      </section>
+
+      <section class="bloque" id="procedimiento">
+        <h2>Temas paso a paso</h2>
+        <p>Resumen de cada tema en el orden de los dos videos. Las cifras y los cálculos están en las claves técnicas.</p>
+
+        <div class="accordion" id="pasos">
+          <h3 class="fase">Parte 1 · Transmisión óptica</h3>
+
+          <div class="paso">
+            <button type="button" class="paso-btn" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1">
+              <span class="paso-num">1</span> Qué es la fibra y cómo transmite
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p1" class="collapse show" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La fibra óptica es un hilo de vidrio muy puro que guía la luz de un extremo a otro.</li>
+                  <li>En una red de telecomunicaciones conecta la central con la troncal, la troncal con las cajas de distribución y las cajas con cada casa.</li>
+                  <li>Por la fibra no viaja electricidad: viajan pulsos de luz. Un pulso encendido y un espacio apagado representan unos y ceros.</li>
+                  <li>El transmisor óptico convierte la señal eléctrica en luz encendiendo y apagando su fuente al ritmo de los datos; al otro extremo, un fotodetector la convierte de nuevo en señal eléctrica.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2">
+              <span class="paso-num">2</span> Reflexión interna total
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p2" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El núcleo tiene un índice de refracción mayor que el revestimiento que lo rodea.</li>
+                  <li>Si la luz llega al borde casi de frente, se refracta y se pierde hacia afuera. Si llega rasante, con un ángulo mayor que el <strong>ángulo crítico</strong>, no puede salir: se refleja por completo y vuelve al núcleo.</li>
+                  <li>No es un espejo: no hay una capa metálica. Es el límite entre dos vidrios de índices distintos el que atrapa la luz.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3">
+              <span class="paso-num">3</span> Estructura de la fibra
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p3" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>En el centro está el <strong>núcleo</strong>, por donde viaja la luz (unos 9 µm en monomodo).</li>
+                  <li>Lo rodea el <strong>revestimiento</strong>, también de vidrio, que confina la luz. En la mayoría de las fibras mide 125 µm.</li>
+                  <li>Encima va el <strong>recubrimiento</strong> primario, una capa plástica de color que protege el vidrio de golpes y humedad. Es el color que se ve en las bandejas.</li>
+                  <li>Revestimiento y recubrimiento no son la misma capa: el revestimiento es vidrio y guía la luz; el recubrimiento es plástico y protege.</li>
+                  <li>Después vienen los elementos de protección del cable, como tubos, elementos de tracción y cubierta, según el diseño de cada cable.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p4" aria-expanded="false" aria-controls="p4">
+              <span class="paso-num">4</span> Fibra monomodo
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p4" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El núcleo es tan estrecho que la luz solo puede seguir un camino: el modo fundamental.</li>
+                  <li>La luz ocupa el núcleo y una pequeña parte del revestimiento; por eso se habla de <strong>diámetro de campo modal</strong> (en una ficha G.652.D, 9,2 ± 0,4 µm a 1310 nm).</li>
+                  <li>Trabaja con fuentes láser, en las ventanas de 1310 y 1550 nm.</li>
+                  <li>La recomendación UIT-T G.652 describe la fibra monomodo estándar. Es la que dice la marcación del cable de la troncal de NPE y la que se usa en redes troncales y FTTH, donde la bajada viaja en 1490 nm.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p5" aria-expanded="false" aria-controls="p5">
+              <span class="paso-num">5</span> Fibra multimodo y comparación
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p5" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La multimodo tiene un núcleo más grande, de 50 o 62,5 µm, y la luz sigue muchos caminos a la vez, llamados modos.</li>
+                  <li>Unos caminos son más largos que otros y las partes de un mismo pulso llegan en momentos distintos: el pulso se ensancha. Es la <strong>dispersión modal</strong>, y es lo que limita la distancia. Las fibras de índice gradual reducen ese efecto.</li>
+                  <li>Se usa en distancias cortas, como redes locales y centros de datos, con fuentes LED o láser VCSEL de 850 nm.</li>
+                  <li>Ninguna es mejor que la otra: la monomodo sirve para troncales, FTTH y larga distancia; la multimodo, para enlaces cortos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p6" aria-expanded="false" aria-controls="p6">
+              <span class="paso-num">6</span> En el trabajo de campo
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p6" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Antes de instalar, empalmar o medir hay que saber qué fibra se tiene en las manos: la marcación del cable indica el número de fibras y el tipo.</li>
+                  <li>En la bandeja, cada fibra se identifica por el color de su recubrimiento.</li>
+                  <li>La fusionadora se configura según el tipo de fibra y el medidor, en la longitud de onda correcta.</li>
+                  <li>Mezclar fibras multimodo y monomodo en un mismo enlace produce pérdidas grandes.</li>
+                  <li>La luz de estas redes es infrarroja: el ojo no la ve. Nunca se mira el extremo de una fibra; primero se mide con el power meter.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h3 class="fase">Parte 2 · Ventanas, atenuación y código de colores</h3>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p7" aria-expanded="false" aria-controls="p7">
+              <span class="paso-num">7</span> Ventanas de operación
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p7" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La luz visible va de unos 400 a 700 nm. Las redes de fibra trabajan más allá del rojo, en el infrarrojo.</li>
+                  <li>Las regiones donde la fibra transmite bien se llaman <strong>ventanas de operación</strong>. Cuál se usa depende de la fibra, del transmisor y del receptor del sistema.</li>
+                  <li>Las tres ventanas clásicas: 850 nm, para multimodo en redes locales; 1310 nm, en monomodo, donde la G.652 tiene su dispersión cero; y 1550 nm, en monomodo, la de menor atenuación para enlaces largos.</li>
+                  <li>Las fibras monomodo modernas trabajan en varias bandas (O, E, S, C, L). En FTTH, por ejemplo, la subida viaja en 1310 nm y la bajada en 1490 nm.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p8" aria-expanded="false" aria-controls="p8">
+              <span class="paso-num">8</span> Atenuación y unidades
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p8" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>A medida que la luz avanza, pierde potencia: es la <strong>atenuación</strong>. Se expresa en dB por kilómetro, y la pérdida de la fibra es ese coeficiente por la longitud.</li>
+                  <li>Hay tres unidades distintas: el <strong>dBm</strong> es potencia absoluta referida a 1 mW; el <strong>dB</strong> es la diferencia entre dos potencias, es decir, una pérdida; y el <strong>dB/km</strong> es la pérdida por cada kilómetro.</li>
+                  <li>Si una señal entra con −20 dBm y llega con −22,3 dBm, el tramo perdió 2,3 dB.</li>
+                  <li>Sumar todas las pérdidas del camino es el <strong>presupuesto óptico</strong> del enlace: la luz que llega debe quedar por encima de lo que el receptor necesita.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p9" aria-expanded="false" aria-controls="p9">
+              <span class="paso-num">9</span> Causas de la atenuación
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p9" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li><strong>Absorción:</strong> impurezas (OH) y dopantes del vidrio convierten parte de la luz en calor.</li>
+                  <li><strong>Dispersión de Rayleigh:</strong> el vidrio esparce la luz en todas direcciones. Es la mayor causa de atenuación y disminuye mucho en longitudes de onda más largas.</li>
+                  <li><strong>Macrocurvatura:</strong> una curva visible demasiado cerrada deja escapar la luz. Por eso se respetan los radios mínimos del fabricante.</li>
+                  <li><strong>Microcurvatura:</strong> deformaciones mínimas por presión o temperatura que no se ven pero también hacen perder luz.</li>
+                  <li><strong>Empalmes y conectores:</strong> cada unión agrega pérdida, según la calidad del corte y la alineación. En un conector la tolerancia a la suciedad es casi nula: se limpia y se inspecciona antes de conectarlo.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p10" aria-expanded="false" aria-controls="p10">
+              <span class="paso-num">10</span> Medición de potencia y de pérdida
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p10" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El medidor de potencia óptica (power meter) mide cuánta luz llega: es la <strong>potencia recibida</strong>, un valor absoluto en un punto de la red. Ejemplo de una caja de NPE: −18,23 dBm, que equivalen a 15,03 µW.</li>
+                  <li>La <strong>pérdida de inserción</strong> es otra cosa: la diferencia en dB entre una medición de referencia y la medición con el tramo conectado (pérdida = P ref − P med).</li>
+                  <li>La atenuación por kilómetro resulta de dividir la pérdida de la fibra entre su longitud.</li>
+                  <li>Para no confundir: el dBm dice cuánta luz hay; el dB, cuánta se perdió.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p11" aria-expanded="false" aria-controls="p11">
+              <span class="paso-num">11</span> Código de colores y cables de 24 y 48 hilos
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p11" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Cada fibra tiene un color según la norma TIA-598: azul, naranja, verde, café, gris, blanco, rojo, negro, amarillo, violeta, rosa y aqua.</li>
+                  <li>Con esa secuencia cada hilo conserva su identidad de un extremo al otro: en la instalación, en el empalme y en el mantenimiento.</li>
+                  <li>En muchos cables las fibras viajan en tubos, y los tubos usan la misma secuencia. Un cable de 24 hilos puede tener 2 tubos de 12; uno de 48, 4 tubos de 12.</li>
+                  <li>En un cable de 48 hilos, la fibra 17 está en el tubo 2 (naranja) y es la fibra 5 de ese tubo (gris).</li>
+                  <li>Las construcciones cambian entre fabricantes: antes de empalmar se consultan la ficha técnica y la marcación del cable.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p12" aria-expanded="false" aria-controls="p12">
+              <span class="paso-num">12</span> Aplicación en campo
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p12" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El técnico identifica primero el tubo y luego el hilo, por su color y su posición en la secuencia.</li>
+                  <li>Verifica la continuidad del hilo antes de intervenirlo y lo prepara para el empalme sin forzar curvas.</li>
+                  <li>Las pruebas se hacen en las ventanas del servicio (1310, 1490 o 1550 nm), porque la atenuación cambia con la longitud de onda.</li>
+                  <li>Un hilo mal identificado corta el servicio de otro cliente. Una curva forzada o un conector sucio agregan pérdidas que el presupuesto no tenía.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aviso-validar mt-4">
+          <p class="m-0"><b>Antes de abrir una caja o un cierre por una lectura extraña,</b> se verifica en este orden: la configuración
+          del equipo (longitud de onda y referencia), la limpieza y el estado de los conectores, la identificación de la fibra y la
+          comparación entre 1310 y 1550 nm. La mayoría de las lecturas malas se resuelven en los dos primeros pasos.</p>
+        </div>
+      </section>
+
+      <section class="bloque" id="claves">
+        <h2>Seis claves técnicas</h2>
+        <p>
+          Cálculos y criterios que el video no desarrolla: ángulo crítico, lectura del cable, unidades, longitudes de onda,
+          presupuesto óptico y ubicación de una fibra. El tema completo está en las dos guías de la sección de descargas.
+        </p>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">1</span><div><small>Fundamento</small><h3>Por qué una curva o un empalme desalineado pierden luz</h3></div></header>
+          <p>El índice de refracción indica cuánto más lenta va la luz en un material que en el vacío (n = c ÷ v). La luz queda atrapada si choca con el borde por encima del <b>ángulo crítico θc = arcsen (n₂ ÷ n₁)</b>, medido desde la perpendicular al borde. Para eso debe entrar dentro de un cono, cuya abertura mide la <b>apertura numérica AN = √(n₁² − n₂²) = sen θa</b>.</p><figure class="figura figura-angosta"><img src="../img/fundamentos/cono-aceptacion.webp" width="1234" height="1040" loading="lazy" alt="Esquema de una fibra: el núcleo de índice n1 rodeado por el revestimiento de índice n2, un rayo que entra dentro del cono de aceptación y rebota en zigzag, un rayo fuera del cono que se escapa y una fibra con una curva cerrada por donde sale la luz"><figcaption>La luz que entra dentro del cono queda confinada; en una curva muy cerrada cambia el ángulo contra el borde y parte de la luz sale.</figcaption></figure><div class="ejemplo"><b>Ejemplo · n₁ = 1,468 y n₂ = 1,463</b><p class="m-0">θc = arcsen (1,463 ÷ 1,468) = arcsen 0,99659 ≈ 85,3°: respecto al eje, el rayo puede inclinarse como máximo unos 4,7°. AN = √(2,15502 − 2,14037) ≈ 0,121 y θa = arcsen 0,121 ≈ 7,0°: la luz debe entrar dentro de unos 7° a cada lado del eje.</p><p class="ejemplo-nota">Índices supuestos para practicar.</p></div>
+          <p class="clave-regla"><b>En campo:</b> las pérdidas por curvatura, por desalineación en el empalme y por suciedad en el conector tienen la misma causa: la luz sale del cono o deja de cumplir la reflexión interna total. Por eso el cable se maneja con radios amplios y las caras de la fibra se cortan, limpian y alinean con cuidado.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">2</span><div><small>Lectura</small><h3>La marcación dice qué fibra se tiene en las manos</h3></div></header>
+          <div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:18%">Se lee</th><th scope="col" style="width:34%">Significa</th><th scope="col">Por qué importa</th></tr></thead><tbody>
+<tr><td><b>ADSS</b></td><td>Cable autosoportado totalmente dieléctrico</td><td>Sin metal: define herrajes y forma de instalación.</td></tr>
+<tr><td><b>48FO</b></td><td>48 fibras ópticas</td><td>Cuántas fibras hay que identificar y organizar en la bandeja.</td></tr>
+<tr><td><b>G.652D</b></td><td>Fibra monomodo, subcategoría D de la UIT-T G.652</td><td>Define el programa de la fusionadora y las longitudes de onda de medición.</td></tr>
+<tr><td><b>2885 m</b></td><td>Marca de longitud del cable</td><td>Restando dos marcas se sabe cuánto cable se tendió o queda en reserva.</td></tr>
+</tbody></table></div><p class="texto-secundario" style="font-size:.875rem">Marcación del cable de una troncal de NPE. Como referencia, la ficha de una fibra G.652.D comercial (Prysmian ESMF) declara revestimiento de 125,0 ± 1,0 µm, recubrimiento de 245 ± 10 µm y atenuación en cable de ≤ 0,36 dB/km a 1310 nm y ≤ 0,22 dB/km a 1550 nm.</p><div class="ejemplo"><b>Ejemplo · metraje</b><p class="m-0">Al inicio del tramo se lee 2885 m y al final 2412 m: 2885 − 2412 = 473 m de cable tendido.</p><p class="ejemplo-nota">Marca final supuesta para practicar.</p></div>
+          <p class="clave-regla"><b>En campo:</b> el revestimiento (vidrio de 125 µm) nunca se retira; el recubrimiento (plástico de color, de unos 245 a 250 µm) se retira con la peladora. Si un cable no tiene la marcación legible, no se empalma hasta identificarlo con los planos, el inventario de la red o el supervisor.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">3</span><div><small>Unidades</small><h3>dBm, dB y dB/km no son lo mismo</h3></div></header>
+          <p>El <b>dBm</b> es potencia absoluta (0 dBm = 1 mW; P en mW = 10^(dBm ÷ 10)); el <b>dB</b> es una pérdida o diferencia entre dos potencias; el <b>dB/km</b> es el coeficiente de atenuación de la fibra. Cada 3 dB de pérdida llega la mitad de la luz y cada 10 dB, la décima parte.</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:20%">Pérdida</th><th scope="col" style="width:20%">Llega</th><th scope="col">Equivale a</th></tr></thead><tbody>
+<tr><td><b>0,1 dB</b></td><td>97,7 %</td><td>El orden de un empalme</td></tr>
+<tr><td><b>0,5 dB</b></td><td>89,1 %</td><td>El orden de una conexión deficiente</td></tr>
+<tr><td><b>1 dB</b></td><td>79,4 %</td><td>Se pierde una quinta parte</td></tr>
+<tr><td><b>3 dB</b></td><td>50,1 %</td><td>Llega la mitad</td></tr>
+<tr><td><b>10 dB</b></td><td>10 %</td><td>Llega la décima parte</td></tr>
+<tr><td><b>20 dB</b></td><td>1 %</td><td>Llega la centésima parte</td></tr>
+</tbody></table></div><p>Operaciones válidas: dBm − dB da la potencia después de una pérdida (dBm); dBm − dBm da la pérdida entre dos puntos (dB); dB + dB suma pérdidas en serie. Sumar dBm + dBm no tiene significado físico.</p><div class="ejemplo"><b>Dato real · power meter de NPE en 1490 nm</b><p class="m-0">La pantalla marca −18,23 dBm y 15,03 µW: 10^(−18,23 ÷ 10) = 10^(−1,823) = 0,01503 mW = 15,03 µW. Son la misma potencia expresada en dos unidades.</p></div>
+          <p class="clave-regla"><b>En campo:</b> un reporte que dice «pérdida −18,23 dBm» está mal escrito: es la potencia recibida («potencia recibida −18,23 dBm en 1490 nm»). Una pérdida se reporta en dB y solo si se conoce la referencia o la potencia de salida.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">4</span><div><small>Longitud de onda</small><h3>La longitud de onda cambia la pérdida y lo que mide el equipo</h3></div></header>
+          <p>La dispersión de Rayleigh, la principal causa de atenuación, es proporcional a 1/λ⁴: de 1310 a 1550 nm baja a la mitad ((1310 ÷ 1550)⁴ ≈ 0,51) y de 850 a 1550 nm, a cerca de la undécima parte (≈ 0,09). Cerca de 1383 nm está el pico de absorción del agua y por encima de 1600 nm crece la absorción del vidrio; el mínimo queda alrededor de 1550 nm.</p><figure class="figura"><img src="../img/fundamentos/curva-atenuacion.webp" width="2186" height="890" loading="lazy" alt="Curva cualitativa de atenuación de una fibra de sílice entre 800 y 1650 nm: baja desde 850 nm por la dispersión de Rayleigh, pasa por 1310 nm, tiene un pico de agua cerca de 1383 nm, llega al mínimo en 1550 nm y sube por la absorción infrarroja; arriba se marcan las bandas O, E, S, C y L"><figcaption>Forma típica de la atenuación de una fibra de sílice. Esquema cualitativo, sin escala de dB.</figcaption></figure><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:24%">Longitud de onda</th><th scope="col" style="width:22%">Fibra</th><th scope="col">Uso</th></tr></thead><tbody>
+<tr><td><b>850 nm</b></td><td>Multimodo</td><td>Redes locales; 10 Gb y más con VCSEL</td></tr>
+<tr><td><b>1310 nm</b></td><td>Monomodo</td><td>Enlaces monomodo; subida en FTTH PON</td></tr>
+<tr><td><b>1490 nm</b></td><td>Monomodo</td><td>Bajada en FTTH PON</td></tr>
+<tr><td><b>1550 nm</b></td><td>Monomodo</td><td>Larga distancia; video en PON con video</td></tr>
+</tbody></table></div><p>Con mayor longitud de onda la luz va menos confinada: 1550 nm tiene menos atenuación propia pero es más sensible a la curvatura que 1310 nm.</p>
+          <p class="clave-regla"><b>En campo:</b> el power meter se configura en la longitud de onda del servicio, porque se calibra para cada una. Los tramos se miden en 1310 y 1550 nm y se comparan: si 1550 nm pierde claramente más que 1310 nm, lo más probable es una curva, un pellizco o una microcurvatura.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">5</span><div><small>Presupuesto</small><h3>Cuánto debería perder un tramo antes de medirlo</h3></div></header>
+          <p>La pérdida esperada de un enlace es la suma de la fibra, las conexiones y los empalmes. Para un presupuesto preliminar se usan valores típicos de la FOA: fibra monomodo de 0,4 dB/km a 1310 nm y 0,3 dB/km a 1550 nm (iguales al máximo de cable de la G.652.D) y 0,3 dB por par de conectores. El empalme por fusión suele quedar por debajo de 0,05 dB; aquí se toman 0,1 dB como valor de diseño conservador.</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:30%">Elemento</th><th scope="col">A 1310 nm</th><th scope="col">A 1550 nm</th></tr></thead><tbody>
+<tr><td><b>Fibra · 12 km</b></td><td>12 × 0,4 = 4,8 dB</td><td>12 × 0,3 = 3,6 dB</td></tr>
+<tr><td><b>2 conexiones</b></td><td>2 × 0,3 = 0,6 dB</td><td>0,6 dB</td></tr>
+<tr><td><b>6 empalmes</b></td><td>6 × 0,1 = 0,6 dB</td><td>0,6 dB</td></tr>
+<tr><td><b>Pérdida esperada</b></td><td><b>6,0 dB</b></td><td><b>4,8 dB</b></td></tr>
+</tbody></table></div><div class="ejemplo"><b>Ejemplo · margen y comparación con la medición</b><p class="m-0">Con un transmisor de 0 dBm y un receptor que necesita −24 dBm hay 24 dB disponibles: margen a 1310 nm = 24 − 6,0 = 18,0 dB (la FOA recomienda en general más de 3 dB). Si se miden 6,3 dB, el tramo está dentro de lo esperado más la incertidumbre (± 0,2 a 0,5 dB). Si se miden 9 dB, sobran 3 dB: hay un evento que el diseño no tenía.</p><p class="ejemplo-nota">Tramo, potencias y medición supuestos para practicar. Los valores reales salen de la ficha de cada equipo y del diseño.</p></div>
+          <p class="clave-regla"><b>En campo:</b> cada longitud de onda usa su propio coeficiente. Con el método de 1 cable, después de fijar la referencia el cable se desconecta solo del medidor: si se retira de la fuente, la referencia deja de valer. El método usado se registra con la medición.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">6</span><div><small>Identificación</small><h3>Cómo ubicar una fibra por tubo y color</h3></div></header>
+          <p>Secuencia de 12 colores de la TIA-598 para fibras y tubos. En un cable de 48 hilos con 4 tubos de 12, el tubo también sigue la secuencia: tubo 1 azul, tubo 2 naranja, tubo 3 verde, tubo 4 café.</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:16%">Posición</th><th scope="col" style="width:30%">Color</th><th scope="col">Fibras de ese color en un cable de 48</th></tr></thead><tbody>
+<tr><td><b>1</b></td><td><span class="hilo" style="background:#1F5FBF" aria-hidden="true"></span>Azul</td><td>1, 13, 25, 37</td></tr>
+<tr><td><b>2</b></td><td><span class="hilo" style="background:#F08A24" aria-hidden="true"></span>Naranja</td><td>2, 14, 26, 38</td></tr>
+<tr><td><b>3</b></td><td><span class="hilo" style="background:#2E9E44" aria-hidden="true"></span>Verde</td><td>3, 15, 27, 39</td></tr>
+<tr><td><b>4</b></td><td><span class="hilo" style="background:#7A4B2A" aria-hidden="true"></span>Café</td><td>4, 16, 28, 40</td></tr>
+<tr><td><b>5</b></td><td><span class="hilo" style="background:#8A8F94" aria-hidden="true"></span>Gris</td><td>5, 17, 29, 41</td></tr>
+<tr><td><b>6</b></td><td><span class="hilo" style="background:#FFFFFF" aria-hidden="true"></span>Blanco</td><td>6, 18, 30, 42</td></tr>
+<tr><td><b>7</b></td><td><span class="hilo" style="background:#D22B2B" aria-hidden="true"></span>Rojo</td><td>7, 19, 31, 43</td></tr>
+<tr><td><b>8</b></td><td><span class="hilo" style="background:#15171A" aria-hidden="true"></span>Negro</td><td>8, 20, 32, 44</td></tr>
+<tr><td><b>9</b></td><td><span class="hilo" style="background:#F2D21B" aria-hidden="true"></span>Amarillo</td><td>9, 21, 33, 45</td></tr>
+<tr><td><b>10</b></td><td><span class="hilo" style="background:#7D3FB2" aria-hidden="true"></span>Violeta</td><td>10, 22, 34, 46</td></tr>
+<tr><td><b>11</b></td><td><span class="hilo" style="background:#F29BC0" aria-hidden="true"></span>Rosa</td><td>11, 23, 35, 47</td></tr>
+<tr><td><b>12</b></td><td><span class="hilo" style="background:#2FC6C6" aria-hidden="true"></span>Aqua</td><td>12, 24, 36, 48</td></tr>
+</tbody></table></div><p><b>Tubo = n ÷ 12, redondeado hacia arriba · posición = n − 12 × (tubo − 1).</b> Cuando hay más de 12 tubos o de 12 fibras por tubo, las posiciones 13 a 24 repiten los colores con una raya negra, y el negro lleva raya amarilla.</p><div class="ejemplo"><b>Ejemplo · fibra 45</b><p class="m-0">45 ÷ 12 = 3,75, así que va en el tubo 4 (café); 45 − 36 = 9, posición 9 (amarillo).</p></div>
+          <p class="clave-regla"><b>En campo:</b> el cálculo vale solo si la ficha técnica confirma la construcción (número de tubos y fibras por tubo); algunos fabricantes marcan los grupos de otra forma. Antes de cortar se verifica la continuidad del hilo: una fibra mal identificada corta el servicio de otro cliente.</p>
+        </article>
+      </section>
+
+      <section class="bloque" id="riesgos">
+        <h2>Riesgos y controles</h2>
+        <p>Riesgos para la persona y para la red al manipular, empalmar o medir fibra.</p>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos align-middle">
+            <thead>
+              <tr><th scope="col" style="width:30%">Peligro</th><th scope="col" style="width:12%">Severidad</th><th scope="col">Control</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Luz infrarroja invisible</b></td><td><span class="sev sev-alta">Alta</span></td><td>La luz de estas redes no se ve: que una fibra parezca apagada no significa que no tenga potencia. Nunca mirar el extremo de una fibra ni un conector; verificar primero con el power meter.</td></tr>
+              <tr><td><b>Residuos de fibra</b></td><td><span class="sev sev-alta">Alta</span></td><td>Gafas de seguridad con protección lateral y recipiente marcado para los residuos, que pueden clavarse en la piel.</td></tr>
+              <tr><td><b>Corte del servicio de otro cliente</b></td><td><span class="sev sev-alta">Alta</span></td><td>Ubicar tubo y fibra contra el plano y el registro de la caja, y verificar la continuidad antes de cortar o empalmar.</td></tr>
+              <tr><td><b>Mezcla de fibras de distinto tipo</b></td><td><span class="sev sev-media">Media</span></td><td>Leer la marcación de ambos cables y sus fichas antes de empalmar. Si un cable no se puede identificar, escalar al supervisor.</td></tr>
+              <tr><td><b>Curvas forzadas y amarres que presionan</b></td><td><span class="sev sev-media">Media</span></td><td>Respetar el radio mínimo del fabricante en bandejas y entradas de caja; amarres sin presionar los tubos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="diagnostico">
+        <h2>Diagnóstico de mediciones</h2>
+        <p>
+          Lo que muestra el equipo, su causa probable y qué hacer. Muchas lecturas extrañas no son fallas de la red sino del procedimiento de medición.
+        </p>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos tabla-diagnostico">
+            <thead>
+              <tr><th scope="col" style="width:38%">Señal</th><th scope="col" style="width:12%">Gravedad</th><th scope="col">Qué hacer</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Lectura muy baja o sin señal</b><small class="d-block mt-1">Longitud de onda mal configurada, conector sucio, fibra equivocada, curva en el cordón o corte.</small></td><td><span class="sev sev-media">Media</span></td><td>Revisar la configuración; luego limpiar e inspeccionar el conector, confirmar tubo y fibra, y por último la continuidad.</td></tr>
+              <tr><td><b>Pérdida en 1550 nm claramente mayor que en 1310 nm</b><small class="d-block mt-1">Curva cerrada, pellizco o microcurvatura.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Revisar bandejas, entradas de caja, amarres y radios de guarda.</td></tr>
+              <tr><td><b>Pérdida alta y parecida en ambas longitudes de onda</b><small class="d-block mt-1">Conector sucio o dañado, o empalme defectuoso.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Inspeccionar y limpiar los conectores; revisar los empalmes con OTDR.</td></tr>
+              <tr><td><b>Pérdida muy alta entre dos tramos</b><small class="d-block mt-1">Mezcla de fibra multimodo y monomodo.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Verificar la marcación de ambos cables y sus fichas técnicas.</td></tr>
+              <tr><td><b>La lectura cambia al mover el cable o la bandeja</b><small class="d-block mt-1">Fibra presionada o conector flojo.</small></td><td><span class="sev sev-media">Media</span></td><td>Reacomodar la fibra sin forzarla y asegurar el conector.</td></tr>
+              <tr><td><b>Pérdida medida menor que cero</b><small class="d-block mt-1">Referencia mal tomada o cable de referencia retirado de la fuente.</small></td><td><span class="sev sev-media">Media</span></td><td>Repetir la referencia con conectores limpios.</td></tr>
+              <tr><td><b>Distancias del OTDR que no coinciden</b><small class="d-block mt-1">Índice de grupo mal configurado o reservas de cable no consideradas.</small></td><td><span class="sev sev-media">Media</span></td><td>Configurar el índice de la ficha y sumar las reservas del diseño.</td></tr>
+              <tr><td><b>Resultados distintos en cada intento</b><small class="d-block mt-1">Conectores sucios o fuente sin estabilizar.</small></td><td><span class="sev sev-baja">Baja</span></td><td>Limpiar, inspeccionar y esperar a que la fuente se estabilice.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="galeria">
+        <h2>Galería de campo</h2>
+        <p>Fotos de obras de NPE en el Putumayo relacionadas con los temas del módulo. Haga clic en una foto para verla en tamaño completo.</p>
+        <div class="row g-3">
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/cable-adss-sibundoy.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/cable-adss-sibundoy.webp" alt="Mano con guante sosteniendo el extremo del cable, con la marcación ADSS 48FO G.652D y el metraje en la chaqueta" loading="lazy" width="1200" height="1216">
+              </a>
+              <figcaption>Marcación del cable: ADSS 48 FO G.652D · Troncal Sibundoy–Santiago<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/power-meter-1490.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/power-meter-1490.webp" alt="Medidor de potencia óptica conectado a una caja con un cordón amarillo, marcando 1490 nm, −18,23 dBm y 15,03 µW" loading="lazy" width="1200" height="1104">
+              </a>
+              <figcaption>Potencia recibida en una caja: −18,23 dBm en 1490 nm<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/bandeja-rotulada-sibundoy.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/bandeja-rotulada-sibundoy.webp" alt="Bandeja de empalme con las posiciones 01 a 24 rotuladas con los colores de la secuencia TIA-598" loading="lazy" width="1280" height="552">
+              </a>
+              <figcaption>Bandeja rotulada 01 a 24 según la TIA-598 · Sibundoy<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/adaptadores-nap.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/adaptadores-nap.webp" alt="Caja NAP abierta con la bandeja y los adaptadores SC/APC verdes en los puertos de distribución" loading="lazy" width="720" height="952">
+              </a>
+              <figcaption>Adaptadores SC/APC en una caja NAP<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/empalme-san-francisco.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/empalme-san-francisco.webp" alt="Técnico de NPE con sombrero prepara un empalme por fusión junto a la caja de herramientas abierta" loading="lazy" width="1600" height="1392">
+              </a>
+              <figcaption>Preparación de un empalme por fusión · San Francisco<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="bloque" id="descargas">
+        <h2>Descargas</h2>
+        <div class="row g-3">
+          <div class="col-md-6"><a class="descarga" href="../docs/guia-fundamentos-transmision-optica.pdf" download><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i><b>Guía · Fundamentos de transmisión óptica</b><small>PDF · 13 páginas · 1,2 MB</small><span>Descargar <i class="bi bi-download" aria-hidden="true"></i></span></a></div>
+          <div class="col-md-6"><a class="descarga" href="../docs/guia-ventanas-atenuacion-colores.pdf" download><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i><b>Guía · Ventanas, atenuación y código de colores</b><small>PDF · 13 páginas · 2,3 MB</small><span>Descargar <i class="bi bi-download" aria-hidden="true"></i></span></a></div>
+          <div class="col-md-6"><a class="descarga" href="../docs/guia-fundamentos-transmision-optica.pdf#page=11" target="_blank" rel="noopener"><i class="bi bi-list-check" aria-hidden="true"></i><b>Lista antes de empalmar o medir</b><small>Formato imprimible · página 11 de la guía de transmisión</small><span>Abrir <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></span></a></div>
+          <div class="col-md-6"><a class="descarga" href="../docs/guia-ventanas-atenuacion-colores.pdf#page=11" target="_blank" rel="noopener"><i class="bi bi-clipboard-data" aria-hidden="true"></i><b>Formato de identificación y medición</b><small>Formato imprimible · página 11 de la guía de ventanas</small><span>Abrir <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></span></a></div>
+        </div>
+      </section>
+
+      <section class="bloque" id="evaluacion">
+        <h2>Autoevaluación</h2>
+        <p>Una pregunta por cada clave técnica; cuatro son casos de campo. Respóndala y luego ábrala para comprobar.</p>
+        <div class="preguntas">
+          <details class="pregunta"><summary><span>1</span>Para que haya reflexión interna total, ¿cómo debe ser el índice del núcleo respecto al del revestimiento? ¿Por qué una curva cerrada hace perder luz?</summary><p>Mayor. En una curva cerrada cambia el ángulo con que la luz llega al borde, y parte de ella queda por debajo del ángulo crítico y sale.</p></details>
+          <details class="pregunta"><summary><span>2</span>Hay que empalmar un cable nuevo marcado «G.652D» con uno existente que tiene la marcación borrada. ¿Se empalma igual?</summary><p>No sin identificar el cable existente. Mezclar monomodo y multimodo produce pérdidas grandes y el programa de la fusionadora depende del tipo de fibra. Se consultan los planos o el inventario de la red, o se escala al supervisor.</p></details>
+          <details class="pregunta"><summary><span>3</span>El reporte de una caja dice «pérdida −18,23 dBm». ¿Está bien escrito?</summary><p>No. Un valor en dBm es una potencia recibida: «potencia recibida −18,23 dBm en 1490 nm» (15,03 µW). La pérdida se expresa en dB y requiere una referencia o la potencia de salida.</p></details>
+          <details class="pregunta"><summary><span>4</span>En una caja FTTH el power meter marca mucho menos que en las cajas vecinas. Está configurado en 1310 nm. ¿La caja está dañada?</summary><p>Todavía no se puede concluir. La bajada en FTTH viaja en 1490 nm: se configura el equipo en esa longitud de onda y se repite la medición. Si sigue baja, se limpia e inspecciona el conector y se revisa el recorrido del cordón antes de abrir la caja.</p></details>
+          <details class="pregunta"><summary><span>5</span>Un tramo de 8 km mide 3,9 dB a 1310 nm y 5,6 dB a 1550 nm. Con 1,2 dB supuestos para conexiones y empalmes, ¿se rechaza la fibra?</summary><p>No de inmediato. Se esperaban 3,2 + 1,2 = 4,4 dB a 1310 nm y 2,4 + 1,2 = 3,6 dB a 1550 nm. A 1310 nm el resultado es aceptable; a 1550 nm sobran 2 dB y la pérdida supera la de 1310 nm, señal de una curva o un esfuerzo sobre la fibra. Se revisan bandejas y entradas de caja antes de pensar en cambiar el cable.</p></details>
+          <details class="pregunta"><summary><span>6</span>La orden de trabajo dice fibra 30 en un cable de 48 hilos con 4 tubos de 12. ¿Qué tubo y qué color?</summary><p>Tubo 3 (verde), posición 6 (blanco): 30 ÷ 12 = 2,5, se redondea a 3; 30 − 24 = 6. Antes de cortar se verifica la continuidad.</p></details>
+        </div>
+      </section>
+
+      <nav class="nav-modulo" aria-label="Módulos de la línea">
+        <a href="../formacion.html?linea=B">
+          <small><i class="bi bi-arrow-left" aria-hidden="true"></i> Línea B</small>
+          <b>Telecomunicaciones y F.O.</b>
+        </a>
+        <a href="redes-troncales.html">
+          <small>Siguiente <i class="bi bi-arrow-right" aria-hidden="true"></i></small>
+          <b>Redes troncales de telecomunicaciones</b>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="pie">
+  <div class="marco pie-grid">
+    <div class="pie-marca">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+        <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+      </a>
+      <p>Ingenieros contratistas y consultores en energía y telecomunicaciones.</p>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Formación</h2>
+      <ul>
+        <li><a href="../formacion.html?linea=A">Infraestructura eléctrica</a></li>
+        <li><a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a></li>
+        <li><a href="../formacion.html?linea=C">Seguridad y SST</a></li>
+        <li><a href="../formacion.html?linea=D">Herramientas y materiales</a></li>
+      </ul>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a class="enlace-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+        <li><a href="mailto:gerencia@npe.com.co">gerencia@npe.com.co</a></li>
+        <li><a href="mailto:talentohumano@npe.com.co">talentohumano@npe.com.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marco">
+    <div class="pie-base">
+      <span>&copy; <span data-anio></span> Net Plus Energy S.A.S. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+<button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../js/npe.js?v=20261110"></script>
+</body>
+</html>

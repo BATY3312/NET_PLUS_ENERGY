@@ -1,0 +1,78 @@
+# ============================================================
+#  NET PLUS ENERGY S.A.S — Configuración del servidor (Apache / cPanel)
+#  Subir este archivo a la carpeta raíz del sitio (public_html).
+# ============================================================
+
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+# ---------- HTTPS ----------
+# Quitar el "#" de las tres líneas siguientes SOLO cuando el certificado SSL
+# del dominio esté activo (en cPanel: "SSL/TLS Status" o "AutoSSL").
+# RewriteEngine On
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---------- Tipos de archivo ----------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+  AddType video/mp4 .mp4
+  AddType application/manifest+json .webmanifest
+  AddDefaultCharset utf-8
+  AddCharset utf-8 .css .js .svg .webmanifest .txt .xml
+</IfModule>
+
+# ---------- Compresión (texto; imágenes, fuentes y video ya vienen comprimidos) ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript image/svg+xml application/manifest+json
+</IfModule>
+
+# ---------- Caché del navegador ----------
+# CSS y JS se versionan con ?v=AAAAMMDD en el HTML: al cambiarlos, cambie ese número.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                          "access plus 1 week"
+  ExpiresByType text/html                 "access plus 0 seconds"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType text/javascript           "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 month"
+  ExpiresByType image/jpeg                "access plus 1 month"
+  ExpiresByType image/png                 "access plus 1 month"
+  ExpiresByType image/svg+xml             "access plus 1 month"
+  ExpiresByType video/mp4                 "access plus 1 month"
+  ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+
+# ---------- Cabeceras de seguridad ----------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; media-src 'self'; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+
+  # Activar SOLO cuando el sitio funcione siempre por HTTPS (ver arriba):
+  # Header always set Strict-Transport-Security "max-age=31536000"
+
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# ---------- Archivos que nunca deben servirse ----------
+<FilesMatch "(^\.|\.(md|py|json|bak|log|ps1)$)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+<Files "site.webmanifest">
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+</Files>

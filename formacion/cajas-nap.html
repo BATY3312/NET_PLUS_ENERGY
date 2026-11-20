@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instalación y configuración de cajas NAP | Centro de Formación NPE</title>
+<meta name="description" content="Instalación y configuración de cajas NAP en redes FTTH: lectura del unifilar, hilo asignado, conexión del splitter PLC, trazabilidad de salidas, pérdidas ópticas, presupuesto y verificación de la potencia.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Net Plus Energy S.A.S">
+<meta property="og:title" content="Instalación y configuración de cajas NAP | Centro de Formación NPE">
+<meta property="og:description" content="Instalación y configuración de cajas NAP en redes FTTH: lectura del unifilar, hilo asignado, conexión del splitter PLC, trazabilidad de salidas, pérdidas ópticas, presupuesto y verificación de la potencia.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="../img/logo-npe.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+<link href="../css/npe.css?v=20261110" rel="stylesheet">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra npe-nav">
+  <div class="marco barra-int">
+    <a class="marca" href="../index.html" aria-label="Net Plus Energy, inicio">
+      <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+      <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+    </a>
+    <button class="barra-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span>Menú</span><i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav class="collapse barra-nav" id="menuPrincipal" aria-label="Principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a class="activo" href="../formacion.html">Formación</a></li>
+      </ul>
+      <a class="boton boton-sm" href="../index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================= ENCABEZADO DEL MÓDULO ======================= -->
+<header class="mod-hero">
+  <div class="marco">
+    <nav class="migas" aria-label="Ruta">
+      <a href="../index.html">Inicio</a> /
+      <a href="../formacion.html">Centro de formación</a> /
+      <a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a> /
+      <span aria-current="page">Instalación y configuración de cajas NAP</span>
+    </nav>
+
+    <h1>Instalación y configuración de cajas NAP</h1>
+    <p class="entrada">
+      Configuración de una caja NAP en una red FTTH: lectura del plano unifilar, identificación del hilo asignado,
+      conexión del splitter, trazabilidad de las salidas y verificación de la potencia que llega a los usuarios.
+    </p>
+
+    <div class="mod-datos">
+      <div class="mod-dato"><small>Línea</small><b>B · Telecomunicaciones y F.O.</b></div>
+      <div class="mod-dato"><small>Módulo</small><b>B4</b></div>
+      <div class="mod-dato"><small>Nivel</small><b>Intermedio</b></div>
+      <div class="mod-dato"><small>Duración</small><b>50 min</b></div>
+      <div class="mod-dato"><small>Video</small><b>2 partes · 11:20</b></div>
+      <div class="mod-dato"><small>Actualizado</small><b>14 nov 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="container modulo-cuerpo">
+  <div class="row g-5">
+
+    <aside class="col-lg-3 order-lg-2">
+      <nav class="indice-lateral" aria-label="En este módulo">
+        <span class="indice-titulo">En este módulo</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#normativa">Referencias técnicas</a>
+        <a href="#video">Videos del procedimiento</a>
+        <a href="#procedimiento">Procedimiento</a>
+        <a href="#claves">Seis claves técnicas</a>
+        <a href="#riesgos">Riesgos y errores frecuentes</a>
+        <a href="#diagnostico">Diagnóstico de mediciones</a>
+        <a href="#galeria">Galería de campo</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#evaluacion">Autoevaluación</a>
+      </nav>
+    </aside>
+
+    <main class="col-lg-9 order-lg-1" id="contenido">
+
+      <div class="aviso-validar mb-5">
+        <p class="m-0"><b>Material de apoyo formativo.</b>
+        Los números de puerto, fibras, colores y códigos de caja de este módulo son ejemplos. En obra, cada asignación se toma
+        del unifilar y de la matriz de empalmes del proyecto, y los valores de aceptación, de las fichas de los equipos y del
+        diseño. No sustituye el criterio del ingeniero responsable.</p>
+      </div>
+
+      <section class="bloque" id="objetivos">
+        <h2>Objetivos de aprendizaje</h2>
+        <p>Al terminar este módulo, el técnico estará en capacidad de:</p>
+        <ul class="lista-check">
+          <li>Leer el plano unifilar y distinguir una caja NAP en sangría de una en punta.</li>
+          <li>Ubicar el hilo asignado con los cinco datos del diseño y confirmar que coincide en el unifilar y en la matriz de empalmes.</li>
+          <li>Reconocer los componentes de la caja NAP y el criterio de calidad de cada uno.</li>
+          <li>Explicar de dónde viene la pérdida de un splitter PLC y calcular la potencia esperada a la salida de la caja.</li>
+          <li>Diligenciar la tabla de trazabilidad de un splitter 1:8.</li>
+          <li>Evaluar la pérdida de un empalme e interpretar las lecturas de las salidas.</li>
+        </ul>
+        <p class="texto-secundario" style="font-size:.9375rem">Conocimientos previos: dB, dBm, código de colores TIA-598 y medición de pérdida,
+        del módulo <a href="fundamentos-fibra-optica.html">Fundamentos de fibra óptica</a>, y el procedimiento de
+        <a href="fusion-fibra-optica.html">fusión de fibra óptica</a>.</p>
+      </section>
+
+      <section class="bloque" id="normativa">
+        <h2>Referencias técnicas</h2>
+        <p>
+          La configuración de una caja NAP no la fija una ley colombiana: la definen el diseño del proyecto, las fichas de los componentes
+          y recomendaciones y normas técnicas internacionales.
+        </p>
+        <div>
+          <span class="chip-norma">UIT-T G.984.2 (08/2019) · GPON, capa física</span>
+          <span class="chip-norma">TIA-455-8 · Medición de empalmes con OTDR</span>
+          <span class="chip-norma">TIA-598-D · Código de colores</span>
+          <span class="chip-norma">FOA · Presupuesto de pérdida</span>
+          <span class="chip-norma">Fichas de splitters PLC del fabricante</span>
+        </div>
+        <p class="mt-3 texto-secundario" style="font-size:.9375rem">
+          La G.984.2 define las clases de presupuesto óptico de una red GPON; como referencia, la clase B+ admite hasta 28 dB de pérdida entre
+          OLT y ONT y la C+ hasta 32 dB, según los módulos ópticos instalados. La TIA-455-8 indica que la pérdida de un empalme medida con OTDR
+          se toma en ambos sentidos y se promedia.
+        </p>
+      </section>
+
+      <section class="bloque" id="video">
+        <h2>Videos del procedimiento</h2>
+        <p>
+          Serie <strong>Redes FTTH · Cajas NAP</strong>, producida por NPE, en dos partes con narración y subtítulos. La primera enseña a leer
+          el unifilar; la segunda recorre la caja por dentro: splitter, salidas, pérdidas y verificación. Cada capítulo lleva al tema
+          correspondiente del video.
+        </p>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 1</span>
+            <div>
+              <h3>Interpretación del unifilar y configuración de cajas NAP</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 5:01</span>
+                <span><i class="bi bi-diagram-3" aria-hidden="true"></i> Sangría y punta</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte1" data-yt="1DDVmJQqx_Y" data-titulo="Parte 1 · Interpretación del unifilar y configuración de cajas NAP"
+               href="https://www.youtube.com/watch?v=1DDVmJQqx_Y" target="_blank" rel="noopener">
+              <img src="../img/poster-nap-p1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 1 · Interpretación del unifilar y configuración de cajas NAP</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte1">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> Primero, el plano</button>
+            <button type="button" class="capitulo" data-t="21"><span>0:21</span> 1 · La red FTTH y la caja NAP</button>
+            <button type="button" class="capitulo" data-t="58"><span>0:58</span> 2 · Cómo leer el unifilar</button>
+            <button type="button" class="capitulo" data-t="94"><span>1:34</span> 3 · El hilo asignado</button>
+            <button type="button" class="capitulo" data-t="120"><span>2:00</span> 4 · NAP en sangría</button>
+            <button type="button" class="capitulo" data-t="146"><span>2:26</span> 5 · NAP en punta</button>
+            <button type="button" class="capitulo" data-t="170"><span>2:50</span> 6 · Recorrido de la señal</button>
+            <button type="button" class="capitulo" data-t="202"><span>3:22</span> 7 · Identificación de hilos</button>
+            <button type="button" class="capitulo" data-t="240"><span>4:00</span> 8 · Ejemplo de un diseño</button>
+            <button type="button" class="capitulo" data-t="275"><span>4:35</span> 9 · Antes de fusionar</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>1 a 5</strong> del procedimiento.</span>
+            <a href="https://youtu.be/1DDVmJQqx_Y" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 2</span>
+            <div>
+              <h3>Configuración de cajas NAP, fusiones y pérdidas ópticas</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 6:20</span>
+                <span><i class="bi bi-calculator" aria-hidden="true"></i> Ejemplo de cálculo</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte2" data-yt="9rzoVUjHp0s" data-titulo="Parte 2 · Configuración de cajas NAP, fusiones y pérdidas ópticas"
+               href="https://www.youtube.com/watch?v=9rzoVUjHp0s" target="_blank" rel="noopener">
+              <img src="../img/poster-nap-p2.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 2 · Configuración de cajas NAP, fusiones y pérdidas ópticas</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte2">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> No es solo fusionar</button>
+            <button type="button" class="capitulo" data-t="20"><span>0:20</span> 1 · Preparación de la caja NAP</button>
+            <button type="button" class="capitulo" data-t="58"><span>0:58</span> 2 · Identificación de la fibra de alimentación</button>
+            <button type="button" class="capitulo" data-t="95"><span>1:35</span> 3 · Conexión del splitter</button>
+            <button type="button" class="capitulo" data-t="136"><span>2:16</span> 4 · Las ocho salidas</button>
+            <button type="button" class="capitulo" data-t="169"><span>2:49</span> 5 · Sangría y punta</button>
+            <button type="button" class="capitulo" data-t="198"><span>3:18</span> 6 · Pérdidas ópticas</button>
+            <button type="button" class="capitulo" data-t="251"><span>4:11</span> 7 · Ejemplo de cálculo</button>
+            <button type="button" class="capitulo" data-t="293"><span>4:53</span> 8 · Verificación de la red</button>
+            <button type="button" class="capitulo" data-t="320"><span>5:20</span> 9 · Errores que deben evitarse</button>
+            <button type="button" class="capitulo" data-t="345"><span>5:45</span> 10 · Caja configurada</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>6 a 12</strong> del procedimiento.</span>
+            <a href="https://youtu.be/9rzoVUjHp0s" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+      </section>
+
+      <section class="bloque" id="procedimiento">
+        <h2>Procedimiento paso a paso</h2>
+        <p>Secuencia de referencia para configurar una caja NAP, en el orden de los dos videos.</p>
+
+        <div class="accordion" id="pasos">
+          <h3 class="fase">Parte 1 · Lectura del unifilar</h3>
+
+          <div class="paso">
+            <button type="button" class="paso-btn" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1">
+              <span class="paso-num">1</span> La red FTTH y el diseño del proyecto
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p1" class="collapse show" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Una red FTTH lleva la fibra desde la central (OLT) por la red troncal hasta un cierre de empalme, donde se divide y sale por los cables de distribución. A lo largo de la distribución están las cajas NAP, el punto de acceso desde donde salen las acometidas hacia cada vivienda.</li>
+                  <li>Si una caja NAP queda mal configurada, todos los clientes de esa caja se quedan sin servicio.</li>
+                  <li>Por eso la instalación empieza con la revisión del diseño del proyecto: el <strong>plano de recorrido</strong> (por dónde va la red, postes y reservas), el <strong>unifilar</strong> (cables, hilos, cajas y splitters) y la <strong>matriz de empalmes</strong> (qué hilo se fusiona con qué).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2">
+              <span class="paso-num">2</span> Cómo leer el unifilar
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p2" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El unifilar es un plano simplificado: dibuja la red con líneas y símbolos.</li>
+                  <li>Se sigue el recorrido desde el cierre de origen hasta la última caja del ramal.</li>
+                  <li>Cada tramo de cable lleva un rótulo con su nombre, número de hilos y longitud. Las cajas NAP aparecen como recuadros con su código, y dentro de cada una el splitter con su relación (por ejemplo 1:8, una entrada y ocho salidas).</li>
+                  <li>Las líneas de colores representan los hilos, identificados con el código de colores del cable. En cada caja el plano indica qué hilo se fusiona al splitter y cuáles continúan.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3">
+              <span class="paso-num">3</span> El hilo asignado
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p3" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Antes de cualquier fusión se verifica en el diseño el hilo asignado.</li>
+                  <li>Un hilo no se escoge porque esté libre o porque quede más a la mano: puede estar reservado para otra caja, para otro splitter o para el crecimiento de la red.</li>
+                  <li>El hilo correcto es el que coincide en el unifilar y en la matriz de empalmes. Si los dos documentos no coinciden, se consulta con el responsable del diseño antes de fusionar.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p4" aria-expanded="false" aria-controls="p4">
+              <span class="paso-num">4</span> Caja en sangría y caja en punta
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p4" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li><strong>En sangría</strong>, el cable de distribución llega a la caja y continúa su recorrido hacia otras NAP. En la caja se toma solo el hilo asignado y se fusiona a la entrada del splitter; los demás hilos conservan su continuidad hacia las siguientes cajas, tal como indica el plano.</li>
+                  <li><strong>En punta</strong>, la caja es la última del ramal: el cable de distribución termina ahí y no hay continuidad hacia otra caja. El hilo de alimentación y las reservas también salen del plano.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p5" aria-expanded="false" aria-controls="p5">
+              <span class="paso-num">5</span> Recorrido de la señal e identificación de hilos
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p5" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La señal viaja por el hilo de alimentación, se une por fusión a la entrada del splitter, y el splitter la reparte entre sus salidas. Cada salida llega a un puerto de la caja y de cada puerto sale la acometida hacia un cliente.</li>
+                  <li>Repartir la señal reduce la potencia que llega a cada salida; esa pérdida ya está calculada en el diseño.</li>
+                  <li>En cada caja se identifican cuatro elementos: el hilo de alimentación, la entrada del splitter, las salidas del splitter y los hilos que continúan sin intervenirse.</li>
+                  <li>Con eso se arma la tabla de correspondencia: número de hilo, color, ubicación y destino. Evita cruces, errores de distribución y pérdidas de continuidad.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h3 class="fase">Parte 2 · Configuración de la caja</h3>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p6" aria-expanded="false" aria-controls="p6">
+              <span class="paso-num">6</span> Preparación de la caja NAP
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p6" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Por la entrada de cables llega el cable de distribución. Dentro se guarda una reserva de fibra, enrollada en el organizador, para poder trabajar y reparar sin tensionar los hilos.</li>
+                  <li>En la bandeja de empalmes se alojan las fusiones, cada una con su protector.</li>
+                  <li>El splitter recibe la señal por su fibra de entrada y la entrega por sus fibras de salida, que terminan en los adaptadores desde donde parten las acometidas.</li>
+                  <li>Todo queda organizado: fibras guiadas por sus canales, radios de curvatura amplios y empalmes protegidos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p7" aria-expanded="false" aria-controls="p7">
+              <span class="paso-num">7</span> Identificación de la fibra de alimentación
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p7" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Antes de fusionar se reúnen cinco datos del unifilar y la matriz de empalmes: el cable de distribución que llega a la caja, el tubo o grupo, el número y color del hilo, su destino y el puerto del splitter donde se va a conectar.</li>
+                  <li>Con esos datos se ubica físicamente el hilo: primero el tubo por su color, luego el hilo dentro del tubo. Se verifica antes de cortar.</li>
+                  <li>En obra, las asignaciones se toman siempre del plano del proyecto.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p8" aria-expanded="false" aria-controls="p8">
+              <span class="paso-num">8</span> Conexión del splitter
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p8" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El splitter PLC 1:8 tiene una entrada óptica y ocho salidas; en muchos modelos la entrada y las salidas vienen como pigtails, tramos de fibra listos para fusionar.</li>
+                  <li>El hilo de alimentación se fusiona con el pigtail de entrada del splitter y la fusión queda protegida en la bandeja.</li>
+                  <li>Hay que distinguir tres pérdidas: la del empalme de entrada, la del splitter y las de los empalmes de salida. La pérdida del splitter no la produce la fusión: aunque el empalme sea muy bueno, el splitter sigue dividiendo la luz.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p9" aria-expanded="false" aria-controls="p9">
+              <span class="paso-num">9</span> Las ocho salidas y la trazabilidad
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p9" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Cada salida del splitter es un recorrido independiente. El unifilar indica qué salida alimenta cada caja o cada usuario.</li>
+                  <li>Se arma la tabla de trazabilidad: puerto del splitter, hilo de salida, color y destino. Cada fila sale del plano real del proyecto.</li>
+                  <li>Si dos salidas se intercambian, el servicio puede funcionar, pero la red ya no corresponde al diseño y cualquier falla futura se busca en el lugar equivocado.</li>
+                  <li>En sangría y en punta la organización es la misma: alimentación al splitter, salidas hacia sus destinos y cada fusión protegida y registrada.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p10" aria-expanded="false" aria-controls="p10">
+              <span class="paso-num">10</span> Pérdidas ópticas y cálculo
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p10" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La potencia óptica se mide en dBm, y cada elemento del enlace le resta una pérdida en dB: el empalme de alimentación, el splitter, los empalmes de distribución, los conectores, la longitud del cable y las demás conexiones.</li>
+                  <li>Como referencia, un splitter PLC 1:8 tiene entre 10,2 y 10,7 dB, y uno 1:16, entre 13,5 y 13,8 dB. El valor exacto está en la ficha del fabricante.</li>
+                  <li>Una fusión monomodo tiene una pérdida de referencia de 0,1 a 0,2 dB, pero lo que cuenta es el resultado real de cada empalme.</li>
+                  <li>Ejemplo: −6 dBm de entrada − 0,1 dB − 10,5 dB − 0,1 dB = −16,7 dBm. Ese resultado solo incluye tres elementos: faltan la fibra, los conectores y la acometida hasta el usuario.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p11" aria-expanded="false" aria-controls="p11">
+              <span class="paso-num">11</span> Verificación de la red
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p11" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Después de configurar la caja se verifica con un medidor de potencia óptica en los puntos que indica el procedimiento.</li>
+                  <li>La lectura se compara con el presupuesto calculado: si la diferencia es grande, hay un evento que el cálculo no tenía.</li>
+                  <li>También se compara con las especificaciones del equipo, el diseño del enlace y los límites de aceptación del proyecto. No existe una potencia de aprobación única para todas las redes: el criterio lo fija cada proyecto.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p12" aria-expanded="false" aria-controls="p12">
+              <span class="paso-num">12</span> Errores que se evitan y caja configurada
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p12" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Errores que más afectan una caja NAP: fusionar un hilo distinto al asignado, confundir la entrada del splitter con una salida, intercambiar salidas, no registrar colores y destinos, dejar fibras desorganizadas, exceder los radios de curvatura, no proteger los empalmes, no comprobar la potencia y confundir la pérdida del splitter con la de una fusión.</li>
+                  <li>Una caja bien configurada tiene las fibras ordenadas, los empalmes protegidos y cada salida en su lugar.</li>
+                  <li>Tres principios para entregarla: consultar siempre el plano unifilar, respetar la identificación de hilos, colores y puertos, y verificar las pérdidas y la potencia del enlace.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aviso-validar mt-4">
+          <p class="m-0"><b>Antes de cada fusión,</b> el técnico debe poder responder cuatro preguntas: ¿qué hilo estoy usando?, ¿de dónde viene?,
+          ¿hacia dónde va? y ¿qué elemento alimenta? Si falta una respuesta, todavía no se fusiona.</p>
+        </div>
+      </section>
+
+      <section class="bloque" id="claves">
+        <h2>Seis claves técnicas</h2>
+        <p>
+          Datos y criterios que el video no desarrolla: lectura del plano, criterios de la caja, pérdida del splitter, presupuesto,
+          trazabilidad y evaluación del empalme. El tema completo está en la <a href="../docs/guia-cajas-nap.pdf" download>guía técnica</a> (PDF).
+        </p>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">1</span><div><small>Diseño</small><h3>El unifilar dice qué hilo alimenta cada splitter</h3></div></header>
+          <p>En el unifilar cada caja muestra su configuración (sangría o punta), el hilo que alimenta su splitter y la relación del splitter. Los demás hilos del cable siguen como reserva o hacia otras cajas.</p><figure class="figura"><img src="../img/cajas-nap/unifilar-ejemplo.webp" width="1610" height="640" loading="lazy" alt="Unifilar de ejemplo: un cable de 24 hilos sale del CIERRE-01 y recorre tres cajas. NAP-01 en sangría toma el hilo 1 azul, NAP-02 en sangría el hilo 2 naranja y NAP-03 en punta el hilo 3 verde; cada una con un splitter 1:8 para 8 clientes y tramos de 180 m entre cajas"><figcaption>Ejemplo del video: cable de 24 hilos y tres cajas con splitter 1:8. Números y colores ilustrativos.</figcaption></figure><div class="ejemplo"><b>Ejemplo · lectura del plano</b><p class="m-0">NAP-01 y NAP-02 están en sangría y toman los hilos 1 (azul) y 2 (naranja); NAP-03 está en punta, al final del ramal, y toma el hilo 3 (verde). Los hilos 4 a 24 siguen como reserva. Cada splitter tiene un hilo definido y cada salida, un cliente definido.</p></div>
+          <p class="clave-regla"><b>En campo:</b> antes de cada fusión el técnico debe poder responder cuatro preguntas: qué hilo está usando, de dónde viene, hacia dónde va y qué elemento alimenta. Si falta una respuesta, todavía no se fusiona. Si el unifilar y la matriz de empalmes no coinciden, se consulta con el responsable del diseño.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">2</span><div><small>Caja NAP</small><h3>Cada componente tiene un criterio de calidad</h3></div></header>
+          <div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:24%">Componente</th><th scope="col" style="width:30%">Función</th><th scope="col">Criterio de calidad</th></tr></thead><tbody>
+<tr><td><b>Entrada del cable</b></td><td>Fija el cable y sella el paso.</td><td>Cable sujeto por su elemento de tracción; sello completo; sin cubierta cortada dentro del paso.</td></tr>
+<tr><td><b>Reserva de fibra</b></td><td>Deja longitud para reparar sin tensionar.</td><td>Enrollada en el organizador, sin cruces ni cambios bruscos de dirección.</td></tr>
+<tr><td><b>Bandeja de empalmes</b></td><td>Aloja y protege las fusiones.</td><td>Cada fusión con su protector, en su ranura, con radios amplios a la entrada y la salida.</td></tr>
+<tr><td><b>Splitter</b></td><td>Divide la señal de una entrada entre varias salidas.</td><td>Fijado en su alojamiento; relación igual a la del diseño.</td></tr>
+<tr><td><b>Entrada del splitter</b></td><td>Recibe la fibra de alimentación.</td><td>Identificada sin ambigüedad; nunca intercambiada con una salida.</td></tr>
+<tr><td><b>Salidas del splitter</b></td><td>Llevan cada fracción de la señal a un puerto.</td><td>Ordenadas por número; cada una con su destino registrado.</td></tr>
+<tr><td><b>Puertos hacia los usuarios</b></td><td>Adaptadores donde se conectan las acometidas.</td><td>Rotulados; tapas guardapolvo en los puertos libres.</td></tr>
+</tbody></table></div>
+          <p class="clave-regla"><b>En campo:</b> el radio mínimo de curvatura lo fija el fabricante. Una curva más cerrada aumenta la pérdida, sobre todo en las longitudes de onda largas, y puede no notarse hasta que la tapa presiona las fibras al cerrar: la potencia se verifica después de cerrar la caja.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">3</span><div><small>Splitter PLC</small><h3>La pérdida del splitter no es culpa de la fusión</h3></div></header>
+          <p>Un splitter PLC divide la potencia de una entrada entre N salidas. Su pérdida tiene dos partes: la <b>división ideal</b>, inevitable, que vale <b>10 × log10(N)</b>, y el <b>exceso</b> propio del componente. Cada vez que se duplican las salidas, la división ideal sube 3 dB.</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:20%">Splitter</th><th scope="col">División ideal</th><th scope="col">Ficha (máximo)</th><th scope="col">Exceso aproximado</th></tr></thead><tbody>
+<tr><td><b>1:2</b></td><td>3,0 dB</td><td>—</td><td>—</td></tr>
+<tr><td><b>1:4</b></td><td>6,0 dB</td><td>—</td><td>—</td></tr>
+<tr><td><b>1:8</b></td><td>9,0 dB</td><td>10,5 dB</td><td>1,5 dB</td></tr>
+<tr><td><b>1:16</b></td><td>12,0 dB</td><td>13,8 dB</td><td>1,8 dB</td></tr>
+<tr><td><b>1:32</b></td><td>15,1 dB</td><td>—</td><td>—</td></tr>
+</tbody></table></div><p class="texto-secundario" style="font-size:.875rem">Valores máximos de fichas de C-COR y Corning. La ficha también declara la uniformidad (diferencia máxima entre salidas, por ejemplo ≤ 0,8 dB en 1:8 y ≤ 1,0 dB en 1:16) y el rango de longitudes de onda (por ejemplo de 1260 a 1650 nm, que cubre 1310, 1490 y 1550 nm).</p>
+          <p class="clave-regla"><b>En campo:</b> una salida de un splitter 1:8 con 10,6 dB menos que la entrada no indica una fusión defectuosa; un empalme de entrada de 0,6 dB sí. La relación del splitter instalado se confirma en su etiqueta contra el diseño.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">4</span><div><small>Presupuesto</small><h3>Cuánta potencia debe llegar al usuario</h3></div></header>
+          <p>El presupuesto óptico suma la pérdida de cada elemento entre el punto de medición y el usuario.</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:46%">Elemento</th><th scope="col" style="width:20%">Pérdida</th><th scope="col">Potencia después</th></tr></thead><tbody>
+<tr><td><b>Fibra de alimentación (medida en campo)</b></td><td>—</td><td>−6,0 dBm</td></tr>
+<tr><td><b>Empalme de entrada</b></td><td>0,1 dB</td><td>−6,1 dBm</td></tr>
+<tr><td><b>Splitter PLC 1:8</b></td><td>10,5 dB</td><td>−16,6 dBm</td></tr>
+<tr><td><b>Empalme de salida</b></td><td>0,1 dB</td><td>−16,7 dBm</td></tr>
+<tr><td><b>Conexión en el adaptador de la caja</b></td><td>0,3 dB</td><td>−17,0 dBm</td></tr>
+<tr><td><b>Acometida de 200 m a 0,3 dB/km</b></td><td>0,06 dB</td><td>−17,06 dBm</td></tr>
+<tr><td><b>Conexión en la roseta del usuario</b></td><td>0,3 dB</td><td>−17,4 dBm</td></tr>
+</tbody></table></div><div class="ejemplo"><b>Lectura del resultado</b><p class="m-0">El splitter aporta 10,5 de los 11,4 dB que se pierden dentro y después de la caja, más del 90 %. Por eso instalar un 1:16 donde el diseño pide un 1:8 cambia el resultado en unos 3 dB, mucho más que cualquier empalme. Con dos niveles de 1:8 (cierre y NAP) se atienden 64 usuarios por puerto de OLT: la división ideal suma unos 18,1 dB y, con fichas de 10,5 dB, 21 dB; en una red GPON de clase B+ (hasta 28 dB) quedan unos 7 dB para fibra, empalmes, conectores y margen.</p><p class="ejemplo-nota">Potencia de entrada y pérdidas supuestas para practicar; en obra se usan la medición de campo y las fichas del proyecto.</p></div>
+          <p class="clave-regla"><b>En campo:</b> la potencia mínima en el usuario, la pérdida máxima por empalme y los márgenes los fija cada proyecto según sus equipos y su diseño. Ninguno de los valores de referencia es, por sí solo, un criterio de aceptación.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">5</span><div><small>Trazabilidad</small><h3>Cada salida con su fibra, su color y su destino</h3></div></header>
+          <p>La trazabilidad permite saber, para cada fibra de la caja, de dónde viene, a qué se conecta y a dónde va. Se construye antes de fusionar, con el unifilar y la matriz de empalmes, y se confirma después. Los cinco datos de la fibra de alimentación son: cable de distribución, tubo o grupo, número y color del hilo, destino (splitter de esta caja o continuidad) y puerto de entrada del splitter.</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:16%">Puerto</th><th scope="col" style="width:20%">Fibra de salida</th><th scope="col" style="width:24%">Color</th><th scope="col">Destino</th></tr></thead><tbody>
+<tr><td><b>S1</b></td><td>1</td><td><span class="hilo" style="background:#1F5FBF" aria-hidden="true"></span>Azul</td><td>Usuario · puerto 1</td></tr>
+<tr><td><b>S2</b></td><td>2</td><td><span class="hilo" style="background:#F08A24" aria-hidden="true"></span>Naranja</td><td>Usuario · puerto 2</td></tr>
+<tr><td><b>S3</b></td><td>3</td><td><span class="hilo" style="background:#2E9E44" aria-hidden="true"></span>Verde</td><td>Usuario · puerto 3</td></tr>
+<tr><td><b>S4</b></td><td>4</td><td><span class="hilo" style="background:#7A4B2A" aria-hidden="true"></span>Café</td><td>Usuario · puerto 4</td></tr>
+<tr><td><b>S5</b></td><td>5</td><td><span class="hilo" style="background:#8A8F94" aria-hidden="true"></span>Gris</td><td>Usuario · puerto 5</td></tr>
+<tr><td><b>S6</b></td><td>6</td><td><span class="hilo" style="background:#FFFFFF" aria-hidden="true"></span>Blanco</td><td>Usuario · puerto 6</td></tr>
+<tr><td><b>S7</b></td><td>7</td><td><span class="hilo" style="background:#D22B2B" aria-hidden="true"></span>Rojo</td><td>Usuario · puerto 7</td></tr>
+<tr><td><b>S8</b></td><td>8</td><td><span class="hilo" style="background:#15171A" aria-hidden="true"></span>Negro</td><td>Usuario · puerto 8</td></tr>
+</tbody></table></div><p class="texto-secundario" style="font-size:.875rem">Tabla de ejemplo. Cuando las salidas alimentan otras cajas, la columna Destino lleva el código de la caja que indica el unifilar.</p>
+          <p class="clave-regla"><b>En campo:</b> la entrada del splitter se rotula al desempacarlo, cada salida se conecta por número y se verifica contra la tabla, y el formato de configuración se diligencia en sitio. Dos salidas intercambiadas pueden dar servicio sin ninguna alarma, pero una desconexión programada puede afectar a otro usuario.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">6</span><div><small>Medición</small><h3>Cómo saber cuánto pierde un empalme</h3></div></header>
+          <div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:26%">Método</th><th scope="col" style="width:34%">Qué entrega</th><th scope="col">Uso correcto</th></tr></thead><tbody>
+<tr><td><b>Estimación de la fusionadora</b></td><td>Un valor calculado a partir de la imagen de las fibras alineadas.</td><td>Control inmediato: una estimación alta, burbujas o desalineación indican rehacer la fusión. No reemplaza la medición.</td></tr>
+<tr><td><b>OTDR en un solo sentido</b></td><td>Un escalón en la traza; puede exagerar la pérdida o mostrar una ganancia aparente.</td><td>Ubicar eventos. Si las fibras tienen distinto diámetro de campo modal, ese valor no es la pérdida real.</td></tr>
+<tr><td><b>OTDR en ambos sentidos, promediado</b></td><td>El promedio de las dos mediciones.</td><td>Valor para registro y aceptación (TIA-455-8).</td></tr>
+</tbody></table></div><div class="ejemplo"><b>Ejemplo · promedio bidireccional</b><p class="m-0">Sentido A→B: 0,28 dB. Sentido B→A: −0,08 dB (ganancia aparente). (0,28 + (−0,08)) ÷ 2 = 0,10 dB. Ninguna lectura individual es la pérdida del empalme; el promedio sí.</p><p class="ejemplo-nota">Lecturas supuestas para practicar.</p></div><p>Las salidas de un mismo splitter deben leer valores parecidos, con diferencias del orden de la uniformidad de la ficha. Una salida claramente más baja apunta a su empalme, su conector o una curva en su recorrido; todas las salidas igual de bajas apuntan al empalme de entrada o a la alimentación.</p>
+          <p class="clave-regla"><b>En campo:</b> un empalme no puede agregar potencia: una «ganancia» en el OTDR indica fibras con distinto diámetro de campo modal. Se mide desde el otro extremo y se promedia. Cada fusión se protege y se ubica en su ranura: un empalme sin protector puede pasar la medición y fallar después.</p>
+        </article>
+      </section>
+
+      <section class="bloque" id="riesgos">
+        <h2>Riesgos y errores frecuentes</h2>
+        <p>Riesgos para la persona y errores de configuración que afectan la red.</p>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos align-middle">
+            <thead>
+              <tr><th scope="col" style="width:30%">Riesgo o error</th><th scope="col" style="width:12%">Severidad</th><th scope="col">Consecuencia y control</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Luz infrarroja invisible</b></td><td><span class="sev sev-alta">Alta</span></td><td>Nunca mirar el extremo de una fibra ni un conector; verificar la potencia con el medidor. Gafas de seguridad.</td></tr>
+              <tr><td><b>Residuos de fibra</b></td><td><span class="sev sev-alta">Alta</span></td><td>Recipiente marcado para los residuos; no dejar fragmentos en la caja ni en el área de trabajo.</td></tr>
+              <tr><td><b>Fusionar un hilo distinto al asignado</b></td><td><span class="sev sev-alta">Alta</span></td><td>Servicio cortado en otra caja o fibra reservada ocupada. Se previene con los cinco datos y la continuidad verificada antes de cortar.</td></tr>
+              <tr><td><b>Confundir la entrada del splitter con una salida</b></td><td><span class="sev sev-alta">Alta</span></td><td>Señal no distribuida y usuarios sin servicio. Rotular la entrada al desempacar el splitter.</td></tr>
+              <tr><td><b>Intercambiar salidas</b></td><td><span class="sev sev-media">Media</span></td><td>El registro deja de corresponder a la red. Conectar por número y verificar contra la tabla.</td></tr>
+              <tr><td><b>Fibras desorganizadas o curvas cerradas</b></td><td><span class="sev sev-media">Media</span></td><td>Pérdidas por curvatura y fibras rotas al cerrar. Canales y retenedores; revisar antes de cerrar la tapa.</td></tr>
+              <tr><td><b>Empalmes sin protector</b></td><td><span class="sev sev-media">Media</span></td><td>Fallas posteriores por esfuerzo o humedad. Protector y ranura para cada fusión.</td></tr>
+              <tr><td><b>No registrar colores, destinos ni potencias</b></td><td><span class="sev sev-media">Media</span></td><td>Mantenimiento lento e intervenciones a ciegas. Formato de configuración diligenciado en sitio.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="diagnostico">
+        <h2>Diagnóstico de mediciones</h2>
+        <p>
+          Lo que muestran las mediciones de una caja, su causa probable y qué hacer. Se mide en la fibra de alimentación antes de fusionar,
+          en las salidas o puertos de la caja y en la roseta del usuario, en la longitud de onda de bajada del servicio.
+        </p>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos tabla-diagnostico">
+            <thead>
+              <tr><th scope="col" style="width:38%">Señal</th><th scope="col" style="width:12%">Gravedad</th><th scope="col">Qué hacer</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Usuarios de toda la caja sin servicio o con señal muy baja</b><small class="d-block mt-1">Fibra de alimentación conectada a una salida del splitter y no a su entrada.</small></td><td><span class="sev sev-critica">Crítica</span></td><td>Revisar la conexión contra el formato y fusionar la alimentación con la entrada del splitter.</td></tr>
+              <tr><td><b>Todas las salidas unos 3 dB por debajo de las cajas vecinas</b><small class="d-block mt-1">Splitter de otra relación (1:16 donde el diseño pide 1:8).</small></td><td><span class="sev sev-alta">Alta</span></td><td>Revisar la etiqueta del componente y reemplazarlo por el del diseño.</td></tr>
+              <tr><td><b>Todas las salidas igual de bajas</b><small class="d-block mt-1">Empalme de entrada o fibra de alimentación.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Medir la alimentación antes del splitter y revisar el empalme de entrada.</td></tr>
+              <tr><td><b>Una salida claramente más baja que las demás</b><small class="d-block mt-1">Su empalme, una curva en la bandeja o su conector.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Limpiar e inspeccionar el conector y revisar el recorrido antes de rehacer el empalme.</td></tr>
+              <tr><td><b>La potencia baja después de cerrar la tapa</b><small class="d-block mt-1">Fibras presionadas por la tapa o curva cerrada.</small></td><td><span class="sev sev-media">Media</span></td><td>Reabrir, reacomodar las fibras en sus canales y volver a medir.</td></tr>
+              <tr><td><b>El OTDR muestra una ganancia en un empalme</b><small class="d-block mt-1">Fibras con distinto diámetro de campo modal.</small></td><td><span class="sev sev-media">Media</span></td><td>Medir desde el otro extremo y promediar las dos lecturas.</td></tr>
+              <tr><td><b>Unos 10,8 dB entre la alimentación y una salida de un 1:8</b><small class="d-block mt-1">Pérdida normal del splitter (~10,5 dB) más los empalmes.</small></td><td><span class="sev sev-baja">Baja</span></td><td>No es una falla: la fusión no se rehace si el resultado coincide con el presupuesto.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="galeria">
+        <h2>Galería de campo</h2>
+        <p>Fotos de cajas y empalmes de NPE en el Putumayo. Haga clic en una foto para verla en tamaño completo.</p>
+        <div class="row g-3">
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/caja-nap-bandejas.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/caja-nap-bandejas.webp" alt="Caja de NPE abierta con las bandejas de empalme y la reserva de fibra enrollada en el organizador" loading="lazy" width="1200" height="1088">
+              </a>
+              <figcaption>Bandejas de empalme y reserva en el organizador<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/tubos-fibras-nap.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/tubos-fibras-nap.webp" alt="Caja abierta con tubos azules y fibras de colores entrando a la bandeja de empalme" loading="lazy" width="1152" height="944">
+              </a>
+              <figcaption>Tubos y fibras de colores: primero el tubo, después la fibra<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/adaptadores-nap.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/adaptadores-nap.webp" alt="Caja NAP abierta con la bandeja y los adaptadores SC/APC verdes en los puertos de distribución" loading="lazy" width="720" height="952">
+              </a>
+              <figcaption>Adaptadores SC/APC hacia las acometidas<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/empalme-san-francisco.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/empalme-san-francisco.webp" alt="Técnico de NPE con sombrero prepara un empalme por fusión junto a la caja de herramientas abierta" loading="lazy" width="1600" height="1392">
+              </a>
+              <figcaption>Preparación de un empalme por fusión · San Francisco<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/power-meter-1490.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/power-meter-1490.webp" alt="Medidor de potencia óptica conectado a una caja con un cordón amarillo, marcando 1490 nm, −18,23 dBm y 15,03 µW" loading="lazy" width="1200" height="1104">
+              </a>
+              <figcaption>Verificación: −18,23 dBm en 1490 nm, la bajada GPON<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="bloque" id="descargas">
+        <h2>Descargas</h2>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><a class="descarga" href="../docs/guia-cajas-nap.pdf" download><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i><b>Guía · Configuración de cajas NAP, fusiones y pérdidas</b><small>PDF · 13 páginas · 2,7 MB</small><span>Descargar <i class="bi bi-download" aria-hidden="true"></i></span></a></div>
+          <div class="col-md-6 col-lg-4"><a class="descarga" href="../docs/guia-cajas-nap.pdf#page=11" target="_blank" rel="noopener"><i class="bi bi-clipboard-data" aria-hidden="true"></i><b>Formato de configuración de caja NAP</b><small>Formato imprimible · página 11 de la guía</small><span>Abrir <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></span></a></div>
+        </div>
+      </section>
+
+      <section class="bloque" id="evaluacion">
+        <h2>Autoevaluación</h2>
+        <p>Una pregunta por cada clave técnica; cinco son casos de campo. Respóndala y luego ábrala para comprobar.</p>
+        <div class="preguntas">
+          <details class="pregunta"><summary><span>1</span>En la caja hay un hilo libre y a la mano, pero el unifilar asigna otro. ¿Se puede usar el que está libre?</summary><p>No. Puede estar reservado para otra caja, otro splitter o el crecimiento de la red. Se usa el hilo que coincide en el unifilar y en la matriz de empalmes; si los documentos no coinciden, se consulta antes de fusionar.</p></details>
+          <details class="pregunta"><summary><span>2</span>Las salidas leían bien con la caja abierta, pero dos bajan después de cerrar la tapa. ¿Qué pasó?</summary><p>La tapa está presionando fibras o hay una curva cerrada en su recorrido. Se reabre, se reacomodan las fibras en sus canales y se vuelve a medir.</p></details>
+          <details class="pregunta"><summary><span>3</span>Un auxiliar mide −6,0 dBm en la alimentación y −16,8 dBm en la salida S1 de un splitter 1:8, y propone rehacer la fusión de entrada porque «pierde 10 dB». ¿Se rehace?</summary><p>No. La diferencia es de 10,8 dB: el splitter aporta cerca de 10,5 dB y los empalmes de entrada y salida, unos 0,3 dB. El resultado es coherente con el presupuesto.</p></details>
+          <details class="pregunta"><summary><span>4</span>Todas las salidas de una caja leen unos 3 dB menos que las de las cajas vecinas, y la fusionadora estimó empalmes buenos. ¿Qué se revisa?</summary><p>La etiqueta del splitter: unos 3 dB parejos coinciden con duplicar la relación. Si es un 1:16 donde el diseño pide 1:8, se reemplaza por el del diseño.</p></details>
+          <details class="pregunta"><summary><span>5</span>Dos salidas quedaron intercambiadas y los dos usuarios tienen servicio. ¿Se deja así?</summary><p>No. El registro ya no corresponde a la red: una falla futura se buscaría en la salida equivocada y una desconexión programada podría afectar al otro usuario. Se conecta cada salida según la tabla.</p></details>
+          <details class="pregunta"><summary><span>6</span>La traza del OTDR desde la central muestra una ganancia de 0,12 dB en un empalme de la caja. ¿Qué se registra?</summary><p>Nada todavía: un empalme no agrega potencia. La lectura indica fibras con distinto diámetro de campo modal. Se mide desde el otro extremo y se registra el promedio de los dos sentidos.</p></details>
+        </div>
+      </section>
+
+      <nav class="nav-modulo" aria-label="Módulos de la línea">
+        <a href="fusion-fibra-optica.html">
+          <small><i class="bi bi-arrow-left" aria-hidden="true"></i> Anterior</small>
+          <b>Fusión de fibra óptica</b>
+        </a>
+        <a href="pruebas-certificacion.html">
+          <small>Siguiente <i class="bi bi-arrow-right" aria-hidden="true"></i></small>
+          <b>Pruebas y certificación óptica</b>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="pie">
+  <div class="marco pie-grid">
+    <div class="pie-marca">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+        <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+      </a>
+      <p>Ingenieros contratistas y consultores en energía y telecomunicaciones.</p>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Formación</h2>
+      <ul>
+        <li><a href="../formacion.html?linea=A">Infraestructura eléctrica</a></li>
+        <li><a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a></li>
+        <li><a href="../formacion.html?linea=C">Seguridad y SST</a></li>
+        <li><a href="../formacion.html?linea=D">Herramientas y materiales</a></li>
+      </ul>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a class="enlace-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+        <li><a href="mailto:gerencia@npe.com.co">gerencia@npe.com.co</a></li>
+        <li><a href="mailto:talentohumano@npe.com.co">talentohumano@npe.com.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marco">
+    <div class="pie-base">
+      <span>&copy; <span data-anio></span> Net Plus Energy S.A.S. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+<button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../js/npe.js?v=20261110"></script>
+</body>
+</html>

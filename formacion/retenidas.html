@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instalación de retenidas | Centro de Formación NPE</title>
+<meta name="description" content="Instalación de retenidas en postes de redes troncales: anclaje, cable de acero galvanizado, guardacabo y grapas, collarín y aislador tensor, cálculos de campo, criterios de recibo y diagnóstico de fallas.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Net Plus Energy S.A.S">
+<meta property="og:title" content="Instalación de retenidas | Centro de Formación NPE">
+<meta property="og:description" content="Instalación de retenidas en postes de redes troncales: anclaje, cable de acero galvanizado, guardacabo y grapas, collarín y aislador tensor, cálculos de campo, criterios de recibo y diagnóstico de fallas.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="../img/logo-npe.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+<link href="../css/npe.css?v=20261110" rel="stylesheet">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra npe-nav">
+  <div class="marco barra-int">
+    <a class="marca" href="../index.html" aria-label="Net Plus Energy, inicio">
+      <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+      <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+    </a>
+    <button class="barra-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span>Menú</span><i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav class="collapse barra-nav" id="menuPrincipal" aria-label="Principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a class="activo" href="../formacion.html">Formación</a></li>
+      </ul>
+      <a class="boton boton-sm" href="../index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================= ENCABEZADO DEL MÓDULO ======================= -->
+<header class="mod-hero">
+  <div class="marco">
+    <nav class="migas" aria-label="Ruta">
+      <a href="../index.html">Inicio</a> /
+      <a href="../formacion.html">Centro de formación</a> /
+      <a href="../formacion.html?linea=A">Infraestructura eléctrica</a> /
+      <span aria-current="page">Instalación de retenidas</span>
+    </nav>
+
+    <h1>Instalación de retenidas</h1>
+    <p class="entrada">
+      Instalación de una retenida a tierra en un poste de red troncal: anclaje enterrado, cable de acero,
+      terminaciones y herraje superior, con los criterios para aceptarla o rechazarla.
+    </p>
+
+    <div class="mod-datos">
+      <div class="mod-dato"><small>Línea</small><b>A · Infraestructura eléctrica</b></div>
+      <div class="mod-dato"><small>Módulo</small><b>A2</b></div>
+      <div class="mod-dato"><small>Nivel</small><b>Intermedio</b></div>
+      <div class="mod-dato"><small>Duración</small><b>35 min</b></div>
+      <div class="mod-dato"><small>Video</small><b>Parte 4 · 5:32</b></div>
+      <div class="mod-dato"><small>Actualizado</small><b>12 nov 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="container modulo-cuerpo">
+  <div class="row g-5">
+
+    <aside class="col-lg-3 order-lg-2">
+      <nav class="indice-lateral" aria-label="En este módulo">
+        <span class="indice-titulo">En este módulo</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#normativa">Marco normativo</a>
+        <a href="#video">Video del procedimiento</a>
+        <a href="#procedimiento">Procedimiento</a>
+        <a href="#claves">Seis claves técnicas</a>
+        <a href="#piezas">Piezas y criterios de recibo</a>
+        <a href="#riesgos">Riesgos y controles</a>
+        <a href="#diagnostico">Diagnóstico en campo</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#evaluacion">Autoevaluación</a>
+      </nav>
+    </aside>
+
+    <main class="col-lg-9 order-lg-1" id="contenido">
+
+      <div class="aviso-validar mb-5">
+        <p class="m-0"><b>Material de apoyo formativo.</b>
+        Los procedimientos de este módulo son pautas generales de capacitación. En obra se aplican junto
+        con el protocolo de seguridad y salud en el trabajo de la empresa, la norma del operador dueño del
+        poste y el diseño de cada proyecto, y no sustituyen el criterio del ingeniero responsable.</p>
+      </div>
+
+      <section class="bloque" id="objetivos">
+        <h2>Objetivos de aprendizaje</h2>
+        <p>Al terminar este módulo, el técnico estará en capacidad de:</p>
+        <ul class="lista-check">
+          <li>Explicar por qué un anclaje cerca del poste carga más el cable y comprime más el poste.</li>
+          <li>Identificar qué norma aplica en cada poste y por qué las medidas cambian de un operador a otro.</li>
+          <li>Calcular la distancia mínima del anclaje, estimar el cable y ubicar la retenida sobre la bisectriz.</li>
+          <li>Instalar el anclaje, el cable, sus terminaciones y el herraje superior en el orden correcto.</li>
+          <li>Aceptar o rechazar los materiales y una retenida terminada con criterios verificables.</li>
+          <li>Reconocer las señales de una retenida que está fallando y actuar sin improvisar.</li>
+        </ul>
+      </section>
+
+      <section class="bloque" id="normativa">
+        <h2>Marco normativo aplicable</h2>
+        <p>
+          Aplican dos tipos de norma: las leyes nacionales fijan la seguridad de quienes instalan la retenida,
+          y la norma técnica del operador dueño del poste fija cómo se construye.
+        </p>
+        <div>
+          <span class="chip-norma">Decreto 1072 de 2015 · SG-SST</span>
+          <span class="chip-norma">Resolución 4272 de 2021 · Trabajo en alturas</span>
+          <span class="chip-norma">Resolución 5018 de 2019 · SST con energía eléctrica</span>
+          <span class="chip-norma">RETIE 2024 · Resolución 40117 y sus modificaciones</span>
+          <span class="chip-norma">Resolución 2413 de 1979 · Excavaciones</span>
+          <span class="chip-norma">Resolución CRC 5050 de 2016 · Uso compartido de postes</span>
+        </div>
+        <p class="mt-3 texto-secundario" style="font-size:.9375rem">
+          La Resolución 5018 de 2019 incluye expresamente las actividades con peligro eléctrico en redes de telecomunicaciones.
+          Las medidas de la retenida no están en ninguna de estas normas: las define cada operador de red (ver la clave 2).
+        </p>
+      </section>
+
+      <section class="bloque" id="video">
+        <h2>Video del procedimiento</h2>
+        <p>
+          Video 4 de la serie <strong>Construcción de redes troncales</strong>, producida por NPE, con narración y subtítulos.
+          Las partes 1 a 3 (seguridad, tendido, herrajes y tensionado) están en el módulo
+          <a href="redes-troncales.html#video">Redes troncales de telecomunicaciones</a> y la parte 5 en
+          <a href="postes-metalicos.html#video">Instalación de postes metálicos</a>.
+        </p>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 4</span>
+            <div>
+              <h3>Instalación de retenidas</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 5:32</span>
+                <span><i class="bi bi-bounding-box" aria-hidden="true"></i> Materiales, procedimiento y seguridad</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte4" data-yt="VYbtfFKFp0M" data-titulo="Parte 4 · Instalación de retenidas"
+               href="https://www.youtube.com/watch?v=VYbtfFKFp0M" target="_blank" rel="noopener">
+              <img src="../img/poster-troncales-p4.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 4 · Instalación de retenidas</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte4">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> Por qué el poste necesita una retenida</button>
+            <button type="button" class="capitulo" data-t="20"><span>0:20</span> 1 · Qué es una retenida</button>
+            <button type="button" class="capitulo" data-t="50"><span>0:50</span> 2 · Riesgos de esta tarea</button>
+            <button type="button" class="capitulo" data-t="80"><span>1:20</span> 3 · Excavación y terreno</button>
+            <button type="button" class="capitulo" data-t="113"><span>1:53</span> 4 · Varilla y bloque de anclaje</button>
+            <button type="button" class="capitulo" data-t="149"><span>2:29</span> 5 · El cable de retenida</button>
+            <button type="button" class="capitulo" data-t="175"><span>2:55</span> 6 · Sujeción del cable</button>
+            <button type="button" class="capitulo" data-t="207"><span>3:27</span> 7 · Herraje superior</button>
+            <button type="button" class="capitulo" data-t="240"><span>4:00</span> 8 · Conexión y ajuste</button>
+            <button type="button" class="capitulo" data-t="278"><span>4:38</span> 9 · Inspección final</button>
+            <button type="button" class="capitulo" data-t="304"><span>5:04</span> 10 · Tres errores que no se cometen</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>1 a 9</strong> del procedimiento.</span>
+            <a href="https://youtu.be/VYbtfFKFp0M" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+      </section>
+
+      <section class="bloque" id="procedimiento">
+        <h2>Procedimiento paso a paso</h2>
+        <p>Secuencia de referencia para instalar una retenida a tierra. Los pasos siguen el orden de los capítulos del video.</p>
+
+        <div class="accordion" id="pasos">
+          <div class="paso">
+            <button type="button" class="paso-btn" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1">
+              <span class="paso-num">1</span> Identificación del poste y del diseño
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p1" class="collapse show" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La cuadrilla identifica el poste y revisa su estado.</li>
+                  <li>Confirma en el diseño el tipo de retenida y su ubicación.</li>
+                  <li>La retenida se instala en finales de línea, cambios de dirección y vanos con tensiones desequilibradas: trabaja en dirección contraria a la fuerza de la red para que el poste no se flexione ni se incline.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2">
+              <span class="paso-num">2</span> Seguridad de la tarea
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p2" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Se aplican las normas de seguridad de la serie: elementos de protección completos, área delimitada, herramientas inspeccionadas y comunicación permanente.</li>
+                  <li>La tarea tiene tres riesgos propios: la <strong>excavación</strong> (redes enterradas, paredes que ceden), el <strong>cable de acero</strong> (hilos que cortan, un rollo que se devuelve con fuerza) y la <strong>tensión mecánica</strong> (nadie se ubica en la línea del cable).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3">
+              <span class="paso-num">3</span> Excavación
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p3" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El hueco va en la dirección que marca el diseño, con la ubicación y las dimensiones del diseño.</li>
+                  <li>Antes de excavar se descarta la presencia de redes subterráneas: agua, gas, energía o telecomunicaciones.</li>
+                  <li>Se revisa el suelo: un terreno blando, húmedo o de relleno puede exigir un anclaje diferente.</li>
+                  <li>La zona queda delimitada, el material removido se deja lejos del borde y nadie trabaja dentro de un hueco con paredes inestables.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p4" aria-expanded="false" aria-controls="p4">
+              <span class="paso-num">4</span> Varilla y bloque de anclaje
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p4" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El bloque de anclaje, de concreto, va en el fondo de la excavación. En campo también se le llama «muerto».</li>
+                  <li>La varilla atraviesa el bloque y sale a la superficie; en su extremo tiene el ojo donde se conecta el cable.</li>
+                  <li>La varilla se instala <strong>inclinada en la misma dirección del cable</strong> y el hueco se rellena y se compacta por capas.</li>
+                  <li>La cabeza de la varilla queda sobresaliendo del terreno la medida que indica la norma del operador.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p5" aria-expanded="false" aria-controls="p5">
+              <span class="paso-num">5</span> Preparación del cable
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p5" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Se usa cable de acero galvanizado de varios hilos, con el diámetro y la resistencia que especifica la norma.</li>
+                  <li>Se desenrolla de forma controlada, sin formar cocas ni dobleces, y se corta a la medida con la herramienta adecuada.</li>
+                  <li>Antes del corte se amarra a cada lado, para que los hilos no se abran.</li>
+                  <li>Se manipula siempre con guantes: un hilo suelto corta y un rollo que se libera puede golpear.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p6" aria-expanded="false" aria-controls="p6">
+              <span class="paso-num">6</span> Sujeción del cable
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p6" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>En cada extremo el cable forma un ojo. Dentro va el <strong>guardacabo</strong>, que protege el cable en la curva y evita que se doble demasiado o se desgaste contra el herraje.</li>
+                  <li>Las dos partes del cable se aprietan con la <strong>grapa de tres pernos</strong>, que impide que el cable se deslice.</li>
+                  <li>La punta sobrante se remata con un <strong>entice</strong>: los hilos se enrollan en espiral sobre el mismo cable o se amarran con alambre galvanizado, según la norma.</li>
+                  <li>Los pernos se aprietan de forma pareja y se verifica que ningún hilo quede suelto.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p7" aria-expanded="false" aria-controls="p7">
+              <span class="paso-num">7</span> Herraje superior
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p7" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>En la parte alta va un <strong>collarín</strong> de dos piezas que abraza el poste y ofrece el punto de conexión.</li>
+                  <li>Se selecciona según el diámetro del poste en ese punto y se ubica a la altura que indica el diseño.</li>
+                  <li>El liniero sube con autorización para trabajo en alturas y su sistema de protección contra caídas, conectado a un anclaje autorizado.</li>
+                  <li>Herramientas y herrajes suben en bolsa, con cuerda de servicio, y la zona de abajo queda despejada.</li>
+                  <li>Los pernos del collarín se ajustan hasta que quede firme, sin girar sobre el poste.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p8" aria-expanded="false" aria-controls="p8">
+              <span class="paso-num">8</span> Conexión y ajuste
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p8" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La retenida se conecta arriba al collarín y abajo al ojo de la varilla.</li>
+                  <li>Según el nivel de tensión de la red se intercala un <strong>aislador tensor</strong> de porcelana; cada tramo de cable pasa por su propio agujero. Así, si la parte alta toca un conductor, la parte baja no queda energizada.</li>
+                  <li>La retenida queda alineada con el eje de la red o, en un cambio de dirección, con la bisectriz del ángulo.</li>
+                  <li>El ajuste es progresivo, solo hasta la tensión necesaria y sin sacar el poste de su posición.</li>
+                  <li>Durante el tensionado nadie se ubica en la línea del cable y no se usan anclajes improvisados.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p9" aria-expanded="false" aria-controls="p9">
+              <span class="paso-num">9</span> Inspección final
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p9" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li><strong>Varilla y anclaje:</strong> firmes, alineados con el cable y con el terreno compactado.</li>
+                  <li><strong>Sujeción del cable:</strong> grapas apretadas, guardacabos en su sitio y entices completos.</li>
+                  <li><strong>Herrajes:</strong> collarín firme y aislador sin fisuras.</li>
+                  <li><strong>Estructura:</strong> retenida alineada, poste estable y ningún elemento flojo o deteriorado.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aviso-validar mt-4">
+          <p class="m-0"><b>Tres errores que no se cometen:</b> amarrar la retenida a un árbol, una cerca o una estructura
+          que no fue diseñada para eso; instalar el cable sin guardacabo o con grapas flojas; y tensionar de más,
+          hasta sacar el poste de su posición.</p>
+        </div>
+      </section>
+
+      <section class="bloque" id="claves">
+        <h2>Seis claves técnicas</h2>
+        <p>
+          Datos que el video no explica: por qué funciona una retenida, qué medidas tomar y cuándo detener el trabajo.
+          El tema completo está en la <a href="../docs/guia-retenidas.pdf" download>guía técnica de campo</a> (PDF).
+        </p>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">1</span><div><small>Fundamento</small><h3>El ángulo decide cuánto trabaja el cable</h3></div></header>
+          <p>La retenida convierte el hale lateral de la red (F) en tensión en el cable (T) y compresión en el poste (C). Si θ es el ángulo entre el cable y el poste, <b>T = F ÷ sen θ</b> y <b>C = F ÷ tan θ</b>: cuanto más cerca del poste queda el anclaje, más se cierra el ángulo y más crecen las dos.</p><figure class="figura figura-angosta"><img src="../img/retenidas/fuerzas-retenida.webp" width="1196" height="1249" loading="lazy" alt="Esquema de un poste con su retenida: el hale de la red F hacia un lado, la tensión T a lo largo del cable, la compresión C hacia abajo en el poste, el ángulo θ entre cable y poste, la altura h y la distancia horizontal d"><figcaption>La componente horizontal de T iguala a F; la vertical comprime el poste.</figcaption></figure><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col">Distancia del anclaje</th><th scope="col" style="width:18%">Ángulo θ</th><th scope="col" style="width:22%">Tensión del cable</th><th scope="col" style="width:24%">Compresión del poste</th></tr></thead><tbody>
+<tr><td><b>d = h ÷ 3</b></td><td>18,4°</td><td>6,3 kN</td><td>6,0 kN</td></tr>
+<tr><td><b>d ≈ 0,58 h</b></td><td>30°</td><td>4,0 kN</td><td>3,5 kN</td></tr>
+<tr><td><b>d = h</b></td><td>45°</td><td>2,8 kN</td><td>2,0 kN</td></tr>
+</tbody></table></div><p class="texto-secundario" style="font-size:.875rem">Mismo hale lateral en los tres casos: F = 2 kN, valor supuesto para comparar. Por la misma razón la varilla va inclinada en la dirección del cable: así trabaja a tensión a lo largo de su eje; vertical, el cable la dobla y la arranca del relleno con mucha menos fuerza.</p>
+          <p class="clave-regla"><b>En campo:</b> el anclaje no se “acomoda” más cerca del poste porque falta espacio: pasar de d = h a d = h ÷ 3 duplica con creces la tensión y sobrecarga el cable, las grapas, el anclaje y el poste.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">2</span><div><small>Normas</small><h3>Las medidas las fija el operador dueño del poste</h3></div></header>
+          <p>No hay una ley nacional con las medidas de una retenida: cada operador de red las define en su norma de construcción. Dos normas colombianas consultadas muestran por qué no se pueden mezclar:</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:24%">Criterio</th><th scope="col">Enel Colombia · LA 410 y LAR 410</th><th scope="col">Electrocaquetá · Norma técnica 02</th></tr></thead><tbody>
+<tr><td><b>Distancia del anclaje</b></td><td>d ≥ ⅓ de la altura de fijación</td><td>Ángulo cable-poste ≥ 30° (d ≥ 0,58 h)</td></tr>
+<tr><td><b>Varilla sobre el suelo</b></td><td>10 a 15 cm</td><td>Mínimo 20 cm</td></tr>
+<tr><td><b>Aislador tensor</b></td><td>En toda retenida poste-varilla, de la clase que pida la tensión de la red</td><td>A mínimo 4 m del piso y al menos 1,5 m por debajo del punto de amarre</td></tr>
+</tbody></table></div>
+          <p class="clave-regla"><b>En campo:</b> antes de excavar se pregunta qué norma aplica y se confirma su versión vigente con la interventoría. La medida de otro proyecto no se copia.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">3</span><div><small>Cálculo</small><h3>Dónde va el anclaje y cuánto cable cortar</h3></div></header>
+          <p>La <b>altura de fijación h</b> va del suelo al collarín. La <b>distancia d</b> se mide sobre el suelo, desde la base del poste hasta donde sale la varilla. Con un decámetro y una calculadora se resuelve en sitio:</p><ul class="lista-check"><li><b>Criterio ⅓ h:</b> d ≥ h ÷ 3.</li><li><b>Criterio 30°:</b> d ≥ h × 0,577.</li><li><b>Longitud del cable:</b> L = √(h² + d²) más el sobrante de las terminaciones que fije el procedimiento.</li></ul><div class="ejemplo"><b>Ejemplo · collarín a 8,0 m</b><p class="m-0">Criterio ⅓ h: 8,0 ÷ 3 = 2,67 m. Criterio 30°: 8,0 × 0,577 = 4,62 m. Con d = 4,62 m, el cable mide √(8,0² + 4,62²) = 9,24 m; con 1,5 m de sobrante, se cortan unos 10,7 m.</p><p class="ejemplo-nota">Cifras supuestas para practicar. Si el aislador va intercalado, el cable se corta en dos tramos que suman esa longitud.</p></div>
+          <p class="clave-regla"><b>En campo:</b> el mismo poste puede pedir el anclaje a 2,7 m o a 4,6 m según el operador. El cálculo da el corte con margen; la medida exacta se ajusta al instalar.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">4</span><div><small>Alineación</small><h3>La bisectriz se encuentra con un decámetro</h3></div></header>
+          <figure class="figura figura-angosta"><img src="../img/retenidas/bisectriz-decametro.webp" width="1196" height="1057" loading="lazy" alt="Vista en planta de un poste en un cambio de dirección: los puntos A y B a 10 m sobre cada tramo, el punto medio M entre ellos y el anclaje en la prolongación de la línea M–poste, del lado opuesto"><figcaption>Método de las distancias iguales: la retenida queda en la prolongación de M–poste, del lado contrario a los cables.</figcaption></figure><ul class="lista-check"><li>Desde el centro del poste se mide la misma distancia sobre cada tramo de la red, por ejemplo 10 m, y se marcan A y B.</li><li>Se marca el punto medio M entre A y B. La línea M–poste es la bisectriz.</li><li>La línea se prolonga al otro lado del poste: ahí va la retenida, a la distancia d calculada.</li></ul><p>Para comprobar, desde el punto de la varilla los dos tramos deben verse abiertos en partes iguales a cada lado del poste.</p>
+          <p class="clave-regla"><b>En campo:</b> si la distancia calculada cae sobre una vía, un acceso o un predio, no se acerca el anclaje: se consulta al diseñador, que puede cambiar a una retenida poste a poste (Enel pide el cable a no menos de 5,4 m sobre la calzada y 2,4 m sobre la vía peatonal) o a poste auxiliar.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">5</span><div><small>Excavación</small><h3>El hueco del anclaje tiene norma propia</h3></div></header>
+          <p>Lo regula la Resolución 2413 de 1979, y de su relleno depende que el anclaje no se arranque meses después.</p><ul class="lista-check"><li><b>Paredes:</b> taludes o apuntalamiento; en suelo suelto o húmedo no se excava con paredes verticales sin soporte (arts. 15 y 19).</li><li><b>Bordes:</b> escombros lejos del borde (art. 20) y vallas, con señal luminosa de noche (arts. 17 y 25).</li><li><b>Lluvia:</b> después de cada lluvia se inspeccionan las paredes antes de volver a bajar (art. 22).</li><li><b>Relleno:</b> en capas de no más de 15 cm, compactando cada una. Echado de una vez, se asienta con la lluvia y el anclaje empieza a salir.</li></ul>
+          <p class="clave-regla"><b>En campo:</b> si al excavar aparece una tubería, una cinta de advertencia o un ducto, se suspende y se informa: no se rompe ni se mueve.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">6</span><div><small>Riesgo eléctrico</small><h3>Una retenida existente no es un punto de anclaje</h3></div></header>
+          <p>La parte alta de una retenida puede quedar energizada si toca una red; para eso existe el aislador tensor. Además, una retenida ya está trabajando con su propia carga.</p>
+          <p class="clave-regla"><b>En campo:</b> nadie sujeta, sube ni ancla equipos a una retenida existente: ni el aparejo de tensionado ni el sistema contra caídas, que según la Resolución 4272 de 2021 exige anclajes certificados o autorizados.</p>
+        </article>
+      </section>
+
+      <section class="bloque" id="piezas">
+        <h2>Piezas y criterios de recibo</h2>
+        <p>
+          Qué es cada pieza y cuándo se rechaza. Los materiales se revisan antes de cargarlos al vehículo,
+          para no descubrir el defecto al pie del poste. Fotografías tomadas del video del procedimiento.
+        </p>
+        <div class="row g-4">
+          <div class="col-6 col-lg-4"><div class="herramienta"><img class="herr-img" src="../img/herramientas/retenidas/bloque-anclaje.webp" alt="Bloque de anclaje de concreto con el orificio para la varilla" loading="lazy" width="900" height="675"><b>Bloque de anclaje</b><small>Concreto, medidas del diseño · en campo, «muerto»</small><p class="rechazo"><b>Se rechaza si</b> tiene fisuras que lo atraviesan, aristas rotas, hierro expuesto o la perforación desalineada.</p></div></div>
+          <div class="col-6 col-lg-4"><div class="herramienta"><img class="herr-img" src="../img/herramientas/retenidas/varilla-anclaje.webp" alt="Varilla de anclaje de acero galvanizado sobre el piso" loading="lazy" width="900" height="675"><b>Varilla de anclaje</b><small>Acero galvanizado, diámetro y longitud del diseño</small><p class="rechazo"><b>Se rechaza si</b> está doblada, tiene el ojo abierto o fisurado, la rosca dañada o el galvanizado desprendido.</p></div></div>
+          <div class="col-6 col-lg-4"><div class="herramienta"><img class="herr-img" src="../img/herramientas/retenidas/cable-acero.webp" alt="Rollo de cable de acero galvanizado" loading="lazy" width="900" height="675"><b>Cable de acero galvanizado</b><small>Diámetro y grado del diseño</small><p class="rechazo"><b>Se rechaza si</b> tiene hilos rotos o abiertos («pajarera»), cocas o dobleces marcados, zonas aplastadas u óxido rojo.</p></div></div>
+          <div class="col-6 col-lg-4"><div class="herramienta"><img class="herr-img" src="../img/herramientas/retenidas/guardacabo.webp" alt="Guardacabo galvanizado en forma de U, con su canal para el cable" loading="lazy" width="900" height="675"><b>Guardacabo</b><small>Del tamaño del cable, que asienta completo en el canal</small><p class="rechazo"><b>Se rechaza si</b> está deformado o abierto, o su canal es más angosto que el cable.</p></div></div>
+          <div class="col-6 col-lg-4"><div class="herramienta"><img class="herr-img" src="../img/herramientas/retenidas/grapa-tres-pernos.webp" alt="Grapa prensadora galvanizada de tres pernos" loading="lazy" width="900" height="675"><b>Grapa de tres pernos</b><small>Para el diámetro del cable</small><p class="rechazo"><b>Se rechaza si</b> tiene un perno sin tuerca o con la rosca barrida, el cuerpo fisurado o ranuras de otro diámetro.</p></div></div>
+          <div class="col-6 col-lg-4"><div class="herramienta"><img class="herr-img" src="../img/herramientas/retenidas/collarin.webp" alt="Collarín galvanizado de dos piezas con su perno de ajuste" loading="lazy" width="900" height="675"><b>Collarín</b><small>Según el diámetro del poste a la altura de fijación</small><p class="rechazo"><b>Se rechaza si</b> le faltan pernos, tiene las orejas dobladas o no cierra sobre el poste.</p></div></div>
+          <div class="col-6 col-lg-4"><div class="herramienta"><img class="herr-img" src="../img/herramientas/retenidas/aislador-tensor.webp" alt="Aisladores tensores de porcelana café con sus agujeros para el cable" loading="lazy" width="900" height="675"><b>Aislador tensor</b><small>Porcelana, clase según la tensión de la red</small><p class="rechazo"><b>Se rechaza si</b> está despostillado, fisurado o con el esmalte roto, aunque el daño parezca pequeño.</p></div></div>
+        </div>
+        <p class="mt-3 texto-secundario" style="font-size:.875rem">Criterios de inspección visual general. Prevalecen la ficha del fabricante y las especificaciones del diseño.</p>
+      </section>
+
+      <section class="bloque" id="riesgos">
+        <h2>Riesgos y controles</h2>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos align-middle">
+            <thead>
+              <tr><th scope="col" style="width:30%">Peligro</th><th scope="col" style="width:12%">Severidad</th><th scope="col">Control</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Derrumbe de la excavación</b></td><td><span class="sev sev-alta">Alta</span></td><td>Taludes o apuntalamiento según el terreno, material lejos del borde y nadie dentro de un hueco con paredes inestables. Inspección después de cada lluvia.</td></tr>
+              <tr><td><b>Redes enterradas</b></td><td><span class="sev sev-alta">Alta</span></td><td>Revisar planos y marcas en el piso, y excavar con cuidado los primeros centímetros. Ante una tubería, cinta o ducto, suspender e informar.</td></tr>
+              <tr><td><b>Caída de altura al montar el collarín</b></td><td><span class="sev sev-alta">Alta</span></td><td>Permiso de trabajo, trabajador autorizado y sistema contra caídas conectado a un anclaje certificado.</td></tr>
+              <tr><td><b>Contacto eléctrico por la parte alta</b></td><td><span class="sev sev-alta">Alta</span></td><td>Identificar las redes, respetar las distancias, aislador tensor en su posición y no tocar retenidas existentes.</td></tr>
+              <tr><td><b>Latigazo del cable en tensión</b></td><td><span class="sev sev-alta">Alta</span></td><td>Nadie en la línea del cable durante el ajuste; tensión progresiva.</td></tr>
+              <tr><td><b>Caída de herramientas y herrajes</b></td><td><span class="sev sev-alta">Alta</span></td><td>Herramientas en bolsa, con cuerda de servicio, y la zona de abajo despejada.</td></tr>
+              <tr><td><b>Cortes y golpes con el cable de acero</b></td><td><span class="sev sev-media">Media</span></td><td>Guantes de vaqueta y gafas. Cable desenrollado de forma controlada, amarrado antes del corte y con los remates completos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="diagnostico">
+        <h2>Diagnóstico en campo</h2>
+        <p>
+          Señales de una retenida que está fallando, su causa probable y qué hacer. Toda falla se reporta
+          y se corrige con procedimiento.
+        </p>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos tabla-diagnostico">
+            <thead>
+              <tr><th scope="col" style="width:38%">Señal</th><th scope="col" style="width:12%">Gravedad</th><th scope="col">Qué hacer</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Poste inclinado hacia el lado de la red</b><small class="d-block mt-1">Retenida floja, ángulo insuficiente o anclaje que cede.</small></td><td><span class="sev sev-critica">Crítica</span></td><td>No subir. Delimitar la zona de caída del poste y reportar de inmediato.</td></tr>
+              <tr><td><b>Tierra levantada o agrietada alrededor de la varilla</b><small class="d-block mt-1">El anclaje se está arrancando o el relleno quedó mal compactado.</small></td><td><span class="sev sev-critica">Crítica</span></td><td>No subir ni tensionar. Reportar para revisar el anclaje.</td></tr>
+              <tr><td><b>Aislador tensor roto o fisurado</b><small class="d-block mt-1">Golpe, vandalismo o sobrecarga.</small></td><td><span class="sev sev-critica">Crítica</span></td><td>No tocar el cable por encima del aislador. Reportar para que lo cambie personal autorizado.</td></tr>
+              <tr><td><b>Retenida amarrada a un árbol, una cerca o un muro</b><small class="d-block mt-1">Anclaje improvisado.</small></td><td><span class="sev sev-critica">Crítica</span></td><td>Reportar para reubicarla con un anclaje de diseño.</td></tr>
+              <tr><td><b>Cable con comba, sin tensión</b><small class="d-block mt-1">Grapas deslizadas, anclaje asentado o poste desplazado.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Revisar las grapas y el anclaje. Retensionar con procedimiento, no a mano.</td></tr>
+              <tr><td><b>Hilos rotos o abiertos en el cable</b><small class="d-block mt-1">Golpe, coca durante la instalación o roce.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Cambiar el tramo de cable. No se repara con cinta ni con amarres.</td></tr>
+              <tr><td><b>Ojo sin guardacabo</b><small class="d-block mt-1">Instalación incompleta.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Rehacer la terminación con guardacabo.</td></tr>
+              <tr><td><b>Cabeza de la varilla enterrada</b><small class="d-block mt-1">Relleno por encima del nivel de diseño.</small></td><td><span class="sev sev-media">Media</span></td><td>Descubrirla hasta la altura de la norma del operador: enterrada no se puede inspeccionar.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="descargas">
+        <h2>Descargas</h2>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><a class="descarga" href="../docs/guia-retenidas.pdf" download><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i><b>Guía técnica de campo</b><small>PDF · 15 páginas · 1,1 MB</small><span>Descargar <i class="bi bi-download" aria-hidden="true"></i></span></a></div>
+          <div class="col-md-6 col-lg-4"><a class="descarga" href="../docs/guia-retenidas.pdf#page=13" target="_blank" rel="noopener"><i class="bi bi-list-check" aria-hidden="true"></i><b>Lista de recibo de una retenida</b><small>Formato imprimible · página 13 de la guía</small><span>Abrir <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></span></a></div>
+        </div>
+      </section>
+
+      <section class="bloque" id="evaluacion">
+        <h2>Autoevaluación</h2>
+        <p>Una pregunta por cada clave técnica; tres son casos de campo. Respóndala y luego ábrala para comprobar.</p>
+        <div class="preguntas">
+          <details class="pregunta"><summary><span>1</span>Si el anclaje se acerca al poste y el hale de la red no cambia, ¿qué pasa con el cable y con el poste?</summary><p>Sube la tensión del cable y sube la compresión del poste: T = F ÷ sen θ y C = F ÷ tan θ crecen al cerrarse el ángulo.</p></details>
+          <details class="pregunta"><summary><span>2</span>La cuadrilla pasa a trabajar en postes de otro operador. ¿Puede usar la distancia del anclaje del proyecto anterior?</summary><p>No. Cada operador fija sus medidas (Enel pide d ≥ ⅓ h; Electrocaquetá, un ángulo de al menos 30°). Se aplica la norma del dueño del poste.</p></details>
+          <details class="pregunta"><summary><span>3</span>Esquina urbana: el collarín va a 7,5 m, el operador usa el criterio de 30° y solo hay 2,8 m de andén. ¿Qué se hace?</summary><p>La distancia mínima es 7,5 × 0,577 = 4,33 m. A 2,8 m el ángulo queda en unos 20°, por debajo del mínimo. No se acorta: se informa al supervisor para que el diseñador defina otra solución, como una retenida poste a poste o a poste auxiliar.</p></details>
+          <details class="pregunta"><summary><span>4</span>En un cambio de dirección de la red, ¿dónde se ubica la retenida?</summary><p>Sobre la bisectriz del ángulo, del lado contrario a donde halan los dos tramos.</p></details>
+          <details class="pregunta"><summary><span>5</span>Llovió durante el almuerzo y, al volver, a 60 cm del hueco aparece una cinta plástica amarilla. ¿Se sigue excavando?</summary><p>No. Primero se inspeccionan las paredes (Res. 2413, art. 22). La cinta suele marcar una red enterrada: se suspende en ese punto y se informa al supervisor.</p></details>
+          <details class="pregunta"><summary><span>6</span>Un compañero propone anclar el aparejo a la retenida del poste vecino, que tiene el aislador despostillado y algo de comba. ¿Qué se le responde?</summary><p>Que no. Es un anclaje improvisado; la comba indica que su anclaje o sus grapas fallan, y con el aislador dañado la parte alta puede estar energizada. Se usa un anclaje autorizado y se reporta la retenida dañada.</p></details>
+        </div>
+      </section>
+
+      <nav class="nav-modulo" aria-label="Módulos de la línea">
+        <a href="postes-metalicos.html">
+          <small><i class="bi bi-arrow-left" aria-hidden="true"></i> Anterior</small>
+          <b>Instalación de postes metálicos</b>
+        </a>
+        <a href="../formacion.html?linea=A">
+          <small>Siguiente <i class="bi bi-arrow-right" aria-hidden="true"></i></small>
+          <b>Construcción y mantenimiento de redes MT–BT</b>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="pie">
+  <div class="marco pie-grid">
+    <div class="pie-marca">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+        <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+      </a>
+      <p>Ingenieros contratistas y consultores en energía y telecomunicaciones.</p>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Formación</h2>
+      <ul>
+        <li><a href="../formacion.html?linea=A">Infraestructura eléctrica</a></li>
+        <li><a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a></li>
+        <li><a href="../formacion.html?linea=C">Seguridad y SST</a></li>
+        <li><a href="../formacion.html?linea=D">Herramientas y materiales</a></li>
+      </ul>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a class="enlace-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+        <li><a href="mailto:gerencia@npe.com.co">gerencia@npe.com.co</a></li>
+        <li><a href="mailto:talentohumano@npe.com.co">talentohumano@npe.com.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marco">
+    <div class="pie-base">
+      <span>&copy; <span data-anio></span> Net Plus Energy S.A.S. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+<button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../js/npe.js?v=20261110"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+"put-cajas-preparacion": [
+1080,
+736
+],
+"put-gabinete-abierto": [
+1200,
+880
+],
+"put-ont-usuario": [
+845,
+550
+],
+"put-troncal-poste": [
+1200,
+1216
+],
+"put-rack-odf-ups": [
+1200,
+1152
+],
+"put-odf-pigtails": [
+1200,
+1264
+],
+"put-gabinete-pared": [
+1200,
+992
+],
+"put-rack-equipos": [
+1200,
+1264
+],
+"put-troncal-herrajes": [
+1400,
+682
+],
+"put-cierre-empalme": [
+720,
+1037
+],
+"put-trabajo-poste": [
+1200,
+1344
+],
+"put-ramal-chipa": [
+1200,
+950
+],
+"put-odf-bandeja": [
+794,
+960
+],
+"put-gabinete-equipo": [
+1200,
+1040
+],
+"sil-medicion-potencia": [
+1200,
+1104
+],
+"sil-medicion-nap": [
+504,
+807
+],
+"sil-usuarios-poste": [
+960,
+1075
+],
+"sil-troncal-chipa": [
+1200,
+1296
+],
+"sil-caja-nap": [
+1200,
+1136
+],
+"reg-empalme-via": [
+900,
+1020
+],
+"reg-reservas-mt": [
+900,
+828
+],
+"reg-bandeja": [
+900,
+996
+],
+"reg-caja-nap": [
+1200,
+493
+],
+"reg-distribucion": [
+720,
+1088
+],
+"hero-carrete": [
+1200,
+1216
+],
+"serv-fusion": [
+1280,
+518
+]
+}

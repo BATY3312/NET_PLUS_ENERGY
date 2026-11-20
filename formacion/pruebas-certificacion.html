@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pruebas y certificación óptica | Centro de Formación NPE</title>
+<meta name="description" content="Pruebas y certificación de enlaces de fibra óptica: inspección de conectores, fuente y power meter, configuración del OTDR, lectura de trazas reales, reflectancia y registro de certificación.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Net Plus Energy S.A.S">
+<meta property="og:title" content="Pruebas y certificación óptica | Centro de Formación NPE">
+<meta property="og:description" content="Pruebas y certificación de enlaces de fibra óptica: inspección de conectores, fuente y power meter, configuración del OTDR, lectura de trazas reales, reflectancia y registro de certificación.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="../img/logo-npe.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+<link href="../css/npe.css?v=20261110" rel="stylesheet">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra npe-nav">
+  <div class="marco barra-int">
+    <a class="marca" href="../index.html" aria-label="Net Plus Energy, inicio">
+      <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+      <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+    </a>
+    <button class="barra-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span>Menú</span><i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav class="collapse barra-nav" id="menuPrincipal" aria-label="Principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a class="activo" href="../formacion.html">Formación</a></li>
+      </ul>
+      <a class="boton boton-sm" href="../index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================= ENCABEZADO DEL MÓDULO ======================= -->
+<header class="mod-hero">
+  <div class="marco">
+    <nav class="migas" aria-label="Ruta">
+      <a href="../index.html">Inicio</a> /
+      <a href="../formacion.html">Centro de formación</a> /
+      <a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a> /
+      <span aria-current="page">Pruebas y certificación óptica</span>
+    </nav>
+
+    <h1>Pruebas y certificación óptica</h1>
+    <p class="entrada">
+      Cómo se prueba y se certifica un enlace de fibra: inspección de conectores, pérdida de inserción con fuente y
+      power meter, medición con OTDR, lectura de trazas y registro de los resultados.
+    </p>
+
+    <div class="mod-datos">
+      <div class="mod-dato"><small>Línea</small><b>B · Telecomunicaciones y F.O.</b></div>
+      <div class="mod-dato"><small>Módulo</small><b>B5</b></div>
+      <div class="mod-dato"><small>Nivel</small><b>Avanzado</b></div>
+      <div class="mod-dato"><small>Duración</small><b>50 min</b></div>
+      <div class="mod-dato"><small>Video</small><b>6:13</b></div>
+      <div class="mod-dato"><small>Actualizado</small><b>14 nov 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="container modulo-cuerpo">
+  <div class="row g-5">
+
+    <aside class="col-lg-3 order-lg-2">
+      <nav class="indice-lateral" aria-label="En este módulo">
+        <span class="indice-titulo">En este módulo</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#normativa">Referencias técnicas</a>
+        <a href="#video">Video del procedimiento</a>
+        <a href="#procedimiento">Procedimiento</a>
+        <a href="#claves">Seis claves técnicas</a>
+        <a href="#riesgos">Riesgos y errores frecuentes</a>
+        <a href="#diagnostico">Diagnóstico de resultados</a>
+        <a href="#galeria">Galería de campo</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#evaluacion">Autoevaluación</a>
+      </nav>
+    </aside>
+
+    <main class="col-lg-9 order-lg-1" id="contenido">
+
+      <div class="aviso-validar mb-5">
+        <p class="m-0"><b>Material de apoyo formativo.</b>
+        Este módulo no fija valores de aprobación: la pérdida máxima del enlace, de cada empalme y de cada conexión, y la
+        reflectancia admisible, las define cada proyecto según su diseño y sus equipos. No sustituye el criterio del
+        ingeniero responsable.</p>
+      </div>
+
+      <section class="bloque" id="objetivos">
+        <h2>Objetivos de aprendizaje</h2>
+        <p>Al terminar este módulo, el técnico estará en capacidad de:</p>
+        <ul class="lista-check">
+          <li>Inspeccionar y limpiar la cara de un conector con los criterios por zonas de la IEC 61300-3-35.</li>
+          <li>Medir la pérdida de inserción de un enlace con fuente, power meter y una referencia correcta.</li>
+          <li>Explicar cómo calcula el OTDR la distancia y configurar una prueba según el enlace.</li>
+          <li>Leer una traza real y comprobar su tabla de eventos.</li>
+          <li>Interpretar valores de reflectancia y reconocer zonas muertas y eventos fantasma.</li>
+          <li>Diligenciar un registro de certificación y comparar los resultados con los criterios del proyecto.</li>
+        </ul>
+        <p class="texto-secundario" style="font-size:.9375rem">Conocimientos previos: dB, dBm y pérdida de inserción, del módulo
+        <a href="fundamentos-fibra-optica.html">Fundamentos de fibra óptica</a>, y la evaluación de empalmes con OTDR en ambos sentidos, del módulo
+        <a href="cajas-nap.html">Cajas NAP</a>.</p>
+      </section>
+
+      <section class="bloque" id="normativa">
+        <h2>Referencias técnicas</h2>
+        <p>
+          Las pruebas de fibra se rigen por normas y recomendaciones técnicas internacionales; los valores de aceptación los fija cada proyecto.
+        </p>
+        <div>
+          <span class="chip-norma">IEC 61300-3-35 ed. 3.0 (2022) · Inspección de conectores</span>
+          <span class="chip-norma">FOA · OTDR</span>
+          <span class="chip-norma">FOA OFSTP-14 · Pérdida de inserción</span>
+          <span class="chip-norma">Criterios del proyecto</span>
+        </div>
+        <p class="mt-3 texto-secundario" style="font-size:.9375rem">
+          La IEC 61300-3-35 fija el procedimiento y los criterios para evaluar la limpieza de la cara del conector y los requisitos de los microscopios.
+          Las referencias de la FOA explican el funcionamiento del OTDR (cables de lanzamiento y recepción, zona muerta, ancho de pulso, eventos fantasma)
+          y la medición de la pérdida de inserción con los métodos de 1, 2 y 3 cables. Los criterios del proyecto fijan la pérdida máxima, los umbrales
+          de eventos, la reflectancia admisible, las longitudes de onda y el formato de entrega.
+        </p>
+      </section>
+
+      <section class="bloque" id="video">
+        <h2>Video del procedimiento</h2>
+        <p>
+          Serie <strong>Fibra óptica · Pruebas y certificación</strong>, producida por NPE, con narración y subtítulos. Usa trazas y mediciones reales
+          tomadas por NPE. Cada capítulo lleva al paso correspondiente del video.
+        </p>
+
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Video</span>
+            <div>
+              <h3>Pruebas y certificación óptica</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 6:13</span>
+                <span><i class="bi bi-graph-up" aria-hidden="true"></i> Trazas OTDR reales</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte1" data-yt="5qhvGTZJUuE" data-titulo="Video · Pruebas y certificación óptica"
+               href="https://www.youtube.com/watch?v=5qhvGTZJUuE" target="_blank" rel="noopener">
+              <img src="../img/poster-pruebas-p1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Video · Pruebas y certificación óptica</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte1">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> Una traza real de NPE</button>
+            <button type="button" class="capitulo" data-t="23"><span>0:23</span> 1 · Los equipos de prueba</button>
+            <button type="button" class="capitulo" data-t="57"><span>0:57</span> 2 · Seguridad y preparación</button>
+            <button type="button" class="capitulo" data-t="91"><span>1:31</span> 3 · Inspección y limpieza</button>
+            <button type="button" class="capitulo" data-t="126"><span>2:06</span> 4 · Fuente de luz y power meter</button>
+            <button type="button" class="capitulo" data-t="175"><span>2:55</span> 5 · Medición con OTDR</button>
+            <button type="button" class="capitulo" data-t="220"><span>3:40</span> 6 · Leer la traza</button>
+            <button type="button" class="capitulo" data-t="270"><span>4:30</span> 7 · Cinco situaciones</button>
+            <button type="button" class="capitulo" data-t="310"><span>5:10</span> 8 · Comparación y diagnóstico</button>
+            <button type="button" class="capitulo" data-t="338"><span>5:38</span> 9 · Registro y certificación</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>1 a 9</strong> del procedimiento.</span>
+            <a href="https://youtu.be/5qhvGTZJUuE" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+      </section>
+
+      <section class="bloque" id="procedimiento">
+        <h2>Procedimiento paso a paso</h2>
+        <p>Secuencia de referencia para probar y certificar un enlace, en el orden del video.</p>
+
+        <div class="accordion" id="pasos">
+          <div class="paso">
+            <button type="button" class="paso-btn" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1">
+              <span class="paso-num">1</span> Los equipos de prueba
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p1" class="collapse show" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Para probar un enlace se usan cuatro grupos de equipos: el <strong>OTDR</strong>, que recorre la fibra con pulsos y muestra cada evento a lo largo del camino; el <strong>power meter y la fuente de luz</strong>, que miden juntos la pérdida de extremo a extremo; los <strong>cables de prueba</strong> (de referencia, de lanzamiento y de recepción), que conectan los equipos con el enlace; y los elementos de <strong>inspección y limpieza</strong> (microscopio, limpiadores y adaptadores).</li>
+                  <li>Con ellos se verifican la continuidad, las pérdidas, el estado de empalmes y conectores, y el comportamiento general del enlace.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2">
+              <span class="paso-num">2</span> Seguridad y preparación
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p2" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Antes de medir se identifica la fibra que se va a probar, según el registro del proyecto.</li>
+                  <li>Nunca se mira el extremo de una fibra ni de un conector: la luz de trabajo es infrarroja y no se ve. Se verifica con el medidor si hay señal antes de manipular o desconectar una conexión.</li>
+                  <li>No se tocan las caras de los conectores; los adaptadores y los cables de prueba se mantienen limpios y tapados. Los residuos de fibra van a un recipiente marcado.</li>
+                  <li>Una conexión contaminada altera la medición y puede dañar el conector del equipo.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3">
+              <span class="paso-num">3</span> Inspección y limpieza
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p3" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Primero se observa la cara del conector con un microscopio o una sonda de inspección.</li>
+                  <li>Si hay contaminación, se limpia con herramientas y materiales para fibra óptica, y luego se vuelve a inspeccionar para comprobar que quedó limpia.</li>
+                  <li>La norma IEC 61300-3-35 evalúa sobre todo dos zonas: el núcleo y el revestimiento.</li>
+                  <li>Solo se conecta el conector que superó la inspección. Limpiar sin volver a mirar no es un procedimiento.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p4" aria-expanded="false" aria-controls="p4">
+              <span class="paso-num">4</span> Fuente de luz y power meter
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p4" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>La fuente envía una señal estable en una longitud de onda definida y el power meter la recibe y mide su potencia. Juntos miden la pérdida de inserción total del enlace.</li>
+                  <li>Se selecciona la longitud de onda: en monomodo, normalmente 1310 y 1550 nm, según el procedimiento.</li>
+                  <li>Se inspeccionan y limpian los conectores, se conectan fuente y medidor con los cables de referencia y se fija la referencia, normalmente 0 dB, con el método elegido (1, 2 o 3 cables). Luego se conecta el enlace y se registra la pérdida.</li>
+                  <li>El resultado se compara con el presupuesto de pérdidas y con los límites del proyecto: no hay un valor universal de aceptación.</li>
+                  <li>No se confunden las unidades: en dos puertos de una OLT el medidor leyó 5,48 y 5,57 dBm. Eso es potencia absoluta, no una pérdida.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p5" aria-expanded="false" aria-controls="p5">
+              <span class="paso-num">5</span> Medición con OTDR
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p5" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El OTDR envía pulsos de luz y analiza la que regresa: la retrodispersión forma la línea de la traza y las reflexiones forman los picos.</li>
+                  <li>Se enciende el equipo, se verifica la configuración, se identifica la fibra y se inspeccionan y limpian las conexiones.</li>
+                  <li>Entre el OTDR y la fibra se conecta un cable de lanzamiento y, en el otro extremo, cuando es posible, un cable de recepción. El pulso es tan fuerte que deja una zona muerta cerca del equipo; esos cables permiten evaluar los conectores de los extremos.</li>
+                  <li>Se configuran la longitud de onda, el rango, el ancho de pulso, el tiempo de adquisición y el índice de refracción de la fibra. Un pulso más ancho llega más lejos, pero distingue peor los eventos cercanos.</li>
+                  <li>Se ejecuta la prueba y se guarda la traza.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p6" aria-expanded="false" aria-controls="p6">
+              <span class="paso-num">6</span> Leer la traza
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p6" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>El eje horizontal es la distancia, en kilómetros; el eje vertical, el nivel de la luz que regresa, en dB.</li>
+                  <li>La pendiente de la línea es la atenuación de la fibra: en el tramo del video, la tabla indica 0,206 dB/km.</li>
+                  <li>Un escalón hacia abajo, sin pico, es un evento no reflectivo, típico de un empalme por fusión: en el video, 0,320 dB a 4,54 km.</li>
+                  <li>Un pico es un evento reflectivo: un conector, una discontinuidad o un extremo abierto. Al final, la línea cae al ruido: es el final de la fibra, a 11,59 km.</li>
+                  <li>La tabla de eventos reúne distancia, pérdida, reflectancia y pérdida acumulada. Los valores en rojo y el letrero FAIL son la evaluación automática del equipo según los umbrales configurados; se revisa evento por evento.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p7" aria-expanded="false" aria-controls="p7">
+              <span class="paso-num">7</span> Cinco situaciones en una traza
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p7" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Una traza estable: el tramo se comporta de forma uniforme.</li>
+                  <li>Un escalón con pérdida: posible empalme o componente que agrega atenuación.</li>
+                  <li>Un pico reflectivo: posible conector, discontinuidad o extremo abierto.</li>
+                  <li>Una pérdida pronunciada: posible curvatura, daño o conexión defectuosa. Una caída abrupta: el final del enlace, o un corte si ocurre antes de lo esperado.</li>
+                  <li>Ninguna traza se interpreta solo por su forma: se revisan pérdida, reflectancia, distancia y configuración, y se tienen en cuenta las zonas muertas y los eventos fantasma.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p8" aria-expanded="false" aria-controls="p8">
+              <span class="paso-num">8</span> Comparación y diagnóstico
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p8" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Las dos pruebas responden preguntas distintas: la fuente y el power meter dicen cuánto pierde el enlace de extremo a extremo; el OTDR dice dónde está cada evento y cómo es.</li>
+                  <li>El OTDR complementa la pérdida de inserción, pero no la reemplaza para certificar la pérdida total.</li>
+                  <li>Si un resultado sale de los límites: se investiga la causa, se inspeccionan las conexiones, se revisan los empalmes, se corrige y se vuelve a medir.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p9" aria-expanded="false" aria-controls="p9">
+              <span class="paso-num">9</span> Registro y certificación
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p9" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Cada fibra probada se documenta: cable y fibra, origen y destino, longitudes de onda, pérdida de inserción, longitud del enlace, trazas OTDR, eventos identificados, fecha de medición y resultado frente a los criterios del proyecto.</li>
+                  <li>Una red no queda certificada solo porque tiene señal. Queda certificada cuando sus mediciones están documentadas y cumplen los criterios.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aviso-validar mt-4">
+          <p class="m-0"><b>Ante un resultado fuera de límites:</b> 1) confirmar la configuración (longitud de onda, referencia, IOR y umbrales);
+          2) inspeccionar y limpiar las conexiones del enlace y de los cables de prueba; 3) ubicar con el OTDR el evento que explica la diferencia;
+          4) corregir (rehacer el empalme, cambiar el conector o liberar la curvatura); 5) repetir las pruebas y registrar el resultado final con el anterior.</p>
+        </div>
+      </section>
+
+      <section class="bloque" id="claves">
+        <h2>Seis claves técnicas</h2>
+        <p>
+          Datos y criterios que el video no desarrolla: cálculo de distancia, zonas de inspección, configuración, comprobación de la tabla de eventos,
+          reflectancia y certificación. El tema completo está en la <a href="../docs/guia-pruebas-certificacion.pdf" download>guía técnica</a> (PDF).
+        </p>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">1</span><div><small>Fundamento</small><h3>El OTDR mide tiempo y lo convierte en distancia</h3></div></header>
+          <p>El OTDR envía pulsos y mide, en función del tiempo, la luz que regresa. La <b>retrodispersión</b> del vidrio forma la línea inclinada de la traza, cuya pendiente es la atenuación; las <b>reflexiones</b> en conectores, empalmes mecánicos, fisuras o extremos abiertos forman los picos. La distancia sale del tiempo de ida y vuelta y del índice de refracción de grupo (IOR) configurado: <b>d = (c × t) ÷ (2 × n)</b>. Un IOR mal configurado desplaza todas las distancias en la misma proporción.</p><div class="ejemplo"><b>Dato real · traza de 11,59048 km con IOR 1,467</b><p class="m-0">Si el mismo tiempo se interpretara con IOR 1,468: 11,59048 × (1,467 ÷ 1,468) = 11,58258 km, unos 8 m menos.</p></div><p>Cerca del equipo, el pulso satura el receptor y oculta los eventos próximos: es la <b>zona muerta</b>. Por eso se usa un cable de lanzamiento y, en el extremo lejano, uno de recepción. Un pulso más ancho alcanza más distancia, pero separa peor los eventos cercanos.</p>
+          <p class="clave-regla"><b>En campo:</b> el IOR se toma de la ficha de la fibra instalada, para la longitud de onda medida. El OTDR mide longitud de fibra, no de cable ni de trazado: para ubicar un daño en el terreno se usan las marcas métricas del cable y el registro de reservas, porque las reservas y el exceso de fibra dentro del tubo desplazan la ubicación.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">2</span><div><small>Inspección</small><h3>Qué zonas de la cara del conector se evalúan</h3></div></header>
+          <div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:10%">Zona</th><th scope="col" style="width:24%">Ubicación</th><th scope="col">Tratamiento en la IEC 61300-3-35 ed. 3 (2022)</th></tr></thead><tbody>
+<tr><td><b>A</b></td><td>Núcleo</td><td>Criterio de aceptación más exigente: rayas y defectos según tamaño y cantidad.</td></tr>
+<tr><td><b>B</b></td><td>Revestimiento</td><td>Con criterio de aceptación.</td></tr>
+<tr><td><b>C</b></td><td>Adhesivo</td><td>Sin criterio de aceptación desde 2022.</td></tr>
+<tr><td><b>D</b></td><td>Contacto (férula)</td><td>Sin criterio; las partículas sueltas se limpian para que no migren al núcleo.</td></tr>
+</tbody></table></div><p>Secuencia: inspeccionar toda la cara, incluida la zona de contacto; si hay partículas, limpiar con el método del fabricante de la herramienta; volver a inspeccionar. Si quedan partículas después de limpiezas repetidas, se tratan como defectos fijos y se evalúan las zonas A y B. Según la revisión de 2022, un conector que no pasa la inspección puede usarse si cumple las pruebas de pérdida de inserción y de pérdida de retorno: la inspección no reemplaza la medición.</p>
+          <p class="clave-regla"><b>En campo:</b> se inspeccionan los dos conectores de cada conexión (el del cable y el del equipo o adaptador), los cables de referencia, lanzamiento y recepción antes de cada jornada, y los puertos del instrumento con una sonda para puertos. Un cable de prueba contaminado ensucia el puerto del equipo, y un puerto dañado afecta todas las mediciones siguientes.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">3</span><div><small>Configuración</small><h3>Cada parámetro del OTDR tiene un criterio</h3></div></header>
+          <div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:22%">Parámetro</th><th scope="col" style="width:32%">Qué controla</th><th scope="col">Criterio</th></tr></thead><tbody>
+<tr><td><b>Longitud de onda</b></td><td>Atenuación y sensibilidad a curvaturas.</td><td>La del procedimiento; en monomodo, normalmente 1310 y 1550 nm.</td></tr>
+<tr><td><b>Rango</b></td><td>Distancia máxima mostrada.</td><td>Mayor que el enlace, para que el final y el ruido posterior queden visibles.</td></tr>
+<tr><td><b>Ancho de pulso</b></td><td>Alcance contra resolución.</td><td>El menor que permita ver el final del enlace con una traza limpia.</td></tr>
+<tr><td><b>Tiempo de adquisición</b></td><td>Promediado de la traza; reduce el ruido.</td><td>El suficiente para que la retrodispersión se vea estable.</td></tr>
+<tr><td><b>IOR</b></td><td>Conversión de tiempo a distancia.</td><td>El de la ficha de la fibra instalada, para la longitud de onda medida.</td></tr>
+<tr><td><b>Umbrales</b></td><td>Qué eventos marca el equipo como fuera de criterio.</td><td>Los del proyecto.</td></tr>
+</tbody></table></div><div class="ejemplo"><b>Dato real · configuración de dos trazas de NPE</b><p class="m-0">Traza de 11,59 km: 1550 nm, pulso de 1 µs, IOR 1,46700, rango de 25 km. Traza de 18,71 km: 1550 nm, pulso de 2 µs, IOR 1,46700, rango de 50 km. En ambas el rango supera la longitud del enlace y el final queda dentro de la pantalla.</p></div>
+          <p class="clave-regla"><b>En campo:</b> con los umbrales de fábrica, el letrero PASS o FAIL del equipo no representa el criterio de aceptación. Antes de medir se cargan los umbrales del proyecto.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">4</span><div><small>Lectura</small><h3>Cómo comprobar la tabla de eventos de una traza</h3></div></header>
+          <p>La tabla alterna filas de eventos (distancia, pérdida y reflectancia) y filas de tramos (longitud, pérdida y pendiente). La pérdida acumulada permite comprobar que es coherente.</p><div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:22%">Fila</th><th scope="col">Distancia o longitud</th><th scope="col">Pérdida</th><th scope="col">Pendiente</th><th scope="col">Acumulada</th></tr></thead><tbody>
+<tr><td><b>Evento 003</b></td><td>4,53844 km</td><td>0,320 dB</td><td>—</td><td>1,331 dB</td></tr>
+<tr><td><b>Tramo</b></td><td>6,45770 km</td><td>1,330 dB</td><td>0,206 dB/km</td><td>2,662 dB</td></tr>
+<tr><td><b>Evento 004</b></td><td>10,99614 km</td><td>0,291 dB</td><td>—</td><td>2,953 dB</td></tr>
+<tr><td><b>Tramo</b></td><td>0,59434 km</td><td>0,128 dB</td><td>0,215 dB/km</td><td>3,081 dB</td></tr>
+<tr><td><b>Evento 005 (final)</b></td><td>11,59048 km</td><td>—</td><td>—</td><td>3,081 dB</td></tr>
+</tbody></table></div><div class="ejemplo"><b>Dato real · comprobación de la traza de 11,59 km</b><p class="m-0">Tramo: 6,45770 km × 0,206 dB/km = 1,330 dB, igual a la fila. Suma desde el evento 003: 1,331 + 1,330 + 0,291 + 0,128 = 3,080 dB, frente a 3,081 dB de pérdida total (diferencia de redondeo). Pérdida promedio: 3,081 ÷ 11,59048 = 0,266 dB/km, que incluye los eventos; la atenuación propia de la fibra es la pendiente de los tramos, cerca de 0,21 dB/km.</p></div>
+          <p class="clave-regla"><b>En campo:</b> los eventos 003 y 004 son no reflectivos (sin reflectancia), como un empalme por fusión. El equipo los marca en rojo y muestra FAIL porque superan sus umbrales configurados; la aceptación se decide con los umbrales del proyecto, y la pérdida real de un empalme se obtiene midiendo en ambos sentidos y promediando.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">5</span><div><small>Reflectancia</small><h3>Picos, escalones y lo que refleja cada evento</h3></div></header>
+          <figure class="figura"><img src="../img/pruebas/cinco-situaciones.webp" width="1840" height="820" loading="lazy" alt="Esquema didáctico de una traza OTDR: pico inicial, tramo con pendiente uniforme, un escalón pequeño, un pico reflectivo, una caída pronunciada y el pico final seguido del ruido"><figcaption>Esquema didáctico del video, no es una medición. De izquierda a derecha: pico del conector inicial, tramo estable, escalón con pérdida, pico reflectivo, pérdida pronunciada y caída al final del enlace.</figcaption></figure><p>La reflectancia se expresa en dB negativos: cuanto más negativo, menos luz reflejada (−52 dB refleja mucho menos que −15 dB). En la traza real de 18,71 km de NPE, el evento 005 es reflectivo (−42,73 dB) y el equipo no calcula su pérdida (−,−−−): se revisa en la traza y en la configuración antes de clasificarlo, porque puede ser un conector o, si aparece a una distancia múltiplo de otro evento, un fantasma. El tramo corto que lo sigue tiene una pendiente de 0,078 dB/km, muy baja: puede estar afectado por la zona muerta.</p><div class="ejemplo"><b>Cálculo · reflexión de un extremo abierto</b><p class="m-0">Entre vidrio (n ≈ 1,467) y aire: R = ((1,467 − 1) ÷ (1,467 + 1))² ≈ 0,036, es decir unos −14,5 dB. Un final con reflectancia cercana a −15 dB es coherente con un extremo plano abierto; un conector APC desconectado refleja mucho menos por el ángulo de su pulido.</p></div>
+          <p class="clave-regla"><b>En campo:</b> un pico reflectivo sin pérdida a una distancia igual al doble de la de un conector es probablemente un evento fantasma. Se confirma reduciendo la reflexión del extremo (por ejemplo con el cable de recepción) o cambiando el rango. La pendiente de un tramo afectado por zona muerta no se toma como atenuación sin verificarla.</p>
+        </article>
+        <article class="clave">
+          <header class="clave-cab"><span class="clave-num">6</span><div><small>Certificación</small><h3>Tres mediciones que no se reemplazan entre sí</h3></div></header>
+          <div class="table-responsive"><table class="table tabla-riesgos"><thead><tr><th scope="col" style="width:20%">Medición</th><th scope="col" style="width:22%">Equipo</th><th scope="col" style="width:24%">Responde</th><th scope="col">Uso en la certificación</th></tr></thead><tbody>
+<tr><td><b>Potencia (dBm)</b></td><td>Power meter</td><td>¿Cuánta luz hay en este punto?</td><td>Verificar transmisores y la potencia que llega al usuario. No es una pérdida.</td></tr>
+<tr><td><b>Pérdida de inserción (dB)</b></td><td>Fuente y power meter con referencia</td><td>¿Cuánto pierde el enlace completo?</td><td>Comparar con el presupuesto y con el límite del proyecto.</td></tr>
+<tr><td><b>Traza OTDR</b></td><td>OTDR con cables de lanzamiento y recepción</td><td>¿Dónde está cada evento y cómo es?</td><td>Ubicar y caracterizar empalmes, conectores y daños.</td></tr>
+</tbody></table></div><div class="ejemplo"><b>Dato real · potencia de una OLT</b><p class="m-0">En dos puertos GPON de una OLT el medidor registró 5,48 y 5,57 dBm a 1490 nm (unos 3,5 mW): son potencias de salida del transmisor. Si en la ONT del usuario se midieran −20,0 dBm, la pérdida del camino sería 5,48 − (−20,0) = 25,48 dB, que se compara con el presupuesto y con la clase de los módulos ópticos.</p><p class="ejemplo-nota">La lectura en la ONT es un valor supuesto para practicar.</p></div>
+          <p class="clave-regla"><b>En campo:</b> la FOA advierte que el OTDR no debe usarse para medir la pérdida de inserción; la pérdida total se certifica con fuente y power meter. Un tramo con servicio no está certificado: lo está cuando sus mediciones están documentadas y comparadas con los criterios del proyecto.</p>
+        </article>
+      </section>
+
+      <section class="bloque" id="riesgos">
+        <h2>Riesgos y errores frecuentes</h2>
+        <p>Riesgos para la persona y errores que invalidan una medición.</p>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos align-middle">
+            <thead>
+              <tr><th scope="col" style="width:30%">Riesgo o error</th><th scope="col" style="width:12%">Severidad</th><th scope="col">Consecuencia y control</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Luz infrarroja invisible</b></td><td><span class="sev sev-alta">Alta</span></td><td>Nunca mirar un conector ni un puerto; verificar con el medidor que no haya señal antes de inspeccionar o desconectar.</td></tr>
+              <tr><td><b>Residuos de fibra</b></td><td><span class="sev sev-alta">Alta</span></td><td>Recipiente marcado para los residuos; gafas de seguridad.</td></tr>
+              <tr><td><b>Desconectar una fibra con servicio</b></td><td><span class="sev sev-alta">Alta</span></td><td>Identificar la fibra según el registro del proyecto y verificar la señal antes de manipular la conexión.</td></tr>
+              <tr><td><b>Conectar sin inspeccionar</b></td><td><span class="sev sev-media">Media</span></td><td>Mediciones alteradas y puertos del equipo dañados. Inspeccionar, limpiar e inspeccionar otra vez antes de cada conexión.</td></tr>
+              <tr><td><b>Usar los umbrales de fábrica del OTDR</b></td><td><span class="sev sev-media">Media</span></td><td>El PASS o FAIL no corresponde al criterio del proyecto. Cargar los umbrales del proyecto antes de medir.</td></tr>
+              <tr><td><b>IOR distinto al de la ficha</b></td><td><span class="sev sev-media">Media</span></td><td>Distancias desplazadas y daños buscados en el lugar equivocado. Configurar el IOR de la fibra instalada.</td></tr>
+              <tr><td><b>Certificar solo con el OTDR</b></td><td><span class="sev sev-media">Media</span></td><td>La pérdida total queda sin medir. Medir la pérdida de inserción con fuente y power meter.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="diagnostico">
+        <h2>Diagnóstico de resultados</h2>
+        <p>Lo que muestran el OTDR y el power meter, su causa probable y qué hacer.</p>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos tabla-diagnostico">
+            <thead>
+              <tr><th scope="col" style="width:38%">Señal</th><th scope="col" style="width:12%">Gravedad</th><th scope="col">Qué hacer</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>Caída abrupta antes de la longitud esperada</b><small class="d-block mt-1">Corte de la fibra.</small></td><td><span class="sev sev-critica">Crítica</span></td><td>Ubicar el punto con la distancia del OTDR, las marcas métricas del cable y el registro de reservas, y reportar.</td></tr>
+              <tr><td><b>Pérdida de inserción fuera del límite del proyecto</b><small class="d-block mt-1">Conexión sucia, empalme defectuoso, curvatura o daño.</small></td><td><span class="sev sev-alta">Alta</span></td><td>Confirmar la configuración, inspeccionar y limpiar, ubicar el evento con el OTDR, corregir y volver a medir. Registrar el resultado final junto con el anterior.</td></tr>
+              <tr><td><b>Letrero FAIL en la traza</b><small class="d-block mt-1">Eventos que superan los umbrales configurados en el equipo.</small></td><td><span class="sev sev-media">Media</span></td><td>Comparar cada evento con los umbrales del proyecto; medir los empalmes en ambos sentidos antes de decidir si se rehacen.</td></tr>
+              <tr><td><b>El daño no aparece donde indica el OTDR</b><small class="d-block mt-1">Longitud de fibra distinta a la de cable, reservas o IOR distinto al real.</small></td><td><span class="sev sev-media">Media</span></td><td>Trasladar la distancia al terreno con las marcas métricas y el registro de reservas.</td></tr>
+              <tr><td><b>Evento reflectivo sin pérdida medible</b><small class="d-block mt-1">Conector o evento fantasma.</small></td><td><span class="sev sev-media">Media</span></td><td>Revisar la traza y la configuración antes de clasificarlo.</td></tr>
+              <tr><td><b>Pico sin pérdida al doble de la distancia de un conector</b><small class="d-block mt-1">Evento fantasma por reflexión repetida.</small></td><td><span class="sev sev-baja">Baja</span></td><td>Reducir la reflexión del extremo con el cable de recepción o cambiar el rango.</td></tr>
+              <tr><td><b>Pendiente muy baja en un tramo corto después de un pico</b><small class="d-block mt-1">Zona muerta del evento reflectivo.</small></td><td><span class="sev sev-baja">Baja</span></td><td>No tomarla como atenuación de la fibra sin verificarla.</td></tr>
+              <tr><td><b>Final con reflectancia cercana a −15 dB</b><small class="d-block mt-1">Extremo plano abierto (reflexión vidrio-aire).</small></td><td><span class="sev sev-baja">Baja</span></td><td>Es coherente con el final de la fibra; si se esperaba un conector APC, revisar el extremo.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="bloque" id="galeria">
+        <h2>Galería de campo</h2>
+        <p>Equipos y mediciones de NPE. Haga clic en una foto para verla en tamaño completo.</p>
+        <div class="row g-3">
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/otdr-odf.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/otdr-odf.webp" alt="OTDR Deviser AE3100 sobre el rack, conectado al ODF con un cable SC/APC verde, con una traza en pantalla" loading="lazy" width="1600" height="770">
+              </a>
+              <figcaption>OTDR conectado al ODF con un cable SC/APC<span>Dato real</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/traza-18-km.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/traza-18-km.webp" alt="Pantalla del OTDR con una traza de 18,71 km a 1550 nm, el letrero FAIL y la tabla de eventos debajo" loading="lazy" width="1600" height="786">
+              </a>
+              <figcaption>Traza de 18,71 km: pulso de 2 µs y rango de 50 km<span>Dato real</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/potencia-olt.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/potencia-olt.webp" alt="Medidor de potencia conectado con un cordón amarillo a un puerto de la OLT, marcando 5,57 dBm en 1490 nm" loading="lazy" width="904" height="1104">
+              </a>
+              <figcaption>Potencia de salida de una OLT: 5,57 dBm en 1490 nm<span>Dato real</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/power-meter-1490.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/power-meter-1490.webp" alt="Medidor de potencia óptica conectado a una caja con un cordón amarillo, marcando 1490 nm, −18,23 dBm y 15,03 µW" loading="lazy" width="1200" height="1104">
+              </a>
+              <figcaption>Potencia recibida en una caja: −18,23 dBm en 1490 nm<span>sep–oct 2026</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/medicion-nap-mocoa.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/medicion-nap-mocoa.webp" alt="Medidor de potencia óptica conectado a la caja NAP, marcando −15,56 dBm en 1490 nm" loading="lazy" width="720" height="1114">
+              </a>
+              <figcaption>Medición de potencia en una caja NAP · Mocoa<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="bloque" id="descargas">
+        <h2>Descargas</h2>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><a class="descarga" href="../docs/guia-pruebas-certificacion.pdf" download><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i><b>Guía · Pruebas y certificación óptica</b><small>PDF · 13 páginas · 1,9 MB</small><span>Descargar <i class="bi bi-download" aria-hidden="true"></i></span></a></div>
+          <div class="col-md-6 col-lg-4"><a class="descarga" href="../docs/guia-pruebas-certificacion.pdf#page=11" target="_blank" rel="noopener"><i class="bi bi-clipboard-data" aria-hidden="true"></i><b>Registro de certificación</b><small>Formato imprimible · página 11 de la guía</small><span>Abrir <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></span></a></div>
+        </div>
+      </section>
+
+      <section class="bloque" id="evaluacion">
+        <h2>Autoevaluación</h2>
+        <p>Una pregunta por cada clave técnica; cuatro son casos de campo. Respóndala y luego ábrala para comprobar.</p>
+        <div class="preguntas">
+          <details class="pregunta"><summary><span>1</span>El OTDR ubica un corte a 3,200 km, pero al recorrer el cable el daño aparece unos metros antes. ¿Por qué?</summary><p>Porque el OTDR mide longitud de fibra, no de cable ni de trazado: las reservas, el exceso de fibra dentro del tubo y un IOR distinto al real desplazan la ubicación. Se usan las marcas métricas del cable y el registro de reservas para trasladar la distancia al terreno.</p></details>
+          <details class="pregunta"><summary><span>2</span>Un compañero limpia un conector y lo conecta de inmediato. ¿Qué faltó? ¿Qué zonas de la cara se evalúan?</summary><p>Faltó volver a inspeccionar: limpiar sin mirar no es un procedimiento. Las zonas con criterio de aceptación son la A (núcleo) y la B (revestimiento).</p></details>
+          <details class="pregunta"><summary><span>3</span>Un auxiliar reporta «fibra dañada» porque el OTDR muestra FAIL en la traza de 11,59 km. ¿Tiene razón?</summary><p>No necesariamente. La tabla muestra dos eventos no reflectivos de 0,320 y 0,291 dB y una fibra cercana a 0,21 dB/km. El FAIL indica que esos eventos superan los umbrales del equipo; se comparan con el umbral del proyecto y se miden en ambos sentidos antes de decidir.</p></details>
+          <details class="pregunta"><summary><span>4</span>En la traza de 11,59 km, la pérdida promedio es 0,266 dB/km. ¿Es la atenuación de la fibra?</summary><p>No. Ese promedio incluye los eventos del enlace. La atenuación propia de la fibra es la pendiente de los tramos, cerca de 0,21 dB/km.</p></details>
+          <details class="pregunta"><summary><span>5</span>En un enlace corto aparece un pico reflectivo sin pérdida a una distancia igual al doble de la del conector final. ¿Qué es?</summary><p>Un evento fantasma: la reflexión del conector final va y vuelve en la fibra. Se confirma reduciendo la reflexión del extremo, por ejemplo con el cable de recepción, o cambiando el rango.</p></details>
+          <details class="pregunta"><summary><span>6</span>Un tramo entrega servicio, pero no tiene pérdida de inserción medida ni traza guardada. ¿Está certificado?</summary><p>No. El servicio confirma continuidad y potencia suficiente hoy, no el cumplimiento de los criterios ni el margen futuro. Se certifica cuando sus mediciones están documentadas y comparadas con los criterios del proyecto.</p></details>
+        </div>
+      </section>
+
+      <nav class="nav-modulo" aria-label="Módulos de la línea">
+        <a href="cajas-nap.html">
+          <small><i class="bi bi-arrow-left" aria-hidden="true"></i> Anterior</small>
+          <b>Instalación y configuración de cajas NAP</b>
+        </a>
+        <a href="../formacion.html?linea=B">
+          <small>Línea B <i class="bi bi-arrow-right" aria-hidden="true"></i></small>
+          <b>Telecomunicaciones y F.O.</b>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="pie">
+  <div class="marco pie-grid">
+    <div class="pie-marca">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+        <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+      </a>
+      <p>Ingenieros contratistas y consultores en energía y telecomunicaciones.</p>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Formación</h2>
+      <ul>
+        <li><a href="../formacion.html?linea=A">Infraestructura eléctrica</a></li>
+        <li><a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a></li>
+        <li><a href="../formacion.html?linea=C">Seguridad y SST</a></li>
+        <li><a href="../formacion.html?linea=D">Herramientas y materiales</a></li>
+      </ul>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a class="enlace-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+        <li><a href="mailto:gerencia@npe.com.co">gerencia@npe.com.co</a></li>
+        <li><a href="mailto:talentohumano@npe.com.co">talentohumano@npe.com.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marco">
+    <div class="pie-base">
+      <span>&copy; <span data-anio></span> Net Plus Energy S.A.S. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+<button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../js/npe.js?v=20261110"></script>
+</body>
+</html>

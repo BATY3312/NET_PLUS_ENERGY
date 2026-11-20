@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fusión de fibra óptica | Centro de Formación NPE</title>
+<meta name="description" content="Procedimiento de empalme por fusión de fibra óptica: preparación del cable, pelado, limpieza, corte, fusión, protección del empalme y verificación con OTDR.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Net Plus Energy S.A.S">
+<meta property="og:title" content="Fusión de fibra óptica | Centro de Formación NPE">
+<meta property="og:description" content="Procedimiento de empalme por fusión de fibra óptica: preparación del cable, pelado, limpieza, corte, fusión, protección del empalme y verificación con OTDR.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="../img/logo-npe.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preload" href="../fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+<link href="../css/npe.css?v=20261110" rel="stylesheet">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra npe-nav">
+  <div class="marco barra-int">
+    <a class="marca" href="../index.html" aria-label="Net Plus Energy, inicio">
+      <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+      <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+    </a>
+    <button class="barra-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span>Menú</span><i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav class="collapse barra-nav" id="menuPrincipal" aria-label="Principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a class="activo" href="../formacion.html">Formación</a></li>
+      </ul>
+      <a class="boton boton-sm" href="../index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================= ENCABEZADO DEL MÓDULO ======================= -->
+<header class="mod-hero">
+  <div class="marco">
+    <nav class="migas" aria-label="Ruta">
+      <a href="../index.html">Inicio</a> /
+      <a href="../formacion.html">Centro de formación</a> /
+      <a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a> /
+      <span aria-current="page">Fusión de fibra óptica</span>
+    </nav>
+
+    <h1>Fusión de fibra óptica</h1>
+    <p class="entrada">
+      Procedimiento de empalme por fusión en planta externa: desde la apertura y preparación
+      del cable hasta la protección del empalme y su verificación con OTDR.
+    </p>
+
+    <div class="mod-datos">
+      <div class="mod-dato"><small>Línea</small><b>B · Telecomunicaciones y F.O.</b></div>
+      <div class="mod-dato"><small>Módulo</small><b>B3</b></div>
+      <div class="mod-dato"><small>Nivel</small><b>Intermedio</b></div>
+      <div class="mod-dato"><small>Duración</small><b>50 min</b></div>
+      <div class="mod-dato"><small>Video</small><b>2 partes · 6:10</b></div>
+      <div class="mod-dato"><small>Actualizado</small><b>5 nov 2026</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="container modulo-cuerpo">
+  <div class="row g-5">
+
+    <!-- ======================= ÍNDICE LATERAL ======================= -->
+    <aside class="col-lg-3 order-lg-2">
+      <div class="indice-lateral">
+        <span class="indice-titulo">En este módulo</span>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#normativa">Marco normativo</a>
+        <a href="#video">Videos del procedimiento</a>
+        <a href="#procedimiento">Procedimiento</a>
+        <a href="#herramientas">Herramientas y materiales</a>
+        <a href="#epp">EPP requerido</a>
+        <a href="#riesgos">Riesgos y controles</a>
+        <a href="#galeria">Galería de campo</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#charla">Charla técnica</a>
+        <a href="#evaluacion">Autoevaluación</a>
+      </div>
+    </aside>
+
+    <!-- ======================= CONTENIDO ======================= -->
+    <main class="col-lg-9 order-lg-1" id="contenido">
+
+      <div class="aviso-validar mb-5">
+        <p class="m-0"><b>Material de apoyo formativo.</b>
+        El ángulo de corte y la pérdida por empalme de este módulo son valores de referencia habituales. En obra, los
+        criterios de aceptación se toman de la especificación del cliente u operador de red, de la hoja de datos de la
+        fusionadora y de la normativa vigente. No sustituye el criterio del ingeniero responsable.</p>
+      </div>
+
+      <!-- ---------- OBJETIVOS ---------- -->
+      <section class="bloque" id="objetivos">
+        <h2>Objetivos de aprendizaje</h2>
+        <p class="text-secondary">Al terminar este módulo, el técnico estará en capacidad de:</p>
+        <ul class="lista-check">
+          <li>Preparar el cable de fibra óptica e identificar los hilos mediante el código de colores.</li>
+          <li>Ejecutar el pelado, la limpieza y el corte de precisión según el procedimiento.</li>
+          <li>Operar la fusionadora y obtener un empalme con la pérdida exigida por el contrato.</li>
+          <li>Proteger el empalme y organizarlo en bandeja respetando el radio de curvatura mínimo.</li>
+          <li>Verificar el enlace con OTDR e interpretar el evento del empalme en la traza.</li>
+          <li>Aplicar los controles de seguridad propios del trabajo con fibra óptica.</li>
+        </ul>
+      </section>
+
+      <!-- ---------- NORMATIVA ---------- -->
+      <section class="bloque" id="normativa">
+        <h2>Marco normativo aplicable</h2>
+        <p class="text-secondary">
+          Referencias que enmarcan el procedimiento. Debe verificarse la versión vigente de cada una
+          y complementarse con la especificación particular del operador de red o del cliente.
+        </p>
+        <div>
+          <span class="chip-norma">ITU-T G.652.D · Fibra monomodo</span>
+          <span class="chip-norma">ITU-T G.657 · Fibra insensible a curvatura</span>
+          <span class="chip-norma">TIA-598 · Código de colores</span>
+          <span class="chip-norma">RITEL · Redes internas de telecomunicaciones</span>
+          <span class="chip-norma">Decreto 1072 de 2015 · SG-SST</span>
+          <span class="chip-norma">Resolución 4272 de 2021 · Trabajo en alturas</span>
+        </div>
+        <div class="aviso-validar mt-3">
+          <i class="bi bi-bookmark-check" aria-hidden="true"></i>
+          <p class="m-0"><b>Antes de empezar:</b> confirme en el contrato la versión vigente de cada norma y el criterio
+          de aceptación de pérdida por empalme. Si el trabajo se ejecuta en poste, aplica además el
+          reglamento de trabajo seguro en alturas.</p>
+        </div>
+      </section>
+
+      <!-- ---------- VIDEOS ---------- -->
+      <section class="bloque" id="video">
+        <h2>Videos del procedimiento</h2>
+        <p class="text-secondary">
+          Serie <strong>Empalmes por fusión</strong>, producida por NPE, en dos partes con narración y
+          subtítulos. Siguen el orden del procedimiento de esta página; cada capítulo lleva al paso
+          correspondiente del video.
+        </p>
+
+        <!-- Parte 1 -->
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 1</span>
+            <div>
+              <h3>Preparación e identificación de fibra óptica en terreno</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 2:28</span>
+                <span><i class="bi bi-diagram-2" aria-hidden="true"></i> Cable de 24 y 48 hilos</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte1" data-yt="Vt-BBLlhWVs" data-titulo="Parte 1 · Preparación e identificación de fibra óptica en terreno"
+               href="https://www.youtube.com/watch?v=Vt-BBLlhWVs" target="_blank" rel="noopener">
+              <img src="../img/poster-fusion-p1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 1 · Preparación e identificación de fibra óptica en terreno</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte1">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> 1 · Llegada y verificación del punto</button>
+            <button type="button" class="capitulo" data-t="19"><span>0:19</span> 2 · Preparación del cable</button>
+            <button type="button" class="capitulo" data-t="39"><span>0:39</span> 3 · Identificación · 24 hilos</button>
+            <button type="button" class="capitulo" data-t="64"><span>1:04</span> 4 · Identificación · 48 hilos</button>
+            <button type="button" class="capitulo" data-t="85"><span>1:25</span> 5 · Pelado de la fibra</button>
+            <button type="button" class="capitulo" data-t="101"><span>1:41</span> 6 · Limpieza</button>
+            <button type="button" class="capitulo" data-t="116"><span>1:56</span> 7 · Corte de precisión</button>
+            <button type="button" class="capitulo" data-t="135"><span>2:15</span> 8 · Cierre</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>1 a 6</strong> del procedimiento.</span>
+            <a href="https://youtu.be/Vt-BBLlhWVs" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+
+        <!-- Parte 2 -->
+        <article class="video-parte">
+          <div class="video-cab">
+            <span class="video-num">Parte 2</span>
+            <div>
+              <h3>Empalme por fusión, protección y verificación en terreno</h3>
+              <p class="video-meta">
+                <span><i class="bi bi-clock" aria-hidden="true"></i> 3:42</span>
+                <span><i class="bi bi-graph-up" aria-hidden="true"></i> Incluye traza OTDR</span>
+                <span><i class="bi bi-badge-cc" aria-hidden="true"></i> Narración y subtítulos</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="video-caja">
+            <a class="yt" id="videoParte2" data-yt="W1zI3LEDOuA" data-titulo="Parte 2 · Empalme por fusión, protección y verificación en terreno"
+               href="https://www.youtube.com/watch?v=W1zI3LEDOuA" target="_blank" rel="noopener">
+              <img src="../img/poster-fusion-p2.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="yt-play" aria-hidden="true"><i class="bi bi-play-fill"></i></span>
+              <span class="visually-hidden">Reproducir video: Parte 2 · Empalme por fusión, protección y verificación en terreno</span>
+            </a>
+          </div>
+
+          <div class="capitulos" data-video="videoParte2">
+            <button type="button" class="capitulo" data-t="0"><span>0:00</span> 1 · Continuidad</button>
+            <button type="button" class="capitulo" data-t="19"><span>0:19</span> 2 · Preparación de la fusionadora</button>
+            <button type="button" class="capitulo" data-t="42"><span>0:42</span> 3 · Empalme por fusión</button>
+            <button type="button" class="capitulo" data-t="71"><span>1:11</span> 4 · Protección del empalme</button>
+            <button type="button" class="capitulo" data-t="91"><span>1:31</span> 5 · Organización en la bandeja</button>
+            <button type="button" class="capitulo" data-t="113"><span>1:53</span> 6 · Cierre de la caja de empalme</button>
+            <button type="button" class="capitulo" data-t="130"><span>2:10</span> 7 · Verificación con OTDR</button>
+            <button type="button" class="capitulo" data-t="170"><span>2:50</span> 8 · Seguridad laboral</button>
+            <button type="button" class="capitulo" data-t="204"><span>3:24</span> 9 · Conclusión</button>
+          </div>
+
+          <p class="video-pie">
+            <span>Cubre los pasos <strong>7 a 10</strong> del procedimiento.</span>
+            <a href="https://youtu.be/W1zI3LEDOuA" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i> Ver en YouTube<span class="visually-hidden"> (se abre en otra pestaña)</span></a>
+          </p>
+        </article>
+      </section>
+
+      <!-- ---------- PROCEDIMIENTO ---------- -->
+      <section class="bloque" id="procedimiento">
+        <h2>Procedimiento paso a paso</h2>
+        <p class="text-secondary">
+          Secuencia de referencia para un empalme por fusión en campo. El orden importa:
+          el manguito de protección debe montarse antes del corte, porque después ya no entra.
+        </p>
+
+        <div class="accordion" id="pasos">
+
+          <div class="paso">
+            <button type="button" class="paso-btn" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1">
+              <span class="paso-num">1</span> Preparación del sitio y de los equipos
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p1" class="collapse show" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Diligenciar el análisis de trabajo seguro y el permiso de trabajo correspondiente.</li>
+                  <li>Delimitar y señalizar el área. Si el trabajo es en vía, instalar la señalización vial.</li>
+                  <li>Disponer una superficie limpia, estable y protegida del viento, el polvo y la lluvia.</li>
+                  <li>Verificar la carga de la fusionadora y del OTDR; confirmar que los electrodos
+                      estén dentro de su vida útil y ejecutar la rutina de limpieza y calibración de arco.</li>
+                  <li>Ubicar el recipiente rígido para residuos de fibra antes de empezar a cortar.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2">
+              <span class="paso-num">2</span> Apertura y preparación del cable
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p2" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Dejar la reserva técnica de cable que exija la especificación del proyecto.</li>
+                  <li>Retirar la chaqueta exterior con el ranurador, sin tocar los buffers ni el hilo de fibra.</li>
+                  <li>Cortar los elementos de tracción (aramida) con tijeras de kevlar.</li>
+                  <li>Si el cable es de gel, limpiarlo por completo con el removedor adecuado y paños sin pelusa.</li>
+                  <li>Identificar tubos e hilos con el código de colores
+                      (azul, naranja, verde, café, gris, blanco, rojo, negro, amarillo, violeta, rosado, aguamarina).</li>
+                  <li>Fijar el cable a la bandeja o al chasis de empalme antes de manipular los hilos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3">
+              <span class="paso-num">3</span> Montaje del protector de empalme
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p3" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <p><strong>Este paso va antes del corte.</strong> Si se olvida, hay que rehacer el
+                   pelado y el corte completos.</p>
+                <ul>
+                  <li>Deslizar el manguito termocontraíble sobre uno de los dos hilos.</li>
+                  <li>Desplazarlo lo suficientemente lejos de la zona de trabajo para que no estorbe
+                      ni reciba calor durante la fusión.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p4" aria-expanded="false" aria-controls="p4">
+              <span class="paso-num">4</span> Pelado del recubrimiento
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p4" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Retirar el recubrimiento primario con la peladora de precisión, dejando expuesto
+                      el revestimiento de vidrio de 125 µm.</li>
+                  <li>Pelar la longitud que indique el manual de la fusionadora.</li>
+                  <li>Mantener la peladora perpendicular y retirar en un solo movimiento firme y continuo.</li>
+                  <li>No doblar la fibra desnuda: a partir de aquí es frágil y cualquier microfisura
+                      se traduce en pérdida.</li>
+                  <li>Depositar de inmediato los residuos en el recipiente rígido.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p5" aria-expanded="false" aria-controls="p5">
+              <span class="paso-num">5</span> Limpieza
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p5" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Limpiar la fibra desnuda con alcohol isopropílico de pureza mínima 99 % y
+                      paños libres de pelusa.</li>
+                  <li>Pasar el paño en una sola dirección; no frotar de ida y vuelta ni reutilizar la
+                      misma cara del paño.</li>
+                  <li>No tocar la parte limpia con los dedos: la grasa de la piel contamina el empalme.</li>
+                  <li>El alcohol es inflamable: mantenerlo cerrado y lejos de fuentes de ignición.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p6" aria-expanded="false" aria-controls="p6">
+              <span class="paso-num">6</span> Corte de precisión
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p6" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Colocar la fibra en la cortadora respetando la longitud que marca la guía.</li>
+                  <li>Ejecutar el corte en un movimiento limpio, sin forzar.</li>
+                  <li>El objetivo es una cara perpendicular al eje, con ángulo típicamente
+                      inferior a 0,5°.</li>
+                  <li>Verificar que la cuchilla esté en buen estado y en una posición con filo disponible;
+                      una cuchilla gastada produce cortes en ángulo y empalmes de alta pérdida.</li>
+                  <li>Recoger el trozo cortado con el recipiente de residuos, nunca con la mano.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p7" aria-expanded="false" aria-controls="p7">
+              <span class="paso-num">7</span> Fusión
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p7" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Ubicar ambos hilos en los soportes en V de la fusionadora, con la fibra desnuda
+                      sobre los electrodos y sin que las caras se contaminen.</li>
+                  <li>Cerrar la tapa y seleccionar el programa de fusión correspondiente al tipo de fibra.</li>
+                  <li>Permitir que el equipo alinee los núcleos y ejecute el arco eléctrico.</li>
+                  <li>Revisar en pantalla la imagen del empalme: debe verse continuo, sin burbujas,
+                      sin estrechamiento ni desalineación visible.</li>
+                  <li>Leer la pérdida estimada que reporta el equipo. Criterio de referencia habitual:
+                      ≤ 0,1 dB, sujeto a lo que exija el contrato.</li>
+                  <li>Si el resultado no cumple, repetir desde el pelado. No se corrige un mal empalme.</li>
+                  <li>Ejecutar la prueba de tracción que ofrece el equipo antes de retirar la fibra.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p8" aria-expanded="false" aria-controls="p8">
+              <span class="paso-num">8</span> Protección del empalme
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p8" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Centrar el manguito termocontraíble sobre la zona fusionada.</li>
+                  <li>Llevarlo al horno de la fusionadora y ejecutar el ciclo de contracción.</li>
+                  <li>Esperar a que enfríe antes de manipularlo: si se dobla caliente, se deforma.</li>
+                  <li>Verificar que no queden burbujas de aire atrapadas y que la varilla de refuerzo
+                      haya quedado recta y bien posicionada.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p9" aria-expanded="false" aria-controls="p9">
+              <span class="paso-num">9</span> Organización en bandeja
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p9" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Alojar el manguito en su alvéolo de la bandeja de empalme.</li>
+                  <li>Enrollar el sobrante respetando el radio de curvatura mínimo que indique
+                      la ficha técnica del fabricante del cable.
+                      Curvar de más introduce pérdidas por macrocurvatura.</li>
+                  <li>Evitar cruces y tensiones entre hilos dentro de la bandeja.</li>
+                  <li>Rotular la bandeja y registrar la correspondencia de hilos.</li>
+                  <li>Cerrar la caja de empalme verificando el sellado y, cuando aplique, su hermeticidad.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="paso">
+            <button type="button" class="paso-btn collapsed" data-bs-toggle="collapse" data-bs-target="#p10" aria-expanded="false" aria-controls="p10">
+              <span class="paso-num">10</span> Verificación y registro
+              <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div id="p10" class="collapse" data-bs-parent="#pasos">
+              <div class="paso-cuerpo">
+                <ul>
+                  <li>Medir el enlace con OTDR en las ventanas de <strong>1310 nm</strong> y <strong>1550 nm</strong>.</li>
+                  <li>Localizar el evento del empalme en la traza y confirmar que la pérdida esté dentro
+                      del criterio aceptado.</li>
+                  <li>Complementar con medición de potencia extremo a extremo usando fuente de luz y power meter.</li>
+                  <li>Guardar las trazas y adjuntarlas al acta de entrega, junto con el registro
+                      fotográfico y el esquema de empalmes.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ---------- HERRAMIENTAS ---------- -->
+      <section class="bloque" id="herramientas">
+        <h2>Herramientas y materiales</h2>
+        <p class="text-secondary">
+          Equipos y materiales del procedimiento. El localizador visual de fallas (VFL) viene integrado
+          en el OTDR, por eso no aparece aparte.
+        </p>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/fusionadora.webp" alt="Fusionadora de fibra óptica con la pantalla mostrando un empalme alineado" loading="lazy" width="1536" height="1024">
+            <b>Fusionadora</b><small>Alinea los núcleos y los une con un arco eléctrico</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/cortadora-precision.webp" alt="Cortadora de precisión de fibra óptica abierta sobre la mesa de trabajo" loading="lazy" width="1536" height="1024">
+            <b>Cortadora de precisión</b><small>Deja la cara de la fibra perpendicular antes de fusionar</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/peladora-fibra.webp" alt="Peladora de fibra óptica junto a hilos de colores" loading="lazy" width="1536" height="1024">
+            <b>Peladora de fibra</b><small>Retira el recubrimiento hasta el vidrio de 125 µm</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/otdr.webp" alt="Técnico operando un OTDR con la traza en pantalla frente a un rack de fibra" loading="lazy" width="1024" height="572">
+            <b>OTDR</b><small>Localiza y mide cada empalme en la traza del enlace</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/power-meter.webp" alt="Medidor de potencia óptica mostrando una lectura en dBm" loading="lazy" width="1024" height="572">
+            <b>Power meter y fuente</b><small>Miden la potencia del enlace de extremo a extremo</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/tijeras-kevlar.webp" alt="Tijeras para corte de aramida" loading="lazy" width="1024" height="559">
+            <b>Tijeras de kevlar</b><small>Cortan los hilos de aramida del cable</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/alcohol-panos.webp" alt="Frasco de alcohol isopropílico para fibra óptica junto a una caja de paños de limpieza" loading="lazy" width="1024" height="572">
+            <b>Alcohol y paños</b><small>Isopropílico ≥ 99 % y paños sin pelusa</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/caja-nap.webp" alt="Caja NAP abierta con la bandeja de empalme, los pigtails de colores y los conectores en los puertos de distribución" loading="lazy" width="1280" height="547">
+            <b>Caja NAP</b><small>Cierre de distribución FTTH</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/herramientas/manguitos.webp" alt="Manguitos termocontraíbles transparentes para proteger el empalme" loading="lazy" width="500" height="400">
+            <b>Manguitos de protección</b><small>Termocontraíbles; protegen el empalme</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/galeria/thumb/bandeja-troncal-p91.webp" alt="Bandeja de empalme con los manguitos alojados en sus ranuras y las fibras enrolladas" loading="lazy" width="1200" height="1328">
+            <b>Bandejas y cassettes</b><small>Organización de empalmes</small></div></div>
+
+          <div class="col-6 col-md-4 col-lg-3"><div class="herramienta">
+            <img class="herr-img" src="../img/galeria/thumb/cierre-troncal-p91.webp" alt="Cierre de empalme abierto mostrando la bandeja y las reservas de fibra" loading="lazy" width="1200" height="1344">
+            <b>Caja de empalme</b><small>Cierre de planta externa</small></div></div>
+
+        </div>
+        <h3 class="sin-foto-titulo">También se usan</h3>
+        <ul class="sin-foto"><li><b>Carpa de trabajo</b><span>Protege el área de empalme del viento, el polvo y la lluvia</span></li></ul>
+      </section>
+
+      <!-- ---------- EPP ---------- -->
+      <section class="bloque" id="epp">
+        <h2>EPP requerido</h2>
+        <p class="text-secondary">
+          Mínimo exigido para el trabajo con fibra óptica. Si el empalme se ejecuta en poste o
+          estructura elevada, se suma el equipo completo de protección contra caídas.
+        </p>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-eyeglasses" aria-hidden="true"></i><div><b>Gafas de seguridad</b><small>Obligatorias: los fragmentos de fibra son invisibles</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-hand-index-thumb" aria-hidden="true"></i><div><b>Guantes</b><small>Manipulación de cable y herramienta</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-person-standing" aria-hidden="true"></i><div><b>Overol o bata</b><small>Evita que los fragmentos queden en la ropa</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-shield-fill-check" aria-hidden="true"></i><div><b>Casco</b><small>Con barbuquejo si hay trabajo en altura</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-person-walking" aria-hidden="true"></i><div><b>Botas dieléctricas</b><small>Si hay proximidad a redes energizadas</small></div></div></div>
+          <div class="col-md-6 col-lg-4"><div class="epp-item"><i class="bi bi-life-preserver" aria-hidden="true"></i><div><b>Arnés y eslingas</b><small>Solo para empalme en poste o estructura</small></div></div></div>
+        </div>
+      </section>
+
+      <!-- ---------- RIESGOS ---------- -->
+      <section class="bloque" id="riesgos">
+        <h2>Riesgos y controles</h2>
+        <div class="table-responsive">
+          <table class="table tabla-riesgos align-middle">
+            <thead>
+              <tr><th style="width:26%">Peligro</th><th style="width:12%">Severidad</th><th>Control</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Fragmentos de fibra</b></td>
+                <td><span class="sev sev-alta">Alta</span></td>
+                <td>Son esquirlas de vidrio de 125 µm, prácticamente invisibles, y penetran la piel
+                    con facilidad. Gafas siempre puestas. Recipiente rígido exclusivo para residuos.
+                    Prohibido comer, beber o fumar en el área. Lavarse las manos al terminar y
+                    nunca pasarlas por la cara o los ojos durante el trabajo.</td>
+              </tr>
+              <tr>
+                <td><b>Radiación láser invisible</b></td>
+                <td><span class="sev sev-alta">Alta</span></td>
+                <td>Nunca mirar directamente el extremo de una fibra ni un conector que pueda estar
+                    activo. La luz de la red no se ve y puede dañar la retina. Verificar con power
+                    meter que el hilo esté apagado antes de manipularlo.</td>
+              </tr>
+              <tr>
+                <td><b>Caída de altura</b></td>
+                <td><span class="sev sev-alta">Alta</span></td>
+                <td>Aplica cuando el empalme se hace en poste. Exige certificación vigente de trabajo
+                    en alturas, permiso de trabajo, punto de anclaje verificado, equipo de protección
+                    contra caídas completo y plan de rescate disponible en sitio.</td>
+              </tr>
+              <tr>
+                <td><b>Contacto eléctrico</b></td>
+                <td><span class="sev sev-alta">Alta</span></td>
+                <td>En postería compartida con red de energía, respetar las distancias de seguridad y
+                    coordinar con el operador de red. Nunca invadir el nivel de la red eléctrica sin
+                    autorización y sin consignación cuando corresponda.</td>
+              </tr>
+              <tr>
+                <td><b>Alcohol isopropílico</b></td>
+                <td><span class="sev sev-media">Media</span></td>
+                <td>Líquido inflamable. Mantener el envase cerrado y alejado del arco de la fusionadora
+                    y de cualquier fuente de ignición. Ventilar el área. Consultar la hoja de seguridad.</td>
+              </tr>
+              <tr>
+                <td><b>Arco eléctrico de la fusionadora</b></td>
+                <td><span class="sev sev-media">Media</span></td>
+                <td>No operar el equipo en atmósferas con gases o vapores inflamables. Mantener la tapa
+                    cerrada durante la descarga.</td>
+              </tr>
+              <tr>
+                <td><b>Quemadura por horno</b></td>
+                <td><span class="sev sev-baja">Baja</span></td>
+                <td>El horno de termocontracción queda caliente al terminar el ciclo. Esperar el
+                    enfriamiento antes de manipular el manguito.</td>
+              </tr>
+              <tr>
+                <td><b>Tránsito vehicular</b></td>
+                <td><span class="sev sev-media">Media</span></td>
+                <td>En trabajos sobre vía, instalar el plan de manejo de tránsito, señalización y
+                    conos. Usar ropa de alta visibilidad.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ---------- GALERÍA ---------- -->
+      <section class="bloque" id="galeria">
+        <h2>Galería de campo</h2>
+        <p class="text-secondary">
+          Fotos de obras de NPE, en el orden del procedimiento. Haga clic en una foto para verla
+          en tamaño completo.
+        </p>
+        <div class="row g-3">
+
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/reserva-poste-sibundoy.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/reserva-poste-sibundoy.webp"
+                     alt="Dos reservas de cable de fibra enrolladas y amarradas al poste, bajo la red eléctrica de media tensión"
+                     loading="lazy" width="1200" height="1104">
+              </a>
+              <figcaption>Reserva de cable en poste · Sibundoy<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/troncal-p91-via.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/troncal-p91-via.webp" style="object-position:center 65%"
+                     alt="Empalme de troncal a borde de vía: cierre y maletín de herramientas en primer plano, cuadrilla y cono de señalización al fondo"
+                     loading="lazy" width="1200" height="1360">
+              </a>
+              <figcaption>Empalme de troncal · San Francisco–Sibundoy<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/fusion-santiago.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/fusion-santiago.webp"
+                     alt="Fusionadora abierta junto a la caja de distribución, con los hilos de colores ya identificados"
+                     loading="lazy" width="1280" height="518">
+              </a>
+              <figcaption>Fusión en terreno · Santiago<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/bandeja-troncal-p91.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/bandeja-troncal-p91.webp"
+                     alt="Bandeja de empalme con los manguitos termocontraíbles alojados en sus ranuras y las fibras enrolladas"
+                     loading="lazy" width="1200" height="1328">
+              </a>
+              <figcaption>Organización en bandeja · Sibundoy<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/cierre-troncal-p91.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/cierre-troncal-p91.webp"
+                     alt="Cierre de empalme abierto en la mano del técnico, con la bandeja y las reservas de fibra organizadas"
+                     loading="lazy" width="1200" height="1344">
+              </a>
+              <figcaption>Cierre de empalme troncal · Sibundoy<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/distribucion-san-francisco.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/distribucion-san-francisco.webp" style="object-position:center 72%"
+                     alt="Caja de distribución abierta con sus bandejas, fusionadora y peladoras sobre una mesa, al pie del poste"
+                     loading="lazy" width="720" height="1088">
+              </a>
+              <figcaption>Punto de distribución San Francisco<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <figure class="foto-campo">
+              <a href="../img/galeria/medicion-nap-mocoa.webp" target="_blank" rel="noopener">
+                <img src="../img/galeria/thumb/medicion-nap-mocoa.webp" style="object-position:center 60%"
+                     alt="Medidor de potencia óptica conectado a la caja NAP, marcando −15,56 dBm en 1490 nm"
+                     loading="lazy" width="720" height="1114">
+              </a>
+              <figcaption>Medición de potencia en una caja NAP · Mocoa<span>oct 2026</span></figcaption>
+            </figure>
+          </div>
+
+        </div>
+        <p class="texto-secundario mt-3 mb-0" style="font-size:.875rem">
+          <i class="bi bi-info-circle" aria-hidden="true"></i>
+          En la medición de Mocoa el equipo marca <strong>−15,56 dBm</strong> y <strong>27,79 µW</strong> en la
+          ventana de 1490 nm: es la misma potencia, expresada en escala logarítmica y en escala lineal.
+        </p>
+      </section>
+
+      <!-- ---------- DESCARGAS ---------- -->
+      <section class="bloque" id="descargas">
+        <h2>Descargas</h2>
+        <div class="row g-3">
+          <div class="col-md-4"><div class="slot" style="min-height:150px"><div><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i><b>Ficha técnica</b><small>PDF del procedimiento · en preparación</small></div></div></div>
+          <div class="col-md-4"><div class="slot" style="min-height:150px"><div><i class="bi bi-list-check" aria-hidden="true"></i><b>Lista de chequeo</b><small>Verificación en campo · en preparación</small></div></div></div>
+          <div class="col-md-4"><div class="slot" style="min-height:150px"><div><i class="bi bi-clipboard-data" aria-hidden="true"></i><b>Formato de registro</b><small>Acta de empalmes · en preparación</small></div></div></div>
+        </div>
+      </section>
+
+      <!-- ---------- CHARLA ---------- -->
+      <section class="bloque" id="charla">
+        <h2>Charla técnica</h2>
+        <div class="slot slot-video">
+          <div>
+            <i class="bi bi-mic" aria-hidden="true"></i>
+            <b>Charla técnica en preparación</b>
+            <small>Sesión con el equipo técnico de NPE</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- EVALUACIÓN ---------- -->
+      <section class="bloque" id="evaluacion">
+        <h2>Autoevaluación</h2>
+        <div class="slot" style="min-height:190px">
+          <div>
+            <i class="bi bi-patch-question" aria-hidden="true"></i>
+            <b>Cuestionario en preparación</b>
+            <small>Preguntas para comprobar lo aprendido</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- NAVEGACIÓN ---------- -->
+      <nav class="nav-modulo">
+        <a href="redes-troncales.html">
+          <small><i class="bi bi-arrow-left" aria-hidden="true"></i> Anterior</small>
+          <b>Redes troncales de telecomunicaciones</b>
+        </a>
+        <a href="cajas-nap.html">
+          <small>Siguiente <i class="bi bi-arrow-right" aria-hidden="true"></i></small>
+          <b>Instalación y configuración de cajas NAP</b>
+        </a>
+      </nav>
+
+    </main>
+  </div>
+</div>
+
+<footer class="pie">
+  <div class="marco pie-grid">
+    <div class="pie-marca">
+      <a class="marca" href="../index.html">
+        <img src="../img/logo-npe.svg" alt="" width="38" height="38">
+        <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+      </a>
+      <p>Ingenieros contratistas y consultores en energía y telecomunicaciones.</p>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Formación</h2>
+      <ul>
+        <li><a href="../formacion.html?linea=A">Infraestructura eléctrica</a></li>
+        <li><a href="../formacion.html?linea=B">Telecomunicaciones y F.O.</a></li>
+        <li><a href="../formacion.html?linea=C">Seguridad y SST</a></li>
+        <li><a href="../formacion.html?linea=D">Herramientas y materiales</a></li>
+      </ul>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a class="enlace-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+        <li><a href="mailto:gerencia@npe.com.co">gerencia@npe.com.co</a></li>
+        <li><a href="mailto:talentohumano@npe.com.co">talentohumano@npe.com.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marco">
+    <div class="pie-base">
+      <span>&copy; <span data-anio></span> Net Plus Energy S.A.S. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+<button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="../js/npe.js?v=20261110"></script>
+</body>
+</html>

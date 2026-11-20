@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centro de Formación | Net Plus Energy S.A.S</title>
+<meta name="description" content="Módulos de formación técnica en redes de energía y telecomunicaciones: fundamentos de fibra óptica, redes troncales de fibra óptica, fusión de fibra óptica, configuración de cajas NAP, pruebas y certificación óptica, instalación de retenidas y de postes metálicos, con video y procedimiento paso a paso.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="Net Plus Energy S.A.S">
+<meta property="og:title" content="Centro de Formación | Net Plus Energy S.A.S">
+<meta property="og:description" content="Módulos de formación técnica en redes de energía y telecomunicaciones: fundamentos de fibra óptica, redes troncales de fibra óptica, fusión de fibra óptica, configuración de cajas NAP, pruebas y certificación óptica, instalación de retenidas y de postes metálicos, con video y procedimiento paso a paso.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="img/logo-npe.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
+<link href="css/npe.css?v=20261110" rel="stylesheet">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra npe-nav">
+  <div class="marco barra-int">
+    <a class="marca" href="index.html" aria-label="Net Plus Energy, inicio">
+      <img src="img/logo-npe.svg" alt="" width="38" height="38">
+      <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+    </a>
+    <button class="barra-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+      <span>Menú</span><i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav class="collapse barra-nav" id="menuPrincipal" aria-label="Principal">
+      <ul>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#experiencia">Experiencia</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a class="activo" href="formacion.html" aria-current="page">Formación</a></li>
+      </ul>
+      <a class="boton boton-sm" href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ======================= CABECERA ======================= -->
+<header class="cab-pagina">
+  <div class="marco cab-pagina-grid">
+    <h1>Centro de formación</h1>
+    <p class="entrada">
+      Procedimientos de campo en energía y telecomunicaciones. Cada módulo publicado tiene
+      video por capítulos, procedimiento paso a paso, normativa aplicable, herramientas o
+      materiales, y riesgos con sus controles. Acceso libre, sin registro.
+    </p>
+    <p class="rotulo">
+      <span><span class="cifra" id="totalModulos">—</span> módulos</span>
+      <span><span class="cifra" id="totalPublicados">—</span> <span id="palabraPublicados">publicados</span></span>
+      <span><span class="cifra">4</span> líneas de formación</span>
+    </p>
+  </div>
+</header>
+
+<!-- ======================= CATÁLOGO ======================= -->
+<section class="marco" aria-label="Catálogo de módulos" style="padding-bottom: var(--seccion)">
+
+  <div class="aviso" style="margin-top: 2rem">
+    <i class="bi bi-info-circle" aria-hidden="true"></i>
+    <div>
+      <b>Publicación por etapas.</b>
+      Los módulos marcados «Próximamente» están en preparación. Los procedimientos son material
+      de apoyo formativo: no sustituyen la normativa vigente, las especificaciones del operador de
+      red ni el criterio del ingeniero responsable de cada obra.
+    </div>
+  </div>
+
+  <div class="herramientas-catalogo">
+    <div class="filtros" id="filtros" role="group" aria-label="Filtrar por línea">
+      <button type="button" class="filtro-btn activo" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="filtro-btn" data-filtro="A" aria-pressed="false"><span class="codigo">A</span>Eléctrica</button>
+      <button type="button" class="filtro-btn" data-filtro="B" aria-pressed="false"><span class="codigo">B</span>Telecom y F.O.</button>
+      <button type="button" class="filtro-btn" data-filtro="C" aria-pressed="false"><span class="codigo">C</span>Seguridad y SST</button>
+      <button type="button" class="filtro-btn" data-filtro="D" aria-pressed="false"><span class="codigo">D</span>Herramientas</button>
+    </div>
+    <label class="buscar">
+      <i class="bi bi-search" aria-hidden="true"></i>
+      <input type="search" id="buscador" placeholder="Buscar: NAP, retenidas, alturas…" aria-label="Buscar módulo">
+    </label>
+  </div>
+
+  <div class="indice-modulos" id="catalogo" role="list"></div>
+  <noscript><p class="sin-resultados">El catálogo necesita JavaScript activado. Mientras tanto puede abrir el módulo de <a href="formacion/fundamentos-fibra-optica.html">Fundamentos de fibra óptica</a>, el de <a href="formacion/redes-troncales.html">Redes troncales</a>, el de <a href="formacion/fusion-fibra-optica.html">Fusión de fibra óptica</a>, el de <a href="formacion/cajas-nap.html">Cajas NAP</a>, el de <a href="formacion/pruebas-certificacion.html">Pruebas y certificación óptica</a>, el de <a href="formacion/retenidas.html">Instalación de retenidas</a>, el de <a href="formacion/postes-metalicos.html">Instalación de postes metálicos</a> o el de <a href="formacion/trabajo-alturas.html">Trabajo seguro en alturas</a>.</p></noscript>
+
+  <p class="sin-resultados d-none" id="sinResultados">
+    No hay módulos que coincidan con la búsqueda. Pruebe con otra palabra o elija «Todos».
+  </p>
+</section>
+
+<!-- ======================= RECURSOS ======================= -->
+<section class="seccion banda-noche" aria-labelledby="titulo-recursos">
+  <div class="marco">
+    <div class="seccion-cab">
+      <h2 id="titulo-recursos">Charlas y recursos</h2>
+      <p style="color: var(--noche-tinta-2)">En preparación: charlas técnicas, charlas de seguridad y fichas descargables.</p>
+    </div>
+    <ul class="recursos-lista">
+      <li><b>Charla técnica</b><span>Video con el equipo técnico de NPE</span><span class="estado-recurso">Próximamente</span></li>
+      <li><b>Charla de seguridad</b><span>Video sobre SST en planta externa y redes de energía</span><span class="estado-recurso">Próximamente</span></li>
+      <li><b>Biblioteca de fichas</b><span>Fichas técnicas y listas de chequeo en PDF</span><span class="estado-recurso">Próximamente</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="marco pie-grid">
+    <div class="pie-marca">
+      <a class="marca" href="index.html">
+        <img src="img/logo-npe.svg" alt="" width="38" height="38">
+        <span class="marca-txt"><b>NPE</b><small>Net Plus Energy S.A.S</small></span>
+      </a>
+      <p>Ingenieros contratistas y consultores en energía y telecomunicaciones.</p>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Líneas</h2>
+      <ul>
+        <li><a href="?linea=A">Infraestructura eléctrica</a></li>
+        <li><a href="?linea=B">Telecomunicaciones y F.O.</a></li>
+        <li><a href="?linea=C">Seguridad y SST</a></li>
+        <li><a href="?linea=D">Herramientas y materiales</a></li>
+      </ul>
+    </div>
+    <div class="pie-col ancha">
+      <h2>Contacto</h2>
+      <ul>
+        <li><a class="enlace-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+        <li><a href="mailto:gerencia@npe.com.co">gerencia@npe.com.co</a></li>
+        <li><a href="mailto:talentohumano@npe.com.co">talentohumano@npe.com.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="marco">
+    <div class="pie-base">
+      <span>&copy; <span data-anio></span> Net Plus Energy S.A.S. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab-wa" href="https://wa.me/573113947513" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+<button type="button" class="fab-top" id="fabTop" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/cursos-data.js?v=20261110"></script>
+<script src="js/npe.js?v=20261110"></script>
+<script src="js/catalogo.js?v=20261110"></script>
+</body>
+</html>
